@@ -1,7 +1,12 @@
 {% extends "base.html" %} {% block header %}
 
 <link rel="stylesheet" href="{{url_for('static', filename='css/team.css')}}" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+  crossorigin="anonymous"
+/>
 <title>{{title}}</title>
 
 {% endblock %} {% block content %}
@@ -9,159 +14,124 @@
 <h1 style="margin-bottom: 2rem; margin-top: 42px">Teams</h1>
 
 <div class="row teams">
-    <a href="{{ url_for('teams', name='ccc') }}" id="ccc" class="target">CCC</a>
-    <a href="{{ url_for('teams', name='eec') }}" id="eec" class="target">EEC</a>
-    <a href="{{ url_for('teams', name='prc') }}" id="prc" class="target">PRC</a>
-    <a href="{{ url_for('teams', name='arc') }}" id="arc" class="target">ARC</a>
-    <a href="{{ url_for('teams', name='ppc') }}" id="ppc" class="target">PPC</a>
+  <a href="{{ url_for('teams', name='ccc') }}" id="ccc" class="target">CCC</a>
+  <a href="{{ url_for('teams', name='eec') }}" id="eec" class="target">EEC</a>
+  <a href="{{ url_for('teams', name='prc') }}" id="prc" class="target">PRC</a>
+  <a href="{{ url_for('teams', name='arc') }}" id="arc" class="target">ARC</a>
+  <a href="{{ url_for('teams', name='ppc') }}" id="ppc" class="target">PPC</a>
 </div>
 
 <div class="container1">
-    <div class="row">
-        <div id="cccc">
-
-            <div class="column">
-                <div class="img-box">
-                    <img src="" alt="" />
-                </div>
-                <div class="details">
-                    <h3>
-
-                        <span>Mayank Sharma</span>
-                        <span style="font-size: 10px;">Chairman</span>
-                    </h3>
-                    <br />
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+  <div class="row">
+    <div id="cccc">
+      {% for t in senior %}
+      <div class="column">
+        <div class="img-box">
+          <img src="" alt="" />
         </div>
-    </div>
-
-
-    <div class="row">
-        <div id="cccc">
-
-            <div class="column">
-                <div class="img-box">
-                    <img src="" alt="" />
-                </div>
-                <div class="details">
-                    <h3>
-
-                        <span>Mayank Sharma</span>
-                        <span style="font-size: 10px;">Chairman</span>
-                    </h3>
-                    <br />
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-
-
-
-            <div class="column">
-                <div class="img-box">
-                    <img src="" alt="" />
-                </div>
-                <div class="details">
-                    <h3>
-
-                        <span>Bhumika Khakha</span>
-                        <span style="font-size: 10px;">Chairman</span>
-                    </h3>
-                    <br />
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
+        <div class="details">
+          <h3>
+            <span>{{ t['name'] }}</span>
+            <span style="font-size: 10px">Chairman</span>
+          </h3>
+          <br />
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
         </div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 
-
-
-
-
-
-
-    <div class="row">
-        <div id="cccc">
-            {% for t in team %}
-            <div class="column">
-                <div class="img-box">
-                    <img src="{{url_for('static', filename='images/eec/' + t['roll'] + '.jpg')}}" alt="" />
-                </div>
-                <div class="details">
-                    <h3>
-                        <span>{{ t['name'] }}</span>
-                    </h3>
-                    <br />
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            {% endfor %}
+  <div class="row">
+    <div id="cccc">
+      {% for t in junior %}
+      <div class="column">
+        <div class="img-box">
+          <img
+            src="{{url_for('static', filename='images/eec/' + t['roll'] + '.jpg')}}"
+            alt=""
+          />
         </div>
+        <div class="details">
+          <h3>
+            <span>{{ t['name'] }}</span>
+            <span style="font-size: 10px">{{ t['type'] }}</span>
+          </h3>
+          <br />
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {% endfor %}
     </div>
+  </div>
+
+  <div class="row">
+    <div id="cccc">
+      {% for t in team %}
+      <div class="column">
+        <div class="img-box">
+          <img
+            src="{{url_for('static', filename='images/eec/' + t['roll'] + '.jpg')}}"
+            alt=""
+          />
+        </div>
+        <div class="details">
+          <h3>
+            <span>{{ t['name'] }}</span>
+          </h3>
+          <br />
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 <script>
-    var active = document.getElementById("{{name}}");
-    active.style.backgroundColor = "#09ccee";
-    active.style.color = "#fff";
+  var active = document.getElementById("{{name}}");
+  active.style.backgroundColor = "#09ccee";
+  active.style.color = "#fff";
 </script>
 
 {% include "footer.html" %} {% endblock %}
