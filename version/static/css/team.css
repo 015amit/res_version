@@ -244,10 +244,6 @@ i:hover {
     .teams {
         width: 90%;
     }
-    #cccc {
-        height: 450px;
-        /* overflow-y: scroll; */
-    }
 }
 
 @media screen and (max-width:768px) {

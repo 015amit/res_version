@@ -21,14 +21,14 @@ junior_head = {
 
 data = {
     "ccc": [
-        {
+        
             {"name": "Akriti Upadhyay", "roll": "007"},
             {"name": "Amandeep Yadav", "roll": "010"},
             {"name": "Himanshu Ghorwal", "roll": "035"},
             {"name": "Mahima Pawar", "roll": "047"},
             {"name": "Naman Tripathi", "roll": "054"},
             {"name": "Shivangi Gupta", "roll": "112"},
-        }
+        
     ],
     "eec": [
         {"name": "Nikita Das", "roll": "062"},
