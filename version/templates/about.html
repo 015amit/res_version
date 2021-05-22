@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block header %}
+
+<link rel="stylesheet" href="static/css/about.css" />
+<title>{{title}}</title>
+
+{% endblock %} {% block content %}
+
+<h1 style="margin-bottom: 2rem; margin-top: 42px">About Us</h1>
+
+<div class="container">
+    <div class="card">
+        <div class="content">
+            <div class="heading">
+                <h2>Version</h2>
+            </div>
+            <hr />
+            <p>Version is an annual all India MCA meet conducted by the students of MCA at NIT, Trichy. Since it's conception in 1991, Version has aimed to bring the best students from MCA all over India to NIT, compete against each other and showcase their
+                talent and potential.<br>Version includes a variety of events which aims to challenge students to think out of the box and be creative.<br> Version is the star event for MCA at NIT, Trichy and has become one of the most anticipated events
+                for MCA students all over India.
+            </p>
+        </div>
+        <div class="imgBx1">
+            <img src="../static/images/v4.png" width="140px" />
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx2">
+            <img src="../static/images/AboutTheme.jpeg" />
+        </div>
+        <div class="content">
+            <div class="heading">
+                <h2>Version '21 Theme- Deconsentro</h2>
+            </div>
+            <h4>Divide to conquer</h4>
+            <hr />
+            <p>A dapp has its backend code running on a decentralized peer-to-peer network. Contrast this with an app where the backend code is running on centralized servers.<br> A dapp can have frontend code and user interfaces written in any language
+                (just like an app) that can make calls to its backend. Furthermore, its frontend can be hosted on decentralized storage such as IPFS.<br> Decentralized means they are independent, and no one can control them as a group. Deterministic i.e.,
+                they perform the same function irrespective of the environment they are executed. Turing complete, which means given the required resources, the dapp can perform any action. Isolated, which means they are executed in a virtual environment
+                known as Ethereum Virtual Machine so that if the smart contract happens to have a bug, it won’t hamper the normal functioning of the blockchain network.
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <div class="heading">
+                <h2>Staff Advisor- Dr. S. Sangeetha</h2>
+            </div>
+            <hr />
+            <p>Version 2021 is being held under the supervision of Dr. S. Sangeetha</p>
+        </div>
+        <div class="imgBx3">
+            <img src="static/images/profile.jpg" />
+        </div>
+    </div>
+</div>
+{% include "footer.html" %} {% endblock %}

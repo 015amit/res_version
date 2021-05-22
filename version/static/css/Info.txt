@@ -1,0 +1,6 @@
+teams:
+image
+full name
+facebook
+instagram
+linkedin

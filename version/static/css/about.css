@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Cairo", sans-serif; */
+}
+
+/* BODY STARTS */
+
+body {
+  justify-content: center;
+  align-items: center;
+  background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card {
+  position: relative;
+  width: 100%;
+  /* background: rgba(255, 255, 255, 0.2); */
+  background-color: rgba(7, 6, 6, 0.123);
+  color: #fff;
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+  /* box-shadow: 0 5px 20px rgba(255, 255, 255, 0.363); */
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0rem;
+}
+
+.imgBx1,
+.imgBx2,
+.imgBx3 {
+  position: relative;
+  margin-top: 10%;
+}
+
+.imgBx1 img,
+.imgBx2 img,
+.imgBx3 img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 4rem;
+  transition: transform 0.5s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.container .card .content {
+  margin-top: 2%;
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+p {
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+h1 {
+  margin-top: 5%;
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  font-weight: bolder;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes mover {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee,
+      0 0 40px #09ccee;
+  }
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 25px #09ccee, 0 0 25px #09ccee,
+      0 0 45px #09ccee;
+  }
+}
+
+h2 {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 2s infinite alternate;
+}
+.imgBx1 img {
+  object-fit: contain;
+}
+
+/* MENU BAR STARTS */
+
+@media screen and (max-width: 1080px) {
+  .container {
+    padding: 8rem 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-container {
+    width: 100%;
+  }
+  .container .card .content {
+    width: 80%;
+  }
+  h1 {
+    font-size: 35px;
+  }
+}
