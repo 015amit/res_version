@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 body {
     justify-content: center;
     align-items: center;
@@ -10,6 +11,8 @@ body {
     background-blend-mode: overlay;
     background-position: center;
 }
+
+
 /* .main1 {
     overflow: hidden;
     position: absolute;
@@ -30,11 +33,13 @@ body {
     justify-content: center;
     align-items: center;
 }
-.row{
+
+.row {
     position: relative;
     width: 100%;
     box-sizing: border-box;
 }
+
 h1 {
     margin-top: 5%;
     font-size: 50px;
@@ -63,7 +68,8 @@ h1 {
         text-shadow: 0 0 15px #fff, 0 0 25px #09ccee, 0 0 25px #09ccee, 0 0 45px #09ccee;
     }
 }
-.teams{
+
+.teams {
     /* float: left; */
     width: 50%;
     margin: 3.5rem auto;
@@ -74,7 +80,8 @@ h1 {
     margin-bottom: 60px;
     /* text-align: center; */
 }
-.target{
+
+.target {
     text-decoration: none;
     font-size: 22px;
     width: 94px;
@@ -84,7 +91,7 @@ h1 {
     color: #09ccee;
     padding: 5px 1.5rem;
     border-radius: 15px;
-    margin:0 10px;
+    margin: 0 10px;
     transition: .2s;
     outline: none;
     cursor: pointer;
@@ -92,13 +99,14 @@ h1 {
     0 0 20px #ae11ec, 0 0 10px #8a2be2, 0 0 20px #8a1ae6, 0 0 5px #a223d4,
     0 0 20px #a026d8; */
 }
-.target:hover{
+
+.target:hover {
     /* color: white; */
     transform: scale(1.1);
     /* background-color: #09ccee; */
 }
 
-#cccc{
+#cccc {
     width: 100%;
     display: flex;
     align-items: center;
@@ -106,7 +114,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-.row .column{
+.row .column {
     /* margin: 0 10px; */
     position: relative;
     width: calc(25% - 20px);
@@ -124,7 +132,8 @@ h1 {
     border-bottom-right-radius: 30px;
     /* background: linear-gradient(to right, transparent, #1779ff); */
 }
-.row .column::before{
+
+.row .column::before {
     content: '';
     position: absolute;
     bottom: -100%;
@@ -138,22 +147,26 @@ h1 {
     mix-blend-mode: soft-light;
 }
 
-.row .column:hover::before{
+.row .column:hover::before {
     bottom: 0;
 }
-.row .column .img-box{
+
+.row .column .img-box {
     position: relative;
 }
-.row .column .img-box img{
+
+.row .column .img-box img {
     width: 100%;
     transition: 3s;
     background-size: cover;
     height: 17.5rem;
 }
-.row .column:hover .img-box img{
+
+.row .column:hover .img-box img {
     transform: scale(1.3);
 }
-.row .column .details{
+
+.row .column .details {
     position: absolute;
     bottom: -95px;
     left: 0;
@@ -165,10 +178,12 @@ h1 {
     transition: .5s;
     z-index: 2;
 }
-.row .column:hover .details{
+
+.row .column:hover .details {
     bottom: 0;
 }
-.row .column .details h3{
+
+.row .column .details h3 {
     margin: 0;
     padding: 0;
     color: #007ff7;
@@ -176,7 +191,8 @@ h1 {
     /* text-align: right; */
     font-size: 18px;
 }
-.row .column .details h3 span{
+
+.row .column .details h3 span {
     margin: 3px;
     padding: 0;
     font-size: 18px;
@@ -187,45 +203,48 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
-.row .column .details ul{
-    margin: 8px 20px;
 
+.row .column .details ul {
+    margin: 8px 20px;
     padding: 0;
     display: flex;
     /* float: right; */
 }
-.row .column .details ul li{
+
+.row .column .details ul li {
     width: 100%;
     list-style: none;
     display: flex;
     align-items: center;
     /* justify-content: space-evenly; */
 }
-.row .column .details ul li a{
+
+.row .column .details ul li a {
     padding: 0 10px;
     color: #7e0271;
     font-size: 30px;
 }
-.row .column .details ul li a .fa{
+
+.row .column .details ul li a .fa {
     transition: .5s;
 }
-i:hover{
+
+i:hover {
     transform: scale(1.2);
 }
+
 .target:focus {
     color: #fff;
     transform: scale(1.1);
     background-color: #09ccee;
-  }
-
+}
 
 @media screen and (max-width: 1080px) {
     .teams {
         width: 90%;
     }
-    #cccc{
+    #cccc {
         height: 1352px;
         overflow-y: scroll;
     }
@@ -236,18 +255,16 @@ i:hover{
         width: 100%;
         /* display: block; */
     }
-    #cccc{
+    #cccc {
         height: fit-content;
         overflow-y: hidden;
     }
-
     .target {
         width: 2.7rem;
         font-size: 13px;
         /* margin: 0; */
         padding: 0 0.5rem;
     }
-
     a {
         font-size: 18px;
     }
