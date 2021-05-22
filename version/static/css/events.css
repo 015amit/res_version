@@ -1,235 +1,232 @@
 * {
-  margin: 0;
-  padding: 0%;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
 }
 
 body {
-  background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
-  background-blend-mode: overlay;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* font-family: "Bellota", "Belgrano", serif; */
+    background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* font-family: "Bellota", "Belgrano", serif; */
 }
+
 .card1 {
-  position: relative;
-  min-width: 320px;
-  height: 440px;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 10px rgba(255, 255, 255, 0.1),
-    5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  margin: 30px 50px;
+    position: relative;
+    min-width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 30px 50px;
 }
+
 .back {
-  height: 500px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  z-index: 2;
-  font-weight: 600;
+    height: 500px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+    font-weight: 600;
 }
 
 .event-img {
-  position: absolute;
-  top: 0px;
-  height: 398px;
-  width: 278px;
-  left: 0px;
-  border-radius: 13px;
-  /* opacity: 0.8; */
-  transition: 0.8s;
+    position: absolute;
+    top: 0px;
+    height: 398px;
+    width: 278px;
+    left: 0px;
+    border-radius: 13px;
+    /* opacity: 0.8; */
+    transition: 0.8s;
 }
+
 .box {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  background: #2a2b2f;
-  /* background:  #09ccee; */
-
-  /* background: rgba(0,0,0,0.5); */
-  border: 2px solid #1e1f23;
-  border-radius: 15px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-
-  transition: 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-  /* filter: blur(10px); */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #2a2b2f;
+    /* background:  #09ccee; */
+    /* background: rgba(0,0,0,0.5); */
+    border: 2px solid #1e1f23;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* filter: blur(10px); */
 }
 
 .box:hover {
-  /* transform: translateY(-40px); */
-  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+    /* transform: translateY(-40px); */
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+    /* transform: rotateY(180deg); */
+}
 
-  /* transform: rotateY(180deg); */
-}
 .box:hover .back {
-  display: flex;
+    display: flex;
 }
+
 .box:hover .event-img {
-  transform: scale(0);
+    transform: scale(0);
 }
+
 .content {
-  height: 500px;
-  padding: 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+    height: 500px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
+
 h1 {
-  margin-top: 5%;
-  font-size: 50px;
-  text-align: center;
-  color: #fff;
-  font-weight: bolder;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+    margin-top: 5%;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee,
-      0 0 40px #09ccee;
-  }
-  to {
-    text-shadow: 0 0 15px #fff, 0 0 25px #09ccee, 0 0 25px #09ccee,
-      0 0 45px #09ccee;
-  }
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
+    }
+    to {
+        text-shadow: 0 0 15px #fff, 0 0 25px #09ccee, 0 0 25px #09ccee, 0 0 45px #09ccee;
+    }
 }
 
 .container1 {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
 }
 
 .mycard {
-  width: 320px;
-  height: 350px;
-  /* background-color: rgb(255, 255, 255); */
-  background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.94);
-  background-blend-mode: overlay;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0 3px 10px 2px rgba(255, 255, 255, 0.3);
-  margin: 3rem;
+    width: 320px;
+    height: 350px;
+    /* background-color: rgb(255, 255, 255); */
+    background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.94);
+    background-blend-mode: overlay;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 3px 10px 2px rgba(255, 255, 255, 0.3);
+    margin: 3rem;
 }
 
 .mycard::before,
 .mycard::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0%;
-  right: 0%;
-  /* background-color: #fff; */
-  background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.24);
-  background-blend-mode: overlay;
-  background-size: cover;
-  z-index: -1;
-  transition: 0.3s;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    right: 0%;
+    /* background-color: #fff; */
+    background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.24);
+    background-blend-mode: overlay;
+    background-size: cover;
+    z-index: -1;
+    transition: 0.3s;
 }
 
 .mycard:hover::before {
-  transform: rotate(-20deg);
-  box-shadow: rgba(213, 213, 219, 0.25) 0px 50px 50px -40px,
-    rgba(156, 154, 154, 0.3) 0px 30px 40px -30px,
-    rgba(74, 128, 182, 0.35) 0px -2px 6px 0px inset;
+    transform: rotate(-20deg);
+    box-shadow: rgba(213, 213, 219, 0.25) 0px 50px 50px -40px, rgba(156, 154, 154, 0.3) 0px 30px 40px -30px, rgba(74, 128, 182, 0.35) 0px -2px 6px 0px inset;
 }
 
 .mycard:hover::after {
-  transform: rotate(20deg);
-  box-shadow: rgba(213, 213, 219, 0.25) 0px 50px 50px -40px,
-    rgba(156, 154, 154, 0.3) 0px 30px 40px -30px,
-    rgba(74, 128, 182, 0.35) 0px -2px 6px 0px inset;
+    transform: rotate(20deg);
+    box-shadow: rgba(213, 213, 219, 0.25) 0px 50px 50px -40px, rgba(156, 154, 154, 0.3) 0px 30px 40px -30px, rgba(74, 128, 182, 0.35) 0px -2px 6px 0px inset;
 }
 
 .mycard:hover {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 .img-container {
-  position: absolute;
-  top: 10px;
-  bottom: 80px;
-  right: 10px;
-  left: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+    position: absolute;
+    top: 10px;
+    bottom: 80px;
+    right: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
 }
 
 .imgbx {
-  position: absolute;
-  top: 0;
-  left: 15px;
-  width: 90%;
-  height: 100%;
-  object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
 }
+
 
 /* 
  Plz Subscribe to Thapa Technical Youtube Channel  
         link: https://www.youtube.com/thapatechnical */
 
 .details {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  left: 10px;
-  text-align: center;
-  height: 70px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    text-align: center;
+    height: 70px;
 }
 
 h2 {
-  font-weight: bold;
-  color: #09ccee;
-  /* margin-top: -1rem; */
-  /* cursor: pointer; */
-  transition: 0.2s;
+    font-weight: bold;
+    color: #09ccee;
+    font-size: 30px;
+    /* margin-top: -1rem; */
+    /* cursor: pointer; */
+    transition: 0.2s;
 }
 
 .mycard:hover h2 {
-  transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 a {
-  text-decoration: none;
-  color: #fff;
-  padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
 }
 
 .Navbar {
-  width: 100%;
+    width: 100%;
 }
 
 @media screen and (max-width: 1080px) {
-  .container1 {
-    padding: 7rem 2rem;
-  }
+    .container1 {
+        padding: 7rem 2rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .mycard {
-    height: 255px;
-    margin: 3rem 0.5rem;
-  }
+    .mycard {
+        height: 255px;
+        margin: 3rem 0.5rem;
+    }
 }
