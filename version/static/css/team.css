@@ -245,8 +245,8 @@ i:hover {
         width: 90%;
     }
     #cccc {
-        height: 1352px;
-        overflow-y: scroll;
+        height: 450px;
+        /* overflow-y: scroll; */
     }
 }
 

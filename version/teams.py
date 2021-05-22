@@ -1,18 +1,62 @@
 import json
 
+
+senior = {"ccc": [
+    {
+        'name': 'Mayank Sharma',
+        'roll': '010'
+    }
+    ],
+
+    "eec": [
+    {
+        'name': 'Kuldeep Patidar',
+        'roll': '010'
+    }
+    ],
+    "prc": 0,
+    "ppc": 0,
+    "arc": 0,
+    
+
+
+ 
+}
+
+
+junior_head = {"ccc": [
+    
+    {
+        'name': 'Bhumika Khakha',
+        'roll': '024',
+        'type': 'Secretary'
+    },
+    {
+        'name': 'Shivam Dubey',
+        'roll': '098',
+        'type': 'Treasurer'
+    }],
+
+    "eec": 0,
+    "prc": 0,
+    "ppc": 0,
+    "arc": 0,
+    
+
+
+ 
+}
+
+
+
+
 data = {"ccc": [
     {
         'name': 'Amandeep Yadav',
         'roll': '010'
-    },
-    {
-        'name': 'Bhumika Khakha',
-        'roll': '024'
-    },
-    {
-        'name': 'Shivam Dubey',
-        'roll': '098'
-    }],
+    }
+    
+    ],
     "eec": [
     {
         'name': 'Nikita Das',
