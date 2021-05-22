@@ -4,7 +4,7 @@ from flask.helpers import make_response
 from version import app
 import json
 
-from .teams import data
+from .teams import data, senior, junior_head
 
 
 @app.route('/')
@@ -25,7 +25,12 @@ def events():
 
 @app.route('/teams/<string:name>')
 def teams(name):
+    if senior[name] and junior_head[name]:
+        return render_template('team.html', title="Team",name=name, team=data[name], senior =senior[name], junior= junior_head[name])
+    elif senior[name]:
+        return render_template('team.html', title="Team",name=name, team=data[name], senior =senior[name])    
     return render_template('team.html', title="Team",name=name, team=data[name])
+
 
 @app.errorhandler(404)
 def page_not_found(e):

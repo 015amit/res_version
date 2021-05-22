@@ -1,13 +1,34 @@
 import json
 
+senior = {
+    "ccc": [{"name": "Mayank Sharma", "roll": "010"}],
+    "eec": [{"name": "Kuldeep Patidar", "roll": "010"}],
+    "prc": 0,
+    "ppc": 0,
+    "arc": 0,
+}
+
+junior_head = {
+    "ccc": [
+        {"name": "Bhumika Khakha", "roll": "024", "type": "Secretary"},
+        {"name": "Shivam Dubey", "roll": "098", "type": "Treasurer"},
+    ],
+    "eec": 0,
+    "prc": 0,
+    "ppc": 0,
+    "arc": 0,
+}
+
 data = {
     "ccc": [
-        {"name": "Akriti Upadhyay", "roll": "007"},
-        {"name": "Amandeep Yadav", "roll": "010"},
-        {"name": "Himanshu Ghorwal", "roll": "035"},
-        {"name": "Mahima Pawar", "roll": "047"},
-        {"name": "Naman Tripathi", "roll": "054"},
-        {"name": "Shivangi Gupta", "roll": "112"},
+        {
+            {"name": "Akriti Upadhyay", "roll": "007"},
+            {"name": "Amandeep Yadav", "roll": "010"},
+            {"name": "Himanshu Ghorwal", "roll": "035"},
+            {"name": "Mahima Pawar", "roll": "047"},
+            {"name": "Naman Tripathi", "roll": "054"},
+            {"name": "Shivangi Gupta", "roll": "112"},
+        }
     ],
     "eec": [
         {"name": "Nikita Das", "roll": "062"},
@@ -76,7 +97,6 @@ data = {
         {"name": "Sangam Raja", "roll": "089"},
         {"name": "Sarath Kumar", "roll": "091"},
         {"name": "Sudhanshu", "roll": "105"},
-
     ],
     "prc": [
         {"name": "Aditya Kumar Soni", "roll": "04"},
@@ -91,6 +111,5 @@ data = {
         {"name": "Rishikant Patel", "roll": "82"},
         {"name": "Shababul Ali", "roll": "93"},
         {"name": "Shashank Shekhar Pandey", "roll": "95"},
-
     ],
 }
