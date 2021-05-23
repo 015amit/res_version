@@ -3,9 +3,9 @@ import json
 senior = {
     "ccc": [{"name": "Mayank Sharma", "roll": "010"}],
     "eec": [{"name": "Kuldeep Patidar", "roll": "010"}],
-    "prc": 0,
-    "ppc": 0,
-    "arc": 0,
+    "prc": [{"name": "PRC Chairman", "roll": "010"}],
+    "ppc": [{"name": "PPC Chairman", "roll": "010"}],
+    "arc": [{"name": "ARC Chairman", "roll": "010"}],
 }
 
 junior_head = {

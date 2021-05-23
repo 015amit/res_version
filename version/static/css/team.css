@@ -168,7 +168,7 @@ h1 {
 
 .row .column .details {
     position: absolute;
-    bottom: -95px;
+    bottom: -60px;
     left: 0;
     padding: 10px;
     box-sizing: border-box;
@@ -197,7 +197,7 @@ h1 {
     padding: 0;
     font-size: 18px;
     color: #047ef8;
-    font-weight: 900;
+    font-weight: bolder;
     text-transform: uppercase;
     position: relative;
     display: flex;
@@ -217,6 +217,7 @@ h1 {
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     /* justify-content: space-evenly; */
 }
 
