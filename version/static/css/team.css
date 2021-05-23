@@ -257,12 +257,13 @@ i:hover {
         overflow-y: hidden;
     }
     .target {
-        width: 2.7rem;
+        width: 3.0rem;
         font-size: 13px;
-        /* margin: 0; */
-        padding: 0 0.5rem;
+        margin: auto;
+        padding: 0.2rem 0.7rem;
     }
     a {
+        padding: 5px;
         font-size: 18px;
     }
 }
