@@ -11,7 +11,7 @@ senior = {
 junior_head = {
     "ccc": [
         {"name": "Bhumika Khakha", "roll": "024", "type": "Secretary"},
-        {"name": "Shivam Dubey", "roll": "098", "type": "Treasurer"},
+        {"name": "Shivam Dubey", "roll": "098", "type": "Treasurer"}
     ],
     "eec": 0,
     "prc": 0,
