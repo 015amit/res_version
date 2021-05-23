@@ -246,7 +246,8 @@ i:hover {
         width: 90%;
     }
     .row .column{
-        width: 242px;
+            width: 223px;
+            height: 260px;
     }
 }
 
