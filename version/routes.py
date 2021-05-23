@@ -19,9 +19,9 @@ def about():
 def contact():
     return render_template('contact.html', title="Contact Us")
 
-@app.route('/events')
-def events():
-    return render_template('events.html', title="Events")
+# @app.route('/events')
+# def events():
+#     return render_template('events.html', title="Events")
 
 @app.route('/teams/<string:name>')
 def teams(name):

@@ -2,16 +2,16 @@ import json
 
 senior = {
     "ccc": [{"name": "Mayank Sharma", "roll": "010"}],
-    "eec": [{"name": "Kuldeep Patidar", "roll": "010"}],
-    "prc": [{"name": "PRC Chairman", "roll": "010"}],
-    "ppc": [{"name": "PPC Chairman", "roll": "010"}],
-    "arc": [{"name": "ARC Chairman", "roll": "010"}],
+    "eec": [{"name": "Kuldeep Patidar", "roll": "011"}],
+    "prc": [{"name": "Surbhi Dabhade", "roll": "012"}],
+    "ppc": [{"name": "Anand Prakash", "roll": "013"}],
+    "arc": [{"name": "Mahima Pandey", "roll": "014"}],
 }
 
 junior_head = {
     "ccc": [
         {"name": "Bhumika Khakha", "roll": "024", "type": "Secretary"},
-        {"name": "Shivam Dubey", "roll": "098", "type": "Treasurer"}
+        {"name": "Shivam Dubey", "roll": "097", "type": "Treasurer"}
     ],
     "eec": 0,
     "prc": 0,
