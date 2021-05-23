@@ -31,12 +31,11 @@ data = {
         
     ],
     "eec": [
-        {"name": "Nikita Das", "roll": "062"},
-        {"name": "Amit Kumar", "roll": "015"},
-        {"name": "Anshu Mala Lakra", "roll": "019"},
         {"name": "Aayushi", "roll": "002"},
         {"name": "Amitabha Roy", "roll": "013"},
+        {"name": "Amit Kumar", "roll": "015"},
         {"name": "Ankit Singh", "roll": "018"},
+        {"name": "Anshu Mala Lakra", "roll": "019"},
         {"name": "Charu Bajaj", "roll": "026"},
         {"name": "Deepeeka", "roll": "027"},
         {"name": "Dimple Gyanani", "roll": "028"},
@@ -47,6 +46,7 @@ data = {
         {"name": "Jasbir Sikhawat", "roll": "037"},
         {"name": "Manish Kumar Pandey", "roll": "049"},
         {"name": "Manish Nangliya", "roll": "050"},
+        {"name": "Nikita Das", "roll": "062"},
         {"name": "Pankaj Sharma", "roll": "068"},
         {"name": "Paras Tiwari", "roll": "069"},
         {"name": "Payal Soni", "roll": "070"},
