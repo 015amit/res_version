@@ -22,7 +22,7 @@
             {% for t in senior %}
             <div class="column">
                 <div class="img-box">
-                    <img src="" alt="" />
+                    <img src="{{url_for('static', filename='images/chairpersons/' + t['roll'] + '.jpg')}}" alt="" />
                 </div>
                 <div class="details">
                     <h3>
@@ -48,7 +48,7 @@
             {% for t in junior %}
             <div class="column">
                 <div class="img-box">
-                    <img src="{{url_for('static', filename='images/' + name + t['roll'] + '.jpg')}}" alt="" />
+                    <img src="{{url_for('static', filename='images/' + name + '/' + t['roll'] + '.jpg')}}" alt="" />
                 </div>
                 <div class="details">
                     <h3>
@@ -75,7 +75,7 @@
             {% for t in team %}
             <div class="column">
                 <div class="img-box">
-                    <img src="{{url_for('static', filename='images/eec/' + t['roll'] + '.jpg')}}" alt="" />
+                    <img src="{{url_for('static', filename='images/' + name + '/' + t['roll'] + '.jpg')}}" alt="" />
                 </div>
                 <div class="details">
                     <h3>
