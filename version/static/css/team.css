@@ -245,6 +245,10 @@ i:hover {
     .teams {
         width: 90%;
     }
+    .row .column{
+            width: 223px;
+            height: 260px;
+    }
 }
 
 @media screen and (max-width:768px) {
