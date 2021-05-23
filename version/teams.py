@@ -5,7 +5,7 @@ senior = {
     "eec": [{"name": "Kuldeep Patidar", "roll": "011"}],
     "prc": [{"name": "Surbhi Dabhade", "roll": "012"}],
     "ppc": [{"name": "Anand Prakash", "roll": "013"}],
-    "arc": [{"name": "Mahima Pandey", "roll": "014"}],
+    "arc": [{"name": "Mahima Pandey", "roll": "014"}]
 }
 
 junior_head = {
@@ -13,7 +13,11 @@ junior_head = {
         {"name": "Bhumika Khakha", "roll": "024", "type": "Secretary"},
         {"name": "Shivam Dubey", "roll": "097", "type": "Treasurer"}
     ],
-    "eec": 0,
+    "eec": [
+        {"name": "Nikita Das", "roll": "062", "type": "Web Team"},
+        {"name": "Amit Kumar", "roll": "015", "type": "Web Team"},
+        {"name": "Anshu Mala Lakra", "roll": "019", "type": "Web Team"}
+    ],
     "prc": 0,
     "ppc": 0,
     "arc": 0,
@@ -27,13 +31,10 @@ data = {
             {"name": "Himanshu Ghorwal", "roll": "035"},
             {"name": "Mahima Pawar", "roll": "047"},
             {"name": "Naman Tripathi", "roll": "054"},
-            {"name": "Shivangi Gupta", "roll": "112"},
+            {"name": "Shivangi Gupta", "roll": "112"}
         
     ],
     "eec": [
-        {"name": "Nikita Das", "roll": "062"},
-        {"name": "Amit Kumar", "roll": "015"},
-        {"name": "Anshu Mala Lakra", "roll": "019"},
         {"name": "Aayushi", "roll": "002"},
         {"name": "Amitabha Roy", "roll": "013"},
         {"name": "Ankit Singh", "roll": "018"},
@@ -59,7 +60,7 @@ data = {
         {"name": "Simran Garg", "roll": "103"},
         {"name": "Sonu Gupta", "roll": "104"},
         {"name": "Yasser Osam Khan", "roll": "110"},
-        {"name": "Suruchi Bajaj", "roll": "113"},
+        {"name": "Suruchi Bajaj", "roll": "113"}
     ],
     "ppc": [
         {"name": "Alok Khalkho", "roll": "009"},
@@ -77,7 +78,7 @@ data = {
         {"name": "Shubham Brajwasi", "roll": "100"},
         {"name": "Shubham Sharma", "roll": "101"},
         {"name": "Shyam Shukla", "roll": "102"},
-        {"name": "Vandana Mandloi", "roll": "107"},
+        {"name": "Vandana Mandloi", "roll": "107"}
     ],
     "arc": [
         {"name": "Aman Shrivansh", "roll": "011"},
@@ -96,7 +97,7 @@ data = {
         {"name": "Saloni Pawar", "roll": "087"},
         {"name": "Sangam Raja", "roll": "089"},
         {"name": "Sarath Kumar", "roll": "091"},
-        {"name": "Sudhanshu", "roll": "105"},
+        {"name": "Sudhanshu", "roll": "105"}
     ],
     "prc": [
         {"name": "Aditya Kumar Soni", "roll": "004"},
@@ -110,6 +111,6 @@ data = {
         {"name": "Puneet ", "roll": "078"},
         {"name": "Rishikant Patel", "roll": "082"},
         {"name": "Shababul Ali", "roll": "093"},
-        {"name": "Shashank Shekhar Pandey", "roll": "095"},
+        {"name": "Shashank Shekhar Pandey", "roll": "095"}
     ],
 }
