@@ -16,7 +16,7 @@ junior_head = {
     "eec": [
         {"name": "Nikita Das", "roll": "062", "type": "Web Team", "github":"https://github.com/nikki-99", "linkedin":"https://www.linkedin.com/in/nikita-das-517085203/"},
         {"name": "Amit Kumar", "roll": "015", "type": "Web Team", "github":"https://github.com/015amit", "linkedin":"https://www.linkedin.com/in/amit015/"},
-        {"name": "Anshu Mala Lakra", "roll": "019", "type": "Web Team", "github":"https://github.com/019anshu", "linkedin":"www.linkedin.com/in/019anshu"}
+        {"name": "Anshu Mala Lakra", "roll": "019", "type": "Web Team", "github":"https://github.com/019anshu", "linkedin":"https://www.linkedin.com/in/019anshu/"}
     ],
     "prc": 0,
     "ppc": 0,
@@ -56,16 +56,16 @@ data = {
         {"name": "Sachin Sharma", "roll": "085", "github":"", "linkedin":""},
         {"name": "Saurabh Anand", "roll": "092", "github":"", "linkedin":""},
         {"name": "Shanoor Ahmed", "roll": "094", "github":"", "linkedin":""},
-        {"name": "Shobit Samariya", "roll": "099", "github":"", "linkedin":""},
+        {"name": "Shobit Samaria", "roll": "099", "github":"", "linkedin":""},
         {"name": "Simran Garg", "roll": "103", "github":"", "linkedin":""},
         {"name": "Sonu Gupta", "roll": "104", "github":"", "linkedin":""},
-        {"name": "Yasser Osam Khan", "roll": "110", "github":"", "linkedin":""},
+        {"name": "Yasser Osman Khan", "roll": "110", "github":"", "linkedin":""},
         {"name": "Suruchi Bajaj", "roll": "113", "github":"", "linkedin":""}
     ],
     "ppc": [
         {"name": "Alok Khalkho", "roll": "009", "github":"", "linkedin":""},
         {"name": "Bikky Sharma", "roll": "025", "github":"", "linkedin":""},
-        {"name": "Dwarkesh Gupta", "roll": "030", "github":"", "linkedin":""},
+        {"name": "Dvarkesh Gupta", "roll": "030", "github":"", "linkedin":""},
         {"name": "Khushboo Khanchandani", "roll": "041", "github":"", "linkedin":""},
         {"name": "Kunal Kumawat", "roll": "045", "github":"", "linkedin":""},
         {"name": "Mayank Kumar Singh", "roll": "051", "github":"", "linkedin":""},
@@ -90,8 +90,8 @@ data = {
         {"name": "Moh Azhar Hussain", "roll": "052", "github":"", "linkedin":""},
         {"name": "Neetu Pandit", "roll": "061", "github":"", "linkedin":""},
         {"name": "Pooja Yadav", "roll": "072", "github":"", "linkedin":""},
-        {"name": "Prashansha Geete", "roll": "073", "github":"", "linkedin":""},
-        {"name": "Rajni", "roll": "080", "github":"", "linkedin":""},
+        {"name": "Prashansa Geete", "roll": "073", "github":"", "linkedin":""},
+        {"name": "Rajni Kasotiya", "roll": "080", "github":"", "linkedin":""},
         {"name": "Ruchi Panse", "roll": "083", "github":"", "linkedin":""},
         {"name": "Sagar Gupta", "roll": "086", "github":"", "linkedin":""},
         {"name": "Saloni Pawar", "roll": "087", "github":"", "linkedin":""},
@@ -108,7 +108,7 @@ data = {
         {"name": "Nitansshu Jain ", "roll": "063", "github":"", "linkedin":""},
         {"name": "Nitesh Kumar", "roll": "065", "github":"", "linkedin":""},
         {"name": "Prashant Shukla", "roll": "074", "github":"", "linkedin":""},
-        {"name": "Puneet ", "roll": "078", "github":"", "linkedin":""},
+        {"name": "Puneet Kumar", "roll": "078", "github":"", "linkedin":""},
         {"name": "Rishikant Patel", "roll": "082", "github":"", "linkedin":""},
         {"name": "Shababul Ali", "roll": "093", "github":"", "linkedin":""},
         {"name": "Shashank Shekhar Pandey", "roll": "095", "github":"", "linkedin":""}
