@@ -14,8 +14,8 @@ junior_head = {
         {"name": "Shivam Dubey", "roll": "097", "type": "Treasurer", "github":"https://github.com/stech0703", "linkedin":"https://www.linkedin.com/in/shivam-dubey-862086203/"}
     ],
     "eec": [
-        {"name": "Nikita Das", "roll": "062", "type": "Web Team", "github":"", "linkedin":""},
-        {"name": "Amit Kumar", "roll": "015", "type": "Web Team", "github":"", "linkedin":""},
+        {"name": "Nikita Das", "roll": "062", "type": "Web Team", "github":"https://github.com/nikki-99", "linkedin":"https://www.linkedin.com/in/nikita-das-517085203/"},
+        {"name": "Amit Kumar", "roll": "015", "type": "Web Team", "github":"https://github.com/015amit", "linkedin":"https://www.linkedin.com/in/amit015/"},
         {"name": "Anshu Mala Lakra", "roll": "019", "type": "Web Team", "github":"https://github.com/019anshu", "linkedin":"www.linkedin.com/in/019anshu"}
     ],
     "prc": 0,
