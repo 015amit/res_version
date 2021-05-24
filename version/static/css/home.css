@@ -8,7 +8,6 @@
 /* BODY START */
 
 body {
-
     overflow: hidden;
     height: 100vh;
 }
@@ -26,7 +25,6 @@ body {
 
 
 /* MENU BAR START */
-
 
 .links {
     left: -3%;
@@ -91,28 +89,28 @@ body {
 }
 
 .link-icon {
-  width: 100%;
-  /* margin-bottom: -3.5rem; */
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+    width: 100%;
+    /* margin-bottom: -3.5rem; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 
 /* SOCIAL LINKS */
 
 .add {
-  margin: 3.5rem 0.5rem;
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.5s;
-  z-index: 3;
+    margin: 3.5rem 0.5rem;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 3;
 }
 
 .add i {
@@ -202,14 +200,11 @@ body {
 /* THEME NAME AND TAGLINE */
 
 #text {
-    /* margin: 3rem 0; */
-    margin-top: 35rem;
+    margin-top: 33rem;
 }
 
 #soon {
-   
-     /* color: #09ccee; */
-     color: #0addaf;
+    color: #0addaf;
     font-size: 55px;
     font-weight: 600;
     z-index: 9999;
@@ -251,8 +246,7 @@ body {
 /* MEDIA QUERY STARTS */
 
 @media screen and (max-width: 1080px) {
-    body{
-        /* background: #000; */
+    body {
         height: fit-content;
     }
     .svg-right {
@@ -262,28 +256,27 @@ body {
         height: 500px;
         width: 750px;
     }
-    #versionlogo{
+    #versionlogo {
         display: none;
     }
-    #theme{
+    #theme {
         top: 15rem;
         width: 1000px;
     }
-    .add{
+    .add {
         width: 120px;
         height: 120px;
     }
-    .add i{
+    .add i {
         font-size: 40px;
     }
-    .all-link{
+    .all-link {
         margin-left: 0;
     }
-    .all-link ul li{
+    .all-link ul li {
         font-size: 45px;
     }
-    
-    #text{
+    #text {
         margin-top: 50rem;
     }
 }
@@ -293,7 +286,6 @@ body {
         width: 707px;
         top: 10rem;
     }
-    
     .svg-right {
         transform: scale(0.6) rotate(90deg);
         left: -8%;
@@ -327,7 +319,7 @@ body {
     .add {
         margin-bottom: 0;
     }
-    .all-link ul li{
+    .all-link ul li {
         font-size: 30px;
     }
 }
@@ -335,7 +327,6 @@ body {
 @media screen and (max-width: 450px) {
     #theme {
         width: 525px;
-    
     }
     .nitt {
         width: 60%;
@@ -353,7 +344,7 @@ body {
         height: 45px;
         width: 45px;
     }
-    .add i{
+    .add i {
         font-size: 25px;
     }
     .all-link {
@@ -365,8 +356,8 @@ body {
     .all-link ul li {
         margin: 4px;
     }
-    .hero img{
-            width: 240px;
-            height: 100px;
+    .hero img {
+        width: 240px;
+        height: 100px;
     }
 }

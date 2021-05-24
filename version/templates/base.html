@@ -1,122 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="{{url_for('static', filename='images/vvv.png')}}"
-      sizes="32*32"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/vvv.png')}}" sizes="32*32" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Belgrano&family=Bellota&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="{{url_for('static', filename='css/style.css')}}"
-    />
-    {% block header %} {% endblock %}
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Belgrano&family=Bellota&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" /> {% block header %} {% endblock %}
+</head>
 
-  <body>
+<body>
     <div class="main1"></div>
     <div class="Navbar">
-      <div class="logo">
-        <img id="nittlogo"
-          src="{{url_for('static', filename='images/nitt.png')}}"
-          alt="NO"
-          width="50px"
-        />
-        <a href="/"
-          ><img
-            id="versionlogo"
-            src="{{url_for('static', filename='images/v4.png')}}"
-            alt="NO"
-            width="110px"
-        /></a>
-      </div>
-
-      <div class="left">
-        <img
-          id="mca"
-          style="margin-left: 20px; z-index: 2"
-          src="{{url_for('static', filename='images/mcalogo.png')}}"
-          width="80px"
-          alt=""
-        />
-        <div class="humberger">
-          <div class="line1"></div>
-          <div class="line2"></div>
+        <div class="logo">
+            <img id="nittlogo" src="{{url_for('static', filename='images/nitt.png')}}" alt="NO" width="50px" />
+            <a href="/"><img id="versionlogo" src="{{url_for('static', filename='images/v4.png')}}" alt="NO" width="110px" /></a>
         </div>
-      </div>
+
+        <div class="left">
+            <img id="mca" style="margin-left: 20px; z-index: 2" src="{{url_for('static', filename='images/mcalogo.png')}}" width="80px" alt="" />
+            <div class="humberger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+        </div>
     </div>
 
     <div class="menu-container">
-      <ul class="links">
-        <li class="link-item"><a href="/">HOME</a></li>
-        
-        <li class="link-item"><a href="/teams/ccc">TEAMS</a></li>
-        <li class="link-item"><a href="/about">ABOUT</a></li>
-        <li class="link-item"><a href="/contact">CONTACT</a></li>
-      </ul>
+        <ul class="links">
+            <li class="link-item"><a href="/">HOME</a></li>
+
+            <li class="link-item"><a href="/teams/ccc">TEAMS</a></li>
+            <li class="link-item"><a href="/about">ABOUT</a></li>
+            <li class="link-item"><a href="/contact">CONTACT</a></li>
+        </ul>
     </div>
-    <i class="fas fa-arrow-up" id="topbutton" onclick="topFunction()"></i> {%
-    block content %} {% endblock %}
+
+    <i class="fas fa-arrow-up" id="topbutton" onclick="topFunction()"></i> {% block content %} {% endblock %}
     <script>
-      mybutton = document.getElementById("topbutton ");
-      window.onscroll = function () {
-        scrollFunction();
-      };
+        mybutton = document.getElementById("topbutton ");
+        window.onscroll = function() {
+            scrollFunction();
+        };
 
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 700 ||
-          document.documentElement.scrollTop > 700
-        ) {
-          topbutton.style.display = "block";
-        } else {
-          topbutton.style.display = "none";
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 700 ||
+                document.documentElement.scrollTop > 700
+            ) {
+                topbutton.style.display = "block";
+            } else {
+                topbutton.style.display = "none";
+            }
         }
-      }
 
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
-      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
     <script src="{{url_for('static',filename='js/navbar.js')}}"></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+
 </html>
