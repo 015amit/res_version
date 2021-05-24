@@ -6,19 +6,21 @@
 {% endblock %} {% block content %}
 <h1>Events</h1>
 <div class="container1">
+  {% for event in events %}
   <div class="mycard">
     <div class="img-container">
-      <img class="imgbx" src="static/images/back3.jpg" alt="mask pic" />
+      <img class="imgbx" src="static/images/events/back3.jpg" alt="mask pic" />
     </div>
     <div class="details">
-      <h2>CODIGO</h2>
-      <label for="modal" class="btn1">Know More</label>
+      <h2>{{event['name']}}</h2>
+      <a href="/events/{{event['id']}}">Know More</a>
     </div>
   </div>
+  {% endfor %}
 </div>
 
-<input type="checkbox" id="modal" class="hs" />
-<div class="modal-wrapper">
+<!-- <input type="checkbox" id="modal" class="hs" /> -->
+<!-- <div class="modal-wrapper">
   <div class="modalbox">
     <div class="model-content">
       <div class="modal-header">
@@ -62,7 +64,7 @@
                   </p>
                   <p class="card-text" id="rules">
                     Rules are here!
-                    <!-- perspiciatis sapiente doloribus reiciendis! -->
+                    perspiciatis sapiente doloribus reiciendis!
                   </p>
                 </div>
               </div>
@@ -72,5 +74,5 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 {% include "footer.html" %} {% endblock %}

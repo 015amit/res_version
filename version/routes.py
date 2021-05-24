@@ -5,6 +5,7 @@ from version import app
 import json
 
 from .teams import data, senior, junior_head
+from .events import allevents
 
 
 @app.route('/')
@@ -21,7 +22,11 @@ def contact():
 
 @app.route('/events')
 def events():
-    return render_template('events.html', title="Events")
+    return render_template('events.html', title="Events", events=allevents['event'])
+
+@app.route('/events/<int:id>')
+def desc(id):
+    return render_template('desc.html', id=id, event=allevents['event'][id-1])
 
 @app.route('/teams/<string:name>')
 def teams(name):
