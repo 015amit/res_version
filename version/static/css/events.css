@@ -218,11 +218,7 @@ a {
     width: 100%;
 }
 
-@media screen and (max-width: 1080px) {
-    .container1 {
-        padding: 7rem 2rem;
-    }
-}
+
 
 @media screen and (max-width: 768px) {
     .mycard {
@@ -494,9 +490,9 @@ input[id='modal']:checked+.modal-wrapper>.modalbox {
 }
 
 @media screen and (max-width: 1080px) {
-    .footer{
-        bottom: -370px;
-    }
+    /* .container1 {
+        padding: 7rem 2rem;
+    } */
 }
 
 @media screen and (max-width: 768px) {
