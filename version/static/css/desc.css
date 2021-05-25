@@ -127,7 +127,6 @@
         border-top: none;
     }
     
-    
     .active {
         color: #fff;
     }
@@ -163,5 +162,29 @@
             padding: 0.2rem;
                 width: 50%;
                 margin: auto;
+        }
+    }
+    
+    @media screen and (max-width: 1080px) {
+        .footer {
+            position: absolute;
+        }
+        .main2 {
+            align-items: center;
+            justify-content: center;
+            margin-top: 40%;
+        }
+        .head h1 {
+            font-weight: 900;
+        }
+        .content .card {
+            height: 1200px;
+        }
+        .tab button {
+            font-size: 30px;
+            font-weight: 900;
+        }
+        .tabcontent p {
+            font-size: 25px;
         }
     }
