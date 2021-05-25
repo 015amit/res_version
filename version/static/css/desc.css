@@ -131,60 +131,75 @@
         color: #fff;
     }
     
-    @media screen and (max-width: 768px) {
-        .card-header ul li {
-            font-size: 10px;
-        }
-        .card {
-            width: 310px;
-        }
-        .card-text {
-            font-size: 18px;
-        }
-        .imgbox {
-            height: 80px;
-            width: 80px;
-        }
-        .head h1 {
-            font-size: 35px;
-        }
-        .prev,
-        .next {
-            font-size: 18px;
-        }
-        .tab{
-            flex-direction: column;
-            box-shadow: 2px 1px 2px grey;
-            border-radius: 0px 50px;
-        }
-        .tab button{
-            font-size: 14px;
-            padding: 0.2rem;
-                width: 50%;
-                margin: auto;
-        }
-    }
-    
+
     @media screen and (max-width: 1080px) {
-        .footer {
+        .footer{
             position: absolute;
         }
         .main2 {
             align-items: center;
             justify-content: center;
-            margin-top: 40%;
+            height: 1200px;
+            /* margin-top: 40%; */
         }
         .head h1 {
             font-weight: 900;
         }
-        .content .card {
+        /* .content .card {
             height: 1200px;
-        }
-        .tab button {
+        } */
+        /* .tab button {
             font-size: 30px;
             font-weight: 900;
-        }
+        } */
         .tabcontent p {
-            font-size: 25px;
+            font-size: 20px;
         }
     }
+
+
+        @media screen and (max-width: 768px) {
+            .card-header ul li {
+                font-size: 10px;
+            }
+
+            .card {
+                width: 310px;
+            }
+/* .main2{
+    height: 500px;
+} */
+            .card-text {
+                font-size: 18px;
+            }
+
+            .imgbox {
+                height: 80px;
+                width: 80px;
+            }
+
+            .head h1 {
+                font-size: 35px;
+            }
+
+            .prev,
+            .next {
+                font-size: 18px;
+            }
+
+            .tab {
+                flex-direction: column;
+                box-shadow: 2px 1px 2px grey;
+                border-radius: 0px 50px;
+            }
+
+            .tab button {
+                font-size: 14px;
+                padding: 0.2rem;
+                width: 50%;
+                margin: auto;
+            }
+            .tabcontent p {
+                font-size: 18px;
+            }
+        }
