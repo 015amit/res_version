@@ -84,9 +84,7 @@
         overflow-y: scroll;
     }
     
-    .tabcontent p {
-        line-height: 1px;
-    }
+
     
     .tab {
         width: 100%;

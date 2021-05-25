@@ -493,6 +493,12 @@ input[id='modal']:checked+.modal-wrapper>.modalbox {
     background: #fff;
 }
 
+@media screen and (max-width: 1080px) {
+    .footer{
+        bottom: -370px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .card-header ul li {
         font-size: 10px;
