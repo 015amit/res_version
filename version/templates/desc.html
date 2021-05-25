@@ -25,18 +25,18 @@
                     <button class="tablinks" onclick="openTab(event, 'Description')">Description</button>
                     <button class="tablinks" onclick="openTab(event, 'Rules')">Rules</button>
                     <button class="tablinks" onclick="openTab(event, 'Format')">Format</button>
-                    <button class="tablinks" onclick="openTab(event, 'Register')">Register</button>
+                    <button class="tablinks" onclick="openTab(event, 'Register')">Contest</button>
                     <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
                 </div>
 
                 <div id="Description" class="tabcontent active" style="display: flex;">
-                    <h3>Description</h3>
-                    <p>Description is the capital city of England.</p>
+                    
+                    <p>{{event['desc']}}</p>
                 </div>
 
                 <div id="Rules" class="tabcontent">
-                    <h3>Rules</h3>
-                    <p>Rules is the capital of France.</p>
+                    
+                    <p>{{event['rules']}}</p>
                 </div>
 
                 <div id="Format" class="tabcontent">
@@ -80,4 +80,6 @@
         evt.currentTarget.className += " active";
     }
 </script>
+
+{% include "footer.html" %}
 {% endblock %}
