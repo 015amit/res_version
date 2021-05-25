@@ -84,7 +84,7 @@
         overflow-y: scroll;
     }
     
-
+   
     
     .tab {
         width: 100%;
@@ -94,7 +94,7 @@
     }
     
     .tab button {
-        width: 100%;
+        width: 80%;
         display: flex;
         border: none;
         outline: none;
@@ -119,10 +119,7 @@
         color: black;
         background-color: white;
     }
-    
-    .tab button.active {
-        background-color: #ccc;
-    }
+  
     
     .tabcontent {
         display: none;
@@ -150,10 +147,21 @@
             width: 80px;
         }
         .head h1 {
-            font-size: 40px;
+            font-size: 35px;
         }
         .prev,
         .next {
             font-size: 18px;
+        }
+        .tab{
+            flex-direction: column;
+            box-shadow: 2px 1px 2px grey;
+            border-radius: 0px 50px;
+        }
+        .tab button{
+            font-size: 14px;
+            padding: 0.2rem;
+                width: 50%;
+                margin: auto;
         }
     }
