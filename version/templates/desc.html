@@ -4,88 +4,80 @@
 
 {% endblock %} {% block content %}
 <div class="main2">
-  <div class="prev">
-    {% if id == 1 %}
-    <a href="{{url_for('desc', id = 4)}}"
-      ><i class="fas fa-chevron-left"></i
-    ></a>
-    {% else %}
-    <a href="{{url_for('desc', id = id-1)}}"
-      ><i class="fas fa-chevron-left"></i
-    ></a>
-    {% endif %}
-  </div>
-  <div class="slide" id="slide1">
-    <div class="head">
-      <!-- <img
+    <div class="prev">
+        {% if id == 1 %}
+        <a href="{{url_for('desc', id = 4)}}"><i class="fas fa-chevron-left"></i
+    ></a> {% else %}
+        <a href="{{url_for('desc', id = id-1)}}"><i class="fas fa-chevron-left"></i
+    ></a> {% endif %}
+    </div>
+    <div class="slide" id="slide1">
+        <div class="head">
+            <!-- <img
           class="imgbox"
           src="https://mindmatrixwellnessstudio.com/wp-content/uploads/2018/11/Mind-icon-1-Optimized.jpg"
         /> -->
-      <h1>{{event['name']}}</h1>
-    </div>
-    <div class="content">
-      <div class="card text-center">
-        <div class="card-header">
-          <ul>
-            <li class="btn active">DESCRIPTION</li>
-            <li class="btn">RULES</li>
-            <li class="btn">FORMAT</li>
-            <li class="btn">REGISTER</li>
-            <li class="btn">CONTACT</li>
-          </ul>
+            <h1>{{event['name']}}</h1>
         </div>
-        <div class="card-body">
-          <p class="card-text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore,
-            voluptatibus consequatur dolor minus repellendus saepe nostrum
-            accusantium in ab quia, iusto ratione itaque tenetur corrupti eaque,
-            perspiciatis sapiente doloribus reiciendis! Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Tempore, voluptatibus consequatur
-            dolor minus repellendus saepe nostrum accusantium in ab quia, iusto
-            ratione itaque tenetur corrupti eaque, perspiciatis sapiente
-            doloribus reiciendis! Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Tempore, voluptatibus consequatur dolor minus
-            repellendus saepe nostrum accusantium in ab quia, iusto ratione
-            itaque tenetur corrupti eaque, perspiciatis sapiente doloribus
-            reiciendis! Lorem ipsum, dolor sit amet consectetur adipisicing
-            elit. Tempore, voluptatibus consequatur dolor minus repellendus
-            saepe nostrum accusantium in ab quia, iusto ratione itaque tenetur
-            corrupti eaque, perspiciatis sapiente doloribus reiciendis!
-          </p>
-          <p class="card-text" id="rules">
-            Rules are here!
-            <!-- perspiciatis sapiente doloribus reiciendis! -->
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="content">
+            <div class="card text-center">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Description')">Description</button>
+                    <button class="tablinks" onclick="openTab(event, 'Rules')">Rules</button>
+                    <button class="tablinks" onclick="openTab(event, 'Format')">Format</button>
+                    <button class="tablinks" onclick="openTab(event, 'Register')">Register</button>
+                    <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+                </div>
 
-  <div class="next">
-    {% if id==4 %}
-    <a href="{{url_for('desc', id = 1)}}"
-      ><i class="fas fa-chevron-right" id="next"></i
-    ></a>
-    {% else %}
-    <a href="{{url_for('desc', id = id+1)}}"
-      ><i class="fas fa-chevron-right" id="next"></i
-    ></a>
-    {% endif %}
-  </div>
+                <div id="Description" class="tabcontent active" style="display: flex;">
+                    <h3>Description</h3>
+                    <p>Description is the capital city of England.</p>
+                </div>
+
+                <div id="Rules" class="tabcontent">
+                    <h3>Rules</h3>
+                    <p>Rules is the capital of France.</p>
+                </div>
+
+                <div id="Format" class="tabcontent">
+                    <h3>Format</h3>
+                    <p>Format is the capital of Japan.</p>
+                </div>
+
+                <div id="Register" class="tabcontent">
+                    <h3>Register</h3>
+                    <p>Register is the capital of Japan.</p>
+                </div>
+
+                <div id="Contact" class="tabcontent">
+                    <h3>Contact</h3>
+                    <p>Contact is the capital of Japan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="next">
+        {% if id==4 %}
+        <a href="{{url_for('desc', id = 1)}}"><i class="fas fa-chevron-right" id="next"></i
+    ></a> {% else %}
+        <a href="{{url_for('desc', id = id+1)}}"><i class="fas fa-chevron-right" id="next"></i
+    ></a> {% endif %}
+    </div>
 </div>
 <script>
-  var btns = document.querySelectorAll(".btn");
-  var text = document.querySelectorAll(".card-text");
-
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-      var current = document.getElementsByClassName("active");
-      // var current1 = document.getElementsByClassName("active1");
-      // current1[0].className = current1[0].className.replace(" active1", "");
-
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-  }
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "flex";
+        evt.currentTarget.className += " active";
+    }
 </script>
 {% endblock %}
