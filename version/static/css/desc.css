@@ -132,12 +132,29 @@
         color: #fff;
     }
     
+    @media screen and (max-width: 1080px) {
+        .main2{
+            height: 1400px;
+        }
+        .card{
+            width: 84%;
+            height: 1200px;
+        }
+        .footer{
+            margin-top: 295px;
+        }
+    }
+
     @media screen and (max-width: 768px) {
         .card-header ul li {
             font-size: 10px;
         }
+        .main2{
+            height: 600px;
+        }
         .card {
             width: 310px;
+            height: 400px;
         }
         .card-text {
             font-size: 18px;
@@ -163,5 +180,11 @@
             padding: 0.2rem;
                 width: 50%;
                 margin: auto;
+        }
+        .head{
+            margin-top: -50px;
+        }
+        .footer{
+            margin-top: 10%;
         }
     }
