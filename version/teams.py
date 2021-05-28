@@ -5,7 +5,9 @@ senior = {
     "eec": [{"name": "Kuldeep Patidar", "roll": "011", "type": "Chairperson", "github":"https://github.com/kuldeeppatidar47kp", "linkedin":"https://www.linkedin.com/in/kuldeep-patidar-4870751b4"}],
     "prc": [{"name": "Surbhi Dabhade", "roll": "012", "type": "Chairperson", "github":"https://github.com/surbhidabhade", "linkedin":"https://www.linkedin.com/in/surbhi-dabhade-bb711319b/"}],
     "ppc": [{"name": "Anand Prakash", "roll": "013", "type": "Chairperson", "github":"https://github.com/a4anandprakash", "linkedin":"https://www.linkedin.com/in/a4anandprakash"}],
-    "arc": [{"name": "Mahima Pandey", "roll": "014", "type": "Chairperson", "github":"https://github.com/mahii99p", "linkedin":"https://www.linkedin.com/in/mahima-pandey-a58abb1a1"}]
+    "arc": [{"name": "Mahima Pandey", "roll": "014", "type": "Chairperson", "github":"https://github.com/mahii99p", "linkedin":"https://www.linkedin.com/in/mahima-pandey-a58abb1a1"}],
+    "rc": [{"name": "Mahima Pandey", "roll": "014", "type": "Chairperson", "github":"https://github.com/mahii99p", "linkedin":"https://www.linkedin.com/in/mahima-pandey-a58abb1a1"}]
+    
 }
 
 junior_head = {
@@ -21,6 +23,7 @@ junior_head = {
     "prc": 0,
     "ppc": 0,
     "arc": 0,
+    "rc":0
 }
 
 data = {
@@ -118,4 +121,7 @@ data = {
         {"name": "Shababul Ali", "roll": "093", "github":"https://github.com/shababul093", "linkedin":"https://www.linkedin.com/in/shababul-ali-093"},
         {"name": "Shashank Shekhar Pandey", "roll": "095", "github":"https://github.com/shashank095", "linkedin":"https://www.linkedin.com/in/shashank shekhar pandey"},
     ],
+    "rc": [
+        {"name": "Aditya Kumar Soni", "roll": "004", "github":"https://github.com/04adityasoni", "linkedin":"https://www.linkedin.com/in/adityasoni1107"},
+        ],
 }
