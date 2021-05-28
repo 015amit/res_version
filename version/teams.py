@@ -48,11 +48,11 @@ senior = {
     ],
     "rc": [
         {
-            "name": "Mahima Pandey",
-            "roll": "014",
+            "name": "Amit Gupta",
+            "roll": "015",
             "type": "Chairperson",
-            "github": "https://github.com/mahii99p",
-            "linkedin": "https://www.linkedin.com/in/mahima-pandey-a58abb1a1",
+            "github": "https://github.com/creatoramit",
+            "linkedin": "https://www.linkedin.com/in/amit-gupta-7345961b2/",
         }
     ],
 }
