@@ -13,16 +13,7 @@ body {
 }
 
 
-/* .main1 {
-    overflow: hidden;
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background: url("bg.svg") rgba(0, 0, 0, 0.911);
-    background-blend-mode: overlay;
-    background-position: center;
-    filter: grayscale(1);
-} */
+
 
 .container1 {
     position: relative;
@@ -70,15 +61,19 @@ h1 {
 }
 
 .teams {
-    /* float: left; */
+   
     width: 50%;
     margin: 3.5rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin: 0 10px; */
+   
     margin-bottom: 60px;
-    /* text-align: center; */
+   
+}
+.teams.row a{
+    text-align: center;
+
 }
 
 .target {
@@ -95,15 +90,14 @@ h1 {
     transition: .2s;
     outline: none;
     cursor: pointer;
-    /* text-shadow: 0 0 10px rgb(194, 128, 255), 0 0 4px rgb(213, 161, 255),
-    0 0 20px #ae11ec, 0 0 10px #8a2be2, 0 0 20px #8a1ae6, 0 0 5px #a223d4,
-    0 0 20px #a026d8; */
+   
 }
 
 .target:hover {
-    /* color: white; */
+ 
+       color: #09ccee;
     transform: scale(1.1);
-    /* background-color: #09ccee; */
+  
 }
 
 #cccc {
@@ -140,7 +134,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: rgb(30, 95, 156); */
+ 
     background: rgba(26, 91, 121, 0.9);
     z-index: 1;
     transition: .5s;
@@ -173,7 +167,7 @@ h1 {
     padding: 10px;
     box-sizing: border-box;
     background: rgba(250, 250, 250, 1);
-    /* background: rgba(0,0,0,0.5); */
+
     width: 100%;
     transition: .5s;
     z-index: 2;
@@ -188,7 +182,7 @@ h1 {
     padding: 0;
     color: #007ff7;
     font-weight: 500;
-    /* text-align: right; */
+ 
     font-size: 18px;
 }
 
@@ -209,7 +203,7 @@ h1 {
     margin: 8px 20px;
     padding: 0;
     display: flex;
-    /* float: right; */
+   
 }
 
 .row .column .details ul li {
@@ -218,7 +212,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* justify-content: space-evenly; */
+  
 }
 
 .row .column .details ul li a {
@@ -254,7 +248,7 @@ i:hover {
 @media screen and (max-width:768px) {
     .teams {
         width: 100%;
-        /* display: block; */
+        
     }
     #cccc {
         height: fit-content;
