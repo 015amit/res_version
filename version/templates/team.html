@@ -84,10 +84,14 @@
                     </h3>
                     <ul>
                         <li>
+                            {% if t['github'] != "" %}
                             <a href="{{ t['github'] }}" target="_blank"><i class="fab fa-github"></i></a>
+                            {% endif %}
                         </li>
                         <li>
+                            {% if t['linkedin'] != "" %}
                             <a href="{{ t['linkedin'] }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        `   {% endif %}
                         </li>
                     </ul>
                 </div>
