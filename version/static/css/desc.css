@@ -1,190 +1,203 @@
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    /* position: relative; */
+    background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
+    background-blend-mode: overlay;
+    background-size: contain;
+    font-family: "Bellota", "Belgrano", serif;
+}
+
+.main2 {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    width: 85%;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+}
+
+.head h1 {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 50px;
+    margin: 4rem;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
     }
-    
-    body {
-        width: 100%;
-        /* position: relative; */
-        background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
-        background-blend-mode: overlay;
-        background-size: contain;
-        font-family: "Bellota", "Belgrano", serif;
+    to {
+        text-shadow: 0 0 15px #fff, 0 0 25px #09ccee, 0 0 25px #09ccee, 0 0 45px #09ccee;
     }
-    
-    .main2 {
-        width: 100%;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imgbox {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card {
+    height: 400px;
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+    border-radius: 0px 50px;
+}
+
+.prev,
+.next {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.tabcontent {
+    height: 285px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+    overflow-y: scroll;
+}
+
+
+
+.tab {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.tab button {
+    width: 80%;
+    display: flex;
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.tab button.active {
+    color: black;
+    background: #fff;
+}
+
+.tab button:hover {
+    color: black;
+    background-color: white;
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+
+.active {
+    color: #fff;
+}
+
+@media screen and (max-width: 1080px) {
+    .main2{
+        height: 1400px;
+    }
+    .card{
+        width: 84%;
+        height: 1200px;
+    }
+    .footer{
+        margin-top: 295px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-header ul li {
+        font-size: 10px;
+    }
+    .main2{
         height: 600px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
-    
-    .slide {
-        width: 85%;
-    }
-    
-    .head {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        height: 150px;
-        justify-content: center;
-    }
-    
-    .head h1 {
-        color: #09ccee;
-        font-size: 50px;
-        margin: 4rem;
-    }
-    
-    .content {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    
-    .imgbox {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: white;
-        margin-right: 1rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    
     .card {
+        width: 310px;
         height: 400px;
-        width: 75%;
-        background-color: rgba(0, 0, 0, 0.3);
-        box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-        border-radius: 0px 50px;
     }
-    
+    .card-text {
+        font-size: 18px;
+    }
+    .imgbox {
+        height: 80px;
+        width: 80px;
+    }
+    .head h1 {
+        font-size: 35px;
+    }
     .prev,
     .next {
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
+        font-size: 18px;
     }
-    
-    .tabcontent {
-        height: 285px;
-        color: white;
-        display: flex;
+    .tab{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 17px;
-        letter-spacing: 1px;
-        overflow-y: scroll;
+        box-shadow: 2px 1px 2px grey;
+        border-radius: 0px 50px;
     }
-    
-   
-    
-    .tab {
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: row;
+    .tab button{
+        font-size: 14px;
+        padding: 0.2rem;
+            width: 50%;
+            margin: auto;
     }
-    
-    .tab button {
-        width: 80%;
-        display: flex;
-        border: none;
-        outline: none;
-        background: none;
-        color: #fff;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        padding: 0.5rem;
-        cursor: pointer;
-        font-weight: 600;
-        border-radius: 2px;
-        transition: 0.3s;
+    .head{
+        margin-top: -50px;
     }
-    
-    .tab button.active {
-        color: black;
-        background: #fff;
+    .footer{
+        margin-top: 15%;
     }
-    
-    .tab button:hover {
-        color: black;
-        background-color: white;
-    }
-  
-    
-    .tabcontent {
-        display: none;
-        padding: 6px 12px;
-        border-top: none;
-    }
-    
-    .active {
-        color: #fff;
-    }
-    
-    @media screen and (max-width: 768px) {
-        .card-header ul li {
-            font-size: 10px;
-        }
-        .card {
-            width: 310px;
-        }
-        .card-text {
-            font-size: 18px;
-        }
-        .imgbox {
-            height: 80px;
-            width: 80px;
-        }
-        .head h1 {
-            font-size: 35px;
-        }
-        .prev,
-        .next {
-            font-size: 18px;
-        }
-        .tab{
-            flex-direction: column;
-            box-shadow: 2px 1px 2px grey;
-            border-radius: 0px 50px;
-        }
-        .tab button{
-            font-size: 14px;
-            padding: 0.2rem;
-                width: 50%;
-                margin: auto;
-        }
-    }
-    
-    @media screen and (max-width: 1080px) {
-        .footer {
-            position: absolute;
-        }
-        .main2 {
-            align-items: center;
-            justify-content: center;
-            margin-top: 40%;
-        }
-        .head h1 {
-            font-weight: 900;
-        }
-        .content .card {
-            height: 1200px;
-        }
-        .tab button {
-            font-size: 30px;
-            font-weight: 900;
-        }
-        .tabcontent p {
-            font-size: 25px;
-        }
-    }
+}

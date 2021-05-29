@@ -1,7 +1,12 @@
 {% extends "base.html" %} {% block header %}
 
 <link rel="stylesheet" href="{{url_for('static', filename='css/team.css')}}" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+  crossorigin="anonymous"
+/>
 <title>{{title}}</title>
 
 {% endblock %} {% block content %}
@@ -9,66 +14,81 @@
 <h1 style="margin-bottom: 2rem; margin-top: 42px">Teams</h1>
 
 <div class="row teams">
-    <a href="{{ url_for('teams', name='ccc') }}" id="ccc" class="target">CCC</a>
-    <a href="{{ url_for('teams', name='eec') }}" id="eec" class="target">EEC</a>
-    <a href="{{ url_for('teams', name='prc') }}" id="prc" class="target">PRC</a>
-    <a href="{{ url_for('teams', name='arc') }}" id="arc" class="target">ARC</a>
-    <a href="{{ url_for('teams', name='ppc') }}" id="ppc" class="target">PPC</a>
+  <a href="{{ url_for('teams', name='ccc') }}" id="ccc" class="target">CCC</a>
+  <a href="{{ url_for('teams', name='eec') }}" id="eec" class="target">EEC</a>
+  <a href="{{ url_for('teams', name='prc') }}" id="prc" class="target">PRC</a>
+  <a href="{{ url_for('teams', name='arc') }}" id="arc" class="target">ARC</a>
+  <a href="{{ url_for('teams', name='ppc') }}" id="ppc" class="target">PPC</a>
+  <a href="{{ url_for('teams', name='rc') }}" id="rc" class="target">RC</a>
 </div>
 
 <div class="container1">
-    <div class="row">
-        <div id="cccc">
-            {% for t in senior %}
-            <div class="column">
-                <div class="img-box">
-                    <img src="{{url_for('static', filename='images/chairpersons/' + t['roll'] + '.jpg')}}" alt="" />
-                </div>
-                <div class="details">
-                    <h3>
-                        <span>{{ t['name'] }}</span>
-                        <span style="font-size: 12px; color: black;">{{ t['type'] }}</span>
-                    </h3>
-                    <ul>
-                        <li>
-                            <a href="{{ t['github'] }}" target="_blank"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a href="{{ t['linkedin'] }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            {% endfor %}
+  <div class="row">
+    <div id="cccc">
+      {% for t in senior %}
+      <div class="column">
+        <div class="img-box">
+          <img
+            src="{{url_for('static', filename='images/chairpersons/' + t['roll'] + '.jpg')}}"
+            alt=""
+          />
         </div>
-    </div>
-
-    <div class="row">
-        <div id="cccc">
-            {% for t in junior %}
-            <div class="column">
-                <div class="img-box">
-                    <img src="{{url_for('static', filename='images/' + name + '/' + t['roll'] + '.jpg')}}" alt="" />
-                </div>
-                <div class="details">
-                    <h3>
-                        <span>{{ t['name'] }}</span>
-                        <span style="font-size: 12px; color: black;">{{ t['type'] }}</span>
-                    </h3>
-                    <ul>
-                        <li>
-                            <a href="{{ t['github'] }}" target="_blank"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a href="{{ t['linkedin'] }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            {% endfor %}
+        <div class="details">
+          <h3>
+            <span>{{ t['name'] }}</span>
+            <span style="font-size: 12px; color: black">{{ t['type'] }}</span>
+          </h3>
+          <ul>
+            <li>
+              <a href="{{ t['github'] }}" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="{{ t['linkedin'] }}" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+          </ul>
         </div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
+
+  <div class="row">
+    <div id="cccc">
+      {% for t in junior %}
+      <div class="column">
+        <div class="img-box">
+          <img
+            src="{{url_for('static', filename='images/' + name + '/' + t['roll'] + '.jpg')}}"
+            alt=""
+          />
+        </div>
+        <div class="details">
+          <h3>
+            <span>{{ t['name'] }}</span>
+            <span style="font-size: 12px; color: black">{{ t['type'] }}</span>
+          </h3>
+          <ul>
+            <li>
+              <a href="{{ t['github'] }}" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="{{ t['linkedin'] }}" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
 
     <div class="row">
         <div id="cccc">
@@ -83,23 +103,30 @@
                     </h3>
                     <ul>
                         <li>
+                            {% if t['github'] != "" %}
                             <a href="{{ t['github'] }}" target="_blank"><i class="fab fa-github"></i></a>
+                            {% endif %}
                         </li>
                         <li>
+                            {% if t['linkedin'] != "" %}
                             <a href="{{ t['linkedin'] }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        `   {% endif %}
                         </li>
                     </ul>
                 </div>
             </div>
             {% endfor %}
         </div>
+      </div>
+    
     </div>
+  </div>
 </div>
 
 <script>
-    var active = document.getElementById("{{name}}");
-    active.style.backgroundColor = "#09ccee";
-    active.style.color = "#fff";
+  var active = document.getElementById("{{name}}");
+  active.style.backgroundColor = "#09ccee";
+  active.style.color = "#fff";
 </script>
 
 {% include "footer.html" %} {% endblock %}
