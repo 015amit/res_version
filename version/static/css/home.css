@@ -90,7 +90,6 @@ body {
 
 .link-icon {
     width: 100%;
-    /* margin-bottom: -3.5rem; */
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -156,7 +155,6 @@ body {
 .svg-right {
     position: absolute;
     right: 0%;
-    /* display: none; */
     opacity: 0.5;
     bottom: -10%;
     stroke-dasharray: 90%;

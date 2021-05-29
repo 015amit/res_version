@@ -43,7 +43,6 @@ h5 {
 
 @media screen and (max-width: 1080px) {
     .footer {
-        /* position: relative; */
         bottom: 0;
         height: 4%;
     }
@@ -54,7 +53,6 @@ h5 {
         font-size: 15px;
     }
     .footer {
-        /* position: relative; */
         bottom: 0;
         height: 4%;
     }
