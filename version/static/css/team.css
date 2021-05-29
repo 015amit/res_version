@@ -155,6 +155,7 @@ h1 {
     width: 100%;
     transition: .5s;
     z-index: 2;
+    min-height: 105px;
 }
 
 .row .column:hover .details {
