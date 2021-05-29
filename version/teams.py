@@ -604,6 +604,12 @@ data = {
     ],
     "rc": [
         {
+            "name": "Aditya Mandloi",
+            "roll": "001",
+            "github": "",
+            "linkedin": "",
+        },
+        {
             "name": "Abhilash Bhadoriya",
             "roll": "003",
             "github": "https://github.com/abhilashbhadoriya",
@@ -689,7 +695,7 @@ data = {
         },
         {
             "name": "Rahul Dhadkar",
-            "roll": "078",
+            "roll": "079",
             "github": "https://github.com/rahuldhadkar",
             "linkedin": "",
         },
