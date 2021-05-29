@@ -448,7 +448,7 @@ data = {
             "github": "https://github.com/072-Poojaydv",
             "linkedin": "https://www.linkedin.com/in/pooja-yadav-53b132203",
         },
-        {"name": "Prashansa Geete", "roll": "073", "github": "", "linkedin": ""},
+        {"name": "Prashansa Geete", "roll": "073", "github": "hbchsd", "linkedin": ""},
         {
             "name": "Rajni Kasotiya",
             "roll": "080",
