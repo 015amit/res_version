@@ -201,6 +201,14 @@ body {
     margin-top: 33rem;
 }
 
+.icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #soon {
     color: #0addaf;
     font-size: 55px;
@@ -276,6 +284,11 @@ body {
     }
     #text {
         margin-top: 50rem;
+    }
+    .icon {
+        width: 24px;
+        height: 24px;
+        
     }
 }
 
