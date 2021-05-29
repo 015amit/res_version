@@ -185,4 +185,9 @@ h1 {
     width: 280px;
     height: 235px;
   }
+  .container .card .imgBx img{
+    width: 200px;
+    height: 200px;
+    margin-left: 0;
+  }
 }
