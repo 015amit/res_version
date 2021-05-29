@@ -179,7 +179,7 @@ data = {
             "github": "https://github.com/028-Dimple",
             "linkedin": "https://www.linkedin.com/in/028-dimple",
         },
-        {"name": "Harshit Omar", "roll": "031", "github": "", "linkedin": ""},
+        {"name": "Harshit Omar", "roll": "031", "github": "", "linkedin": "https://www.linkedin.com/in/harshit-omar-9071b9203/"},
         {
             "name": "Harsh Rai",
             "roll": "032",
@@ -440,7 +440,7 @@ data = {
             "name": "Neetu Pandit",
             "roll": "061",
             "github": "https://github.com/NeetuPandit",
-            "linkedin": "https://www.linkedin.com/in/NEETU PANDIT",
+            "linkedin": "",
         },
         {
             "name": "Pooja Yadav",
@@ -448,7 +448,7 @@ data = {
             "github": "https://github.com/072-Poojaydv",
             "linkedin": "https://www.linkedin.com/in/pooja-yadav-53b132203",
         },
-        {"name": "Prashansa Geete", "roll": "073", "github": "", "linkedin": ""},
+        {"name": "Prashansa Geete", "roll": "073", "github": "", "linkedin": "https://www.linkedin.com/in/prashansa-geete-82021a203/"},
         {
             "name": "Rajni Kasotiya",
             "roll": "080",
@@ -699,7 +699,7 @@ data = {
             "github": "https://github.com/rahuldhadkar",
             "linkedin": "",
         },
-        {"name": "Ramratan Sharma", "roll": "081", "github": "", "linkedin": ""},
+        {"name": "Ramratan Sharma", "roll": "081", "github": "", "linkedin": "https://www.linkedin.com/in/nittratan/"},
         {
             "name": "Samaresh Maity",
             "roll": "088",
