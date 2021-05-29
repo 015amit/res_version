@@ -31,10 +31,10 @@ def desc(id):
 @app.route('/teams/<string:name>')
 def teams(name):
     if senior[name] and junior_head[name]:
-        return render_template('team.html', title="Team",name=name, team=data[name], senior =senior[name], junior= junior_head[name])
+        return render_template('team.html', title="Teams",name=name, team=data[name], senior =senior[name], junior= junior_head[name])
     elif senior[name]:
-        return render_template('team.html', title="Team",name=name, team=data[name], senior =senior[name])    
-    return render_template('team.html', title="Team",name=name, team=data[name])
+        return render_template('team.html', title="Teams",name=name, team=data[name], senior =senior[name])    
+    return render_template('team.html', title="Teams",name=name, team=data[name])
 
 
 @app.errorhandler(404)
