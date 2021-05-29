@@ -9,7 +9,7 @@
 
 body {
     overflow: hidden;
-    height: 100vh;
+    max-height: 100vh;
 }
 
 .main1 {
@@ -251,12 +251,10 @@ body {
 
 /* MEDIA QUERY STARTS */
 
-
 @media screen and (max-width: 1400px) {
     body {
         height: fit-content;
     }
-
     .svg-right {
         transform: scale(0.8) rotate(90deg);
         left: -14%;
@@ -264,49 +262,39 @@ body {
         height: 500px;
         width: 750px;
     }
-
     #versionlogo {
         display: none;
     }
-
     #theme {
         top: 15rem;
         width: 800px;
-        
     }
-
     .add {
         width: 50px;
         height: 50px;
     }
-
     .add i {
         font-size: 30px;
     }
-
     .all-link {
         margin-left: 0;
     }
-
     .all-link ul li {
         font-size: 45px;
     }
-
     #text {
-        margin-top: 50rem;
+        margin-top: 40rem;
     }
-
     .icon {
         width: 24px;
         height: 24px;
-
     }
 }
-
 
 @media screen and (max-width: 1080px) {
     body {
         height: fit-content;
+        overflow: hidden;
     }
     .svg-right {
         transform: scale(0.8) rotate(90deg);
@@ -320,7 +308,7 @@ body {
     }
     #theme {
         top: 15rem;
-        width: 1000px;
+        /* width: 1000px; */
     }
     .add {
         width: 50px;
@@ -336,12 +324,11 @@ body {
         font-size: 45px;
     }
     #text {
-        margin-top: 50rem;
+        margin-top: 40rem;
     }
     .icon {
         width: 24px;
         height: 24px;
-        
     }
 }
 
