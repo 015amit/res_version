@@ -90,32 +90,32 @@
     </div>
   </div>
 
-  <div class="row">
-    <div id="cccc">
-      {% for t in team %}
-      <div class="column">
-        <div class="img-box">
-          <img
-            src="{{url_for('static', filename='images/' + name + '/' + t['roll'] + '.jpg')}}"
-            alt=""
-          />
-        </div>
-        <div class="details">
-          <h3>
-            <span>{{ t['name'] }}</span>
-          </h3>
-          <ul>
-            <li>
-              <a href="{{ t['github'] }}" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a href="{{ t['linkedin'] }}" target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </li>
-          </ul>
+    <div class="row">
+        <div id="cccc">
+            {% for t in team %}
+            <div class="column">
+                <div class="img-box">
+                    <img src="{{url_for('static', filename='images/' + name + '/' + t['roll'] + '.jpg')}}" alt="" />
+                </div>
+                <div class="details">
+                    <h3>
+                        <span>{{ t['name'] }}</span>
+                    </h3>
+                    <ul>
+                        <li>
+                            {% if t['github'] != "" %}
+                            <a href="{{ t['github'] }}" target="_blank"><i class="fab fa-github"></i></a>
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if t['linkedin'] != "" %}
+                            <a href="{{ t['linkedin'] }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        `   {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
         </div>
       </div>
       {% endfor %}
