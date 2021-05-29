@@ -90,14 +90,6 @@ h1 {
     transition: .2s;
     outline: none;
     cursor: pointer;
-<<<<<<< HEAD
-   
-}
-
-.target:hover {
- 
-       color: #09ccee;
-=======
     text-align: center;
     /* text-shadow: 0 0 10px rgb(194, 128, 255), 0 0 4px rgb(213, 161, 255),
     0 0 20px #ae11ec, 0 0 10px #8a2be2, 0 0 20px #8a1ae6, 0 0 5px #a223d4,
@@ -107,7 +99,6 @@ h1 {
 .target:hover {
     /* color: white; */
     color: #09ccee;
->>>>>>> Version/main
     transform: scale(1.1);
   
 }
