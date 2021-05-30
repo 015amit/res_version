@@ -110,7 +110,7 @@ body {
 
 .mailbutton:hover {
     transform: scale(1.1);
-    color: white;
+    color: #09ccee;
     border-bottom: 2px solid #fff;
 }
 
