@@ -9,13 +9,13 @@
 
 body {
     overflow: hidden;
-    max-height: 100vh;
+    min-height: 100vh;
 }
 
 .main1 {
     overflow: hidden;
     position: absolute;
-    height: 100vh;
+    height: 60rem;
     width: 100%;
     background: url("../images/bg.svg") rgba(0, 0, 0, 0.971);
     background-blend-mode: overlay;
@@ -251,16 +251,20 @@ body {
 
 /* MEDIA QUERY STARTS */
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
     body {
         height: fit-content;
+        overflow: auto;
+    }
+    .main1 {
+        min-height: 120vh;
     }
     .svg-right {
         transform: scale(0.8) rotate(90deg);
         left: -14%;
-        top: 73%;
-        height: 500px;
-        width: 750px;
+        top: 72%;
+        height: 350px;
+        width: 500px;
     }
     #versionlogo {
         display: none;
@@ -294,14 +298,14 @@ body {
 @media screen and (max-width: 1080px) {
     body {
         height: fit-content;
-        overflow: hidden;
+        overflow: auto;
     }
     .svg-right {
         transform: scale(0.8) rotate(90deg);
         left: -14%;
-        top: 73%;
-        height: 500px;
-        width: 750px;
+        top: 78%;
+        height: 300px;
+        width: 450px;
     }
     #versionlogo {
         display: none;
