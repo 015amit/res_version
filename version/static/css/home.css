@@ -8,7 +8,7 @@
 /* BODY START */
 
 body {
-    overflow: hidden;
+    overflow: auto;
     min-height: 100vh;
 }
 
