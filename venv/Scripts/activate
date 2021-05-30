@@ -37,7 +37,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="C:\Users\Nikita Das\Desktop\res_version\venv"
+=======
+VIRTUAL_ENV="E:\ACADEMICS\NITT\VERSION\res_version\venv"
+>>>>>>> Version/main
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
