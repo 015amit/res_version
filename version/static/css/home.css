@@ -8,11 +8,22 @@
 /* BODY START */
 
 body {
-    overflow: auto;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-position: center;
 }
 
-.main1 {
+
+/* body {
+    overflow: hidden;
+    min-height: 100vh;
+} */
+
+
+/* .main1 {
     overflow: hidden;
     position: absolute;
     height: 60rem;
@@ -21,7 +32,7 @@ body {
     background-blend-mode: overlay;
     background-position: center;
     filter: grayscale(1);
-}
+} */
 
 
 /* MENU BAR START */
@@ -99,8 +110,7 @@ body {
 /* SOCIAL LINKS */
 
 .add {
-    bottom: -10%;
-    margin: 3.5rem 0.5rem;
+    margin: 1.5rem 0.9rem;
     height: 55px;
     width: 55px;
     border-radius: 50%;
@@ -157,7 +167,7 @@ body {
     position: absolute;
     right: 0%;
     opacity: 0.5;
-    bottom: -10%;
+    bottom: 0;
     stroke-dasharray: 90%;
     animation: svg-stroke 3s linear infinite alternate-reverse;
 }
@@ -257,9 +267,10 @@ body {
         height: fit-content;
         overflow: auto;
     }
-    .main1 {
-        min-height: 120vh;
-    }
+    /* .main1 {
+        min-height: 100vh;
+        height: 50rem;
+    } */
     .svg-right {
         transform: scale(0.8) rotate(90deg);
         left: -14%;
@@ -346,10 +357,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        height: fit-content;
-        overflow: hidden;
-    }
     #theme {
         width: 707px;
         top: 10rem;
