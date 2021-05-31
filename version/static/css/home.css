@@ -13,6 +13,7 @@ body {
     background-attachment: fixed;
     background-blend-mode: overlay;
     background-position: center;
+    overflow: hidden;
 }
 
 /* body {
