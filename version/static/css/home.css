@@ -6,6 +6,7 @@
 
 
 /* BODY START */
+
 body {
     justify-content: center;
     align-items: center;
@@ -13,12 +14,15 @@ body {
     background-attachment: fixed;
     background-blend-mode: overlay;
     background-position: center;
+    overflow: hidden;
 }
+
 
 /* body {
     overflow: hidden;
     min-height: 100vh;
 } */
+
 
 /* .main1 {
     overflow: hidden;
@@ -259,6 +263,13 @@ body {
 
 /* MEDIA QUERY STARTS */
 
+@media screen and (max-width: 1400px) {
+    body {
+        height: fit-content;
+        overflow: auto;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     body {
         height: fit-content;
@@ -283,6 +294,7 @@ body {
         width: 800px;
     }
     .add {
+        top: 72%;
         width: 50px;
         height: 50px;
     }
@@ -309,6 +321,9 @@ body {
         height: fit-content;
         overflow: auto;
     }
+    .main1 {
+        min-height: 100vh;
+    }
     .svg-right {
         transform: scale(0.8) rotate(90deg);
         left: -14%;
@@ -323,7 +338,11 @@ body {
         top: 15rem;
         /* width: 1000px; */
     }
+    #soon {
+        line-height: 5;
+    }
     .add {
+        top: 78%;
         width: 50px;
         height: 50px;
     }
@@ -357,6 +376,14 @@ body {
         height: 200px;
         width: 250px;
     }
+    .add {
+        top: 76%;
+        width: 50px;
+        height: 50px;
+    }
+    .add i {
+        font-size: 30px;
+    }
     #text {
         margin: 0;
         margin-top: 20rem;
@@ -379,9 +406,6 @@ body {
     }
     .hero p {
         text-align: center;
-    }
-    .add {
-        margin-bottom: 0;
     }
     .all-link ul li {
         font-size: 30px;
