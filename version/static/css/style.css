@@ -197,3 +197,30 @@ body {
         width: 45px;
     }
 }
+
+
+.modal{
+    z-index: 9999;
+    opacity: 2;
+}
+#click{
+    /* margin-top: 5rem; */
+    z-index: 1;
+    color: #fff;
+
+}
+.link-item p{
+    font-size: 25px;
+    margin-left: 1rem;
+   
+    color: #fff;
+    animation: blink 2s linear infinite;
+
+}
+@keyframes blink{
+    
+    50%{
+opacity: 0;
+
+    }
+}
