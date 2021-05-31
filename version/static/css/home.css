@@ -263,6 +263,13 @@ body {
 
 /* MEDIA QUERY STARTS */
 
+@media screen and (max-width: 1400px) {
+    body {
+        height: fit-content;
+        overflow: auto;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     body {
         height: fit-content;
