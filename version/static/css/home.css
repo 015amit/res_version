@@ -449,3 +449,8 @@ body {
         height: 100px;
     }
 }
+
+#cover{
+    width: 450px;
+    height: 500px;
+}
