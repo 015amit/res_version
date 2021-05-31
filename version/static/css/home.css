@@ -8,7 +8,7 @@
 /* BODY START */
 
 body {
-    overflow: auto;
+    overflow: hidden;
     min-height: 100vh;
 }
 
@@ -337,6 +337,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        height: fit-content;
+        overflow: hidden;
+    }
     #theme {
         width: 707px;
         top: 10rem;
