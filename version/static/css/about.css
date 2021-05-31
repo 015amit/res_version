@@ -56,7 +56,9 @@ body {
     transition: transform 0.5s;
 }
 
-img:hover {
+.imgBx1 img:hover,
+.imgBx2 img:hover,
+.imgBx3 img:hover {
     transform: scale(1.1);
 }
 
