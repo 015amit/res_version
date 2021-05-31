@@ -103,6 +103,10 @@ body {
     background: #161616;
     z-index: 99;
 }
+#cover{
+    width: 90%;
+    height: 90%;
+}
 
 .link-item a::before {
     content: "";
