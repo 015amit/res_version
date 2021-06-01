@@ -688,7 +688,7 @@ data = {
             "linkedin": "https://www.linkedin.com/in/prajapatinitin98",
         },
         {
-            "name": "Priya Choudhary",
+            "name": "Priya Chowdhury",
             "roll": "077",
             "github": "https://github.com/priya077 ",
             "linkedin": "",
