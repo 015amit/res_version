@@ -265,7 +265,7 @@ data = {
             "linkedin": "https://www.linkedin.com/in/shanoorahmed/",
         },
         {
-            "name": "Shobit Samaria",
+            "name": "Shobhit Samaria",
             "roll": "099",
             "github": "https://github.com/shobhit099",
             "linkedin": "https://www.linkedin.com/mwlite/in/shobhit-samaria-1a484a202",
