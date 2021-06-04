@@ -20,13 +20,17 @@ def about():
 def contact():
     return render_template('contact.html', title="Contact Us")
 
-# @app.route('/events')
-# def events():
-#     return render_template('events.html', title="Events", events=allevents['event'])
+@app.route('/events')
+def events():
+    return render_template('events.html', title="Events", events=allevents['event'])
 
-# @app.route('/events/<int:id>')
-# def desc(id):
-#     return render_template('desc.html', id=id, event=allevents['event'][id-1])
+@app.route('/events/<int:id>')
+def desc(id):
+    return render_template('desc.html', id=id, event=allevents['event'][id-1])
+
+@app.route('/events/<int:id>/registration')
+def register(id):
+    return render_template('registration.html', title="Registration", id=id )
 
 @app.route('/teams/<string:name>')
 def teams(name):
