@@ -13,20 +13,17 @@ body {
     background-attachment: fixed;
     background-blend-mode: overlay;
     background-position: center;
+    overflow: hidden;
 }
 
-
-/* 
-.container {
+.mycontainer {
     position: relative;
     width: 100%;
-    margin-top: 5%;
-    justify-content: center;
-    align-items: center;
-} */
+    /* margin-top: 5%; */
+}
 
 iframe {
     width: 100%;
-    /* height: fit-content; */
-    margin-top: 5%;
+    height: 80vh;
+    margin: 50px auto;
 }
