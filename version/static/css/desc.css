@@ -13,30 +13,6 @@ body {
     font-family: "Bellota", "Belgrano", serif;
 }
 
-.main2 {
-    width: 100%;
-    /* height: 600px; */
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slide {
-    margin-top: -10%;
-    width: 85%;
-}
-
-.head {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-    justify-content: center;
-}
-
 .head h1 {
     color: #fff;
     font-weight: bolder;
@@ -56,9 +32,35 @@ body {
     }
 }
 
+.main2 {
+    width: 100%;
+    height: 600px;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    margin-top: -10%;
+    width: 85%;
+    height: 80%;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+}
+
 .content {
     display: flex;
     width: 100%;
+    height: 80%;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -157,51 +159,43 @@ body {
     color: #fff;
 }
 
-
-/* 
-.footer {
-    bottom: 0;
-    height: 4%;
-} */
-
 @media screen and (max-width: 1080px) {
-    .slide {
-        margin-top: 5%;
+    .tabcontent a {
+        font-size: 16px;
+        padding: 0.8rem;
     }
-    .card {
-        width: 84%;
-        height: 1200px;
+    .head h1 {
+        font-size: 39px;
     }
-    .footer {
-        margin-top: 295px;
+    .prev,
+    .next {
+        font-size: 22px;
+    }
+    .card-header ul li {
+        font-size: 14px;
+    }
+    .card-text {
+        font-size: 22px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .card-header ul li {
-        font-size: 10px;
-    }
+    /* 
     .slide {
         margin-top: 5%;
     }
-    /* .card {
-        width: 84%;
-        height: 100%;
-    } */
-    .card-text {
-        font-size: 18px;
+    .content {
+        height: 80%;
     }
+    
     .imgbox {
         height: 80px;
         width: 80px;
     }
-    .head h1 {
-        font-size: 35px;
-    }
-    .prev,
-    .next {
-        font-size: 18px;
-    }
+    
+    .head {
+        margin-top: -50px;
+    } */
     .tab {
         flex-direction: column;
         box-shadow: 2px 1px 2px grey;
@@ -213,7 +207,21 @@ body {
         width: 50%;
         margin: auto;
     }
-    .head {
-        margin-top: -50px;
+    .tabcontent a {
+        font-size: 13px;
+        padding: 0.5rem;
+    }
+    .head h1 {
+        font-size: 35px;
+    }
+    .prev,
+    .next {
+        font-size: 18px;
+    }
+    .card-header ul li {
+        font-size: 10px;
+    }
+    .card-text {
+        font-size: 18px;
     }
 }
