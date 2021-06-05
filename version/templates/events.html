@@ -2,21 +2,22 @@
 
 <link rel="stylesheet" href="static/css/events.css" />
 <title>{{title}}</title>
-
 {% endblock %} {% block content %}
-<h1>Events</h1>
-<div class="container1">
-  {% for event in events %}
-  <div class="mycard">
-    <div class="img-container">
-      <img class="imgbx" src="static/images/events/back3.jpg" alt="mask pic" />
+<div class="main">
+    <h1>Events</h1>
+    <div class="container1">
+        {% for event in events %}
+        <div class="mycard">
+            <div class="img-container">
+                <img class="imgbx" src="static/images/events/back3.jpg" alt="mask pic" />
+            </div>
+            <div class="details">
+                <h2>{{event['name']}}</h2>
+                <a href="/events/{{event['id']}}">Know More</a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    <div class="details">
-      <h2>{{event['name']}}</h2>
-      <a href="/events/{{event['id']}}">Know More</a>
-    </div>
-  </div>
-  {% endfor %}
 </div>
 
 {% include "footer.html" %} {% endblock %}

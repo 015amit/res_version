@@ -20,40 +20,22 @@
     justify-content: center;
     align-items: center;
     padding: 0.3rem;
-}
-
-h5 {
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.img {
-    width: 100px;
-    height: 100px;
-}
-
-.one p,
-.two p,
-.three p,
-.four p {
-    font-size: 15px;
-    justify-content: space-around;
-    line-height: 1.4;
+    width: 100%;
 }
 
 @media screen and (max-width: 1080px) {
-    .footer {
+    /* .footer {
         bottom: 0;
         height: 4%;
-    }
+    } */
 }
 
 @media screen and (max-width: 768px) {
     #quote {
         font-size: 15px;
     }
-    .footer {
+    /* .footer {
         bottom: 0;
         height: 4%;
-    }
+    } */
 }
