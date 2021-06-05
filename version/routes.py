@@ -30,7 +30,7 @@ def desc(id):
 
 @app.route('/events/<int:id>/registration')
 def register(id):
-    return render_template('registration.html', title="Registration", id=id )
+    return render_template('register.html', title="Registration", id=id )
 
 @app.route('/teams/<string:name>')
 def teams(name):
