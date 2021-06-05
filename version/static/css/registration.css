@@ -13,22 +13,27 @@ body {
     background-attachment: fixed;
     background-blend-mode: overlay;
     background-position: center;
+<<<<<<< HEAD
     
+=======
+    overflow: hidden;
+>>>>>>> Version/main
 }
 
-
-/* 
-.container {
+.mycontainer {
     position: relative;
     width: 100%;
-    margin-top: 5%;
-    justify-content: center;
-    align-items: center;
-} */
+    /* margin-top: 5%; */
+}
 
 iframe {
     width: 100%;
+<<<<<<< HEAD
     height: 480px;
     /* height: fit-content; */
     margin-top: 1%;
+=======
+    height: 80vh;
+    margin: 50px auto;
+>>>>>>> Version/main
 }
