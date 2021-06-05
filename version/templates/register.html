@@ -4,6 +4,10 @@
 {% endblock %} {% block content %}
 <h1 style="margin-bottom: 2rem; margin-top: 41px">Register Now!</h1>
 <h2>Personal Details: </h2>
+
+<form action="" method="POST">
+
+
 <div class="mycard">
 
     <div class="content">
@@ -14,11 +18,11 @@
                 <!-- Your Email -->
                 <tr>
                     <td><label id="email">Name</label></td>
-                    <td><i class="fas fa-user"></i><input type="email" id="name" placeholder="Name" required></td>
+                    <td><i class="fas fa-user"></i><input type="email" id="name" placeholder="Name" name="name" required></td>
                 </tr>
                 <tr>
                     <td><label id="email">Email</label></td>
-                    <td><i class="fas fa-envelope"></i><input type="email" id="name" placeholder="Email" required></td>
+                    <td><i class="fas fa-envelope"></i><input type="email" id="name" placeholder="Email"  name="email" required></td>
                 </tr>
 
                
@@ -26,7 +30,7 @@
                 <!-- Your Gender -->
                 <tr>
                     <td><label id="degree">Gender</label></td>
-                    <td><input type="radio" id="male" name="gender" value="male">
+                    <td><input type="radio" id="male" name="gender" value="male" name="gender" >
                         <label for="female">Male</label>
                         <input type="radio" id="female" name="gender" value="female">
                         <label for="female">Female</label>
@@ -41,19 +45,19 @@
                 <!-- Your Contact Number -->
                 <tr>
                     <td><label id="contact">Contact Number(WhatsApp)</label></td>
-                    <td><i class="fas fa-phone"></i><input type="tel" id="contact" placeholder="Your Contact Number" max="9999999999" min="6000000000" required></td>
+                    <td><i class="fas fa-phone"></i><input type="tel" id="contact" name="contact" placeholder="Your Contact Number" max="9999999999" min="6000000000" required></td>
                 </tr>
 
                 <tr>
                     <td><label id="contact">Permanent Roll No/Registration No(College)</label></td>
-                    <td><i class="fas fa-number"></i><input type="tel" id="contact" placeholder="" max="9999999999" min="6000000000" required></td>
+                    <td><i class="fas fa-number"></i><input type="tel" id="contact" name="roll" placeholder="" max="9999999999" min="6000000000" required></td>
                 </tr>
 
 
               
                 <tr>
                     <td><label id="year">Year of Study</label></td>
-                    <td><select id="year" placeholder="Year" required>
+                    <td><select id="year" placeholder="Year" name="year" required>
                         <option value="first">First</option>
                         <option value="second">Second</option>
                         <option value="third">Third</option>
@@ -64,12 +68,12 @@
              
                 <tr>
                     <td><label id="hack">Hackerearth Id</label></td>
-                    <td><i class="fas fa-city"></i><input type="text" id="city" placeholder="City" required></td>
+                    <td><i class="fas fa-city"></i><input type="text" name="hackid" id="city" placeholder="City" required></td>
                 </tr>
 
                    <td><label id="instituteid">Proof of Identity(Id Card/Admission letter)</label></td>
                     <td><label id="upload">Upload</label>
-                        <input type="file" accept="image/*" id="instituteidfile"></td>
+                        <input type="file" accept="image/*" name="img" id="instituteidfile"></td>
                 </tr>
               
             </tbody>
@@ -95,22 +99,22 @@
            
                 <tr>
                     <td><label id="institute">Institute you're representing[*Full Name] &nbsp; &nbsp; </label></td>
-                    <td><i class="fas fa-university"></i><input type="text" id="institute" placeholder="Institute" required></td>
+                    <td><i class="fas fa-university"></i><input type="text" name="iname" id="institute" placeholder="Institute" required></td>
                 </tr>
                 <!-- Your Institute's Postal Address -->
                 <tr>
                     <td><label id="instituteaddress">Your Institute's Postal Address</label></td>
-                    <td><i class="fas fa-map-marked-alt"></i><textarea id="instituteaddress" rows="4" placeholder="Institute's Postal Address" required></textarea></td>
+                    <td><i class="fas fa-map-marked-alt"></i><textarea id="instituteaddress" name="address" rows="4" placeholder="Institute's Postal Address" required></textarea></td>
                 </tr>
                 <!-- City -->
                 <tr>
                     <td><label id="city">City</label></td>
-                    <td><i class="fas fa-city"></i><input type="text" id="city" placeholder="City" required></td>
+                    <td><i class="fas fa-city"></i><input type="text" id="city" name="city" placeholder="City" required></td>
                 </tr>
                 <!-- State -->
                 <tr>
                     <td><label id="state">State</label></td>
-                    <td><select id="state" placeholder="State" required>
+                    <td><select id="state" placeholder="State" name="state" required>
 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 <option value="Andhra Pradesh">Andhra Pradesh</option>
 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -151,7 +155,7 @@
                 <!-- Pincode -->
                 <tr>
                     <td><label id="pincode">Pincode</label></td>
-                    <td><i class="fas fa-map-pin"></i><input type="number" id="pincode" placeholder="Pincode" max="999999" min="100000" required></td>
+                    <td><i class="fas fa-map-pin"></i><input type="number" name="pin" id="pincode" placeholder="Pincode" max="999999" min="100000" required></td>
                 </tr>
                 <!-- Institute ID -->
                
@@ -176,4 +180,5 @@
 
     
 </div>
+</form>
 {% include "footer.html" %} {% endblock %}
