@@ -101,6 +101,7 @@ h1 {
 }
 
 .container1 {
+    min-height: 80%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
