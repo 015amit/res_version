@@ -90,15 +90,15 @@ body {
 }
 
 .tabcontent {
-    height: 285px;
+    height: 90%;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 17px;
-    letter-spacing: 1px;
-    overflow-y: scroll;
+    letter-spacing: 0.7px;
+    /* overflow-y: scroll; */
 }
 
 .tab {
@@ -137,8 +137,15 @@ body {
 
 .tabcontent {
     display: none;
+    /* margin-top: 40px; */
+    margin: auto;
     padding: 6px 12px;
     border-top: none;
+}
+
+.tabcontent p,
+.tabcontent li {
+    font-size: 18px;
 }
 
 .tabcontent a {
@@ -206,6 +213,13 @@ body {
         padding: 0.2rem;
         width: 50%;
         margin: auto;
+    }
+    .tabcontent {
+        margin-top: 20px;
+    }
+    .tabcontent p,
+    .tabcontent li {
+        font-size: 13px;
     }
     .tabcontent a {
         font-size: 13px;
