@@ -32,14 +32,40 @@ body {
     }
 }
 
+
+/* 
+.main {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
 .main2 {
     width: 100%;
     height: 600px;
+    position: relative;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note {
+    width: 100%;
+    margin-top: -8%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .slide {
@@ -98,7 +124,6 @@ body {
     align-items: center;
     font-size: 17px;
     letter-spacing: 0.7px;
-    /* overflow-y: scroll; */
 }
 
 .tab {
@@ -137,8 +162,7 @@ body {
 
 .tabcontent {
     display: none;
-    /* margin-top: 40px; */
-    margin: auto;
+    margin: auto 40px;
     padding: 6px 12px;
     border-top: none;
 }
@@ -160,6 +184,7 @@ body {
 .tabcontent a:hover {
     background: #09ccee;
     color: #000;
+    font-weight: 700;
 }
 
 .active {
@@ -203,6 +228,9 @@ body {
     .head {
         margin-top: -50px;
     } */
+    .slide {
+        margin-top: -40%;
+    }
     .tab {
         flex-direction: column;
         box-shadow: 2px 1px 2px grey;
@@ -215,7 +243,7 @@ body {
         margin: auto;
     }
     .tabcontent {
-        margin-top: 20px;
+        margin: 10px;
     }
     .tabcontent p,
     .tabcontent li {
@@ -237,5 +265,10 @@ body {
     }
     .card-text {
         font-size: 18px;
+    }
+    .note {
+        margin-top: -20%;
+        font-size: 16px;
+        font-weight: 600;
     }
 }

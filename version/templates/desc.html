@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block header %}
 <link rel="stylesheet" href="{{url_for('static', filename='css/desc.css')}}" />
-<title>{{event['name']}}</title>
+<title>Scrim 1</title>
+<!-- <title>{{event['name']}}</title> -->
 
 {% endblock %} {% block content %}
 <div class="main2">
@@ -12,7 +13,8 @@
     <div class="slide" id="slide1">
         <div class="head">
 
-            <h1>{{event['name']}}</h1>
+            <!-- <h1>{{event['name']}}</h1> -->
+            <h1>Scrim 1</h1>
         </div>
         <div class="content">
 
@@ -21,16 +23,19 @@
                     <button class="tablinks active" onclick="openTab(event, 'Description')">
                         Description
                     </button>
+
+                    <button class="tablinks" onclick="openTab(event, 'Format')">
+                        Format
+                      </button>
+
                     <button class="tablinks" onclick="openTab(event, 'Rules')">
                         Rules
                     </button>
-                    <!--
-                    <button class="tablinks" onclick="openTab(event, 'Format')">
-            Format
-          </button> -->
+
                     <button class="tablinks" onclick="openTab(event, 'Register')">
                         Register
                     </button>
+
                     <button class="tablinks" onclick="openTab(event, 'Contact')">
                         Contact
                     </button>
@@ -39,17 +44,15 @@
                 <div id="Description" class="tabcontent active" style="display: flex; text-align: left;">
                     <!-- <p>{{event['desc']}}</p> -->
 
-                    <p>Scrims is being conducted by Version, under Version 21.</p>
-                    <p>It is is a part of the Scrims initiative.</p>
-                    <p>This contest will check your problem solving skill as well as evaluate how fast can you solve all the problems.</p>
+                    <p>The Scrim is initiated and being conducted by Version 21.</p>
+                    <p>And this year, Version 21 presents you with the very first edition of the Scrim Initiative- Scrim 1.</p>
+                    <p>This contest will check your problem-solving skill.</p>
                     <p>Participate and outsmart the other participants to reach at the peak of the Leaderboard.</p>
                     <p>May the best coder win!</p>
-                    <p>Round 1 Starts at 11:30 AM, 15 June 2021</p>
+                    <p>Starts at 08:00 PM, 12 June 2021</p>
                 </div>
 
-                <div id="Rules" class="tabcontent" style="text-align: left;">
-                    <!-- <p>{{event['rules']}}</p> -->
-
+                <div id="Format" class="tabcontent">
                     <ul>
                         <li>This is an open coding contest, hosted on hackerearth.</li>
                         <li>There will be 8 problems, and you will get 2 hours and 30 minutes to solve them.</li>
@@ -57,28 +60,31 @@
                         <li>The Contest is open i.e. it will not be proctored. </li>
                         <li>At the end of Contest, participants having maximum points will win.</li>
                     </ul>
+                </div>
 
-
+                <div id="Rules" class="tabcontent" style="text-align: left;">
+                    <!-- <p>{{event['rules']}}</p> -->
+                    <ul>
+                        <li>It is an individual event.</li>
+                        <li>Doubts regarding anything should be asked directly to the event coordinators only. Posting it in public forums will not be entertained.</li>
+                        <li>Unfair means to guarantee advantage will lead to disqualification.</li>
+                        <li>Plagiarism will lead to disqualification.</li>
+                        <li>The solutions should not be made public or open-sourced during the contest.</li>
+                        <li>The decision of the organizers will be final and binding in any case of disputes.</li>
+                    </ul>
+                    <p>Judging Criteria: At the end of the contest, the participants having highest score on the leaderboard wins. Scores will be aggregated based upon the results of both the rounds.</p>
 
 
 
                 </div>
-                <!--
-                <div id="Format" class="tabcontent">
-                    <h3>Format</h3>
-                    <p>Format is the capital of Japan.</p>
-                </div> -->
-
                 <div id="Register" class="tabcontent">
-                    <!-- <h3>Contest</h3> -->
-                    <hr>
-
-                    <a href="{{ url_for('register', id = id) }}">Registration Link</a>
+                    <a href="{{ url_for('register', id = id) }}">Scrim 1 Registration Link</a>
                 </div>
 
                 <div id="Contact" class="tabcontent">
-                    <h4>Contact- 123456789</h4>
-                    <h4>Contact- 123456789</h4>
+                    <a href="mailto:contact@version21.in" style="font-weight: 800;">
+                        <i class="fas fa-envelope"></i>&nbsp; contact@version21.in
+                    </a>
                 </div>
             </div>
         </div>
@@ -90,6 +96,10 @@
                     <a href="{{url_for('desc', id = id+1)}}"><i class="fas fa-chevron-right" id="next"></i></a> {% endif %}
                 </div> -->
 </div>
+<div class="note">
+    <p>Note- Registrations are compulsory for participation</p>
+</div>
+
 <script>
     function openTab(evt, tabName) {
         var i, tabcontent, tablinks;
@@ -107,5 +117,4 @@
 </script>
 
 {% include "footer.html" %} {% endblock %}
-</div>
 </div>
