@@ -16,39 +16,60 @@
         </div>
         <div class="content">
 
-            <div class="card text-center">
-                <div class="tab">
+            <div class="card ">
+                <div class="tab text-center">
                     <button class="tablinks active" onclick="openTab(event, 'Description')">
-            Description
-          </button>
-                    <!-- <button class="tablinks" onclick="openTab(event, 'Rules')">
-            Rules
-          </button>
+                        Description
+                    </button>
+                    <button class="tablinks" onclick="openTab(event, 'Rules')">
+                        Rules
+                    </button>
+                    <!--
                     <button class="tablinks" onclick="openTab(event, 'Format')">
             Format
           </button> -->
-                    <button class="tablinks" onclick="openTab(event, 'Contest')">
-            Contest
-          </button>
+                    <button class="tablinks" onclick="openTab(event, 'Register')">
+                        Register
+                    </button>
                     <button class="tablinks" onclick="openTab(event, 'Contact')">
-            Contact
-          </button>
+                        Contact
+                    </button>
                 </div>
 
-                <div id="Description" class="tabcontent active" style="display: flex">
-                    <p>{{event['desc']}}</p>
+                <div id="Description" class="tabcontent active" style="display: flex; text-align: left;">
+                    <!-- <p>{{event['desc']}}</p> -->
+
+                    <p>Scrims is being conducted by Version, under Version 21.</p>
+                    <p>It is is a part of the Scrims initiative.</p>
+                    <p>This contest will check your problem solving skill as well as evaluate how fast can you solve all the problems.</p>
+                    <p>Participate and outsmart the other participants to reach at the peak of the Leaderboard.</p>
+                    <p>May the best coder win!</p>
+                    <p>Round 1 Starts at 11:30 AM, 15 June 2021</p>
                 </div>
 
-                <!-- <div id="Rules" class="tabcontent">
-                    <p>{{event['rules']}}</p>
-                </div>
+                <div id="Rules" class="tabcontent" style="text-align: left;">
+                    <!-- <p>{{event['rules']}}</p> -->
 
+                    <ul>
+                        <li>This is an open coding contest, hosted on hackerearth.</li>
+                        <li>There will be 8 problems, and you will get 2 hours and 30 minutes to solve them.</li>
+                        <li>Points are distributed according to problem level.</li>
+                        <li>The Contest is open i.e. it will not be proctored. </li>
+                        <li>At the end of Contest, participants having maximum points will win.</li>
+                    </ul>
+
+
+
+
+
+                </div>
+                <!--
                 <div id="Format" class="tabcontent">
                     <h3>Format</h3>
                     <p>Format is the capital of Japan.</p>
                 </div> -->
 
-                <div id="Contest" class="tabcontent">
+                <div id="Register" class="tabcontent">
                     <!-- <h3>Contest</h3> -->
                     <hr>
 
