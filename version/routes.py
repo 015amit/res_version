@@ -28,9 +28,24 @@ def events():
 def desc(id):
     return render_template('desc.html', id=id, event=allevents['event'][id-1])
 
-@app.route('/events/<int:id>/registration')
+@app.route('/events/<int:id>/registration', methods=['GET','POST'])
 def register(id):
-    return render_template('registration.html', title="Registration", id=id )
+    if request.method=='POST':
+        name=request.form.get('name')
+        email=request.form.get('email')
+        gender=request.form.get('gender')
+        contact=request.form.get('contact')
+        roll=request.form.get('roll')
+        year=request.form.get('year')
+        hackid=request.form.get('hackid')
+        iname=request.form.get('iname')
+        address = request.form.get('address')
+        city=request.form.get('city')
+        state=name=request.form.get('state')
+        pin=name=request.form.get('pin')
+        pass
+    
+    return render_template('register.html', title="Registration", id=id )
 
 @app.route('/teams/<string:name>')
 def teams(name):
