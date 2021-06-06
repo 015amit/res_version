@@ -44,8 +44,8 @@ def register(id):
         iname=request.form.get('iname')
         address = request.form.get('address')
         city=request.form.get('city')
-        state=name=request.form.get('state')
-        pin=name=request.form.get('pin')
+        state=request.form.get('state')
+        pin=request.form.get('pin')
         img = request.files['Image']
         email1 = User.query.filter_by(email=email).first()
         contact1 = User.query.filter_by(contact=contact).first()
