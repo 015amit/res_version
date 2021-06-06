@@ -3,6 +3,7 @@
 <title>{{title}}</title>
 {% endblock %} {% block content %}
 <h1 style="margin-bottom: 2rem; margin-top: 41px">Register Now!</h1>
+{% include 'message.html' %}
 <h2>Personal Details: </h2>
 
 <form action="" method="POST">
@@ -18,7 +19,7 @@
                 <!-- Your Email -->
                 <tr>
                     <td><label id="email">Name</label></td>
-                    <td><i class="fas fa-user"></i><input type="email" id="name" placeholder="Name" name="name" required></td>
+                    <td><i class="fas fa-user"></i><input type="text" id="name" placeholder="Name" name="name" required></td>
                 </tr>
                 <tr>
                     <td><label id="email">Email</label></td>
@@ -45,14 +46,13 @@
                 <!-- Your Contact Number -->
                 <tr>
                     <td><label id="contact">Contact Number(WhatsApp)</label></td>
-                    <td><i class="fas fa-phone"></i><input type="tel" id="contact" name="contact" placeholder="Your Contact Number" max="9999999999" min="6000000000" required></td>
+                    <td><i class="fas fa-phone"></i><input type="tel" maxlength="10" minlength="10" id="contact" name="contact" placeholder="Your Contact Number" required></td>
                 </tr>
 
                 <tr>
                     <td><label id="contact">Permanent Roll No/Registration No(College)</label></td>
-                    <td><i class="fas fa-number"></i><input type="tel" id="contact" name="roll" placeholder="" max="9999999999" min="6000000000" required></td>
+                    <td><i class="fas fa-number"></i><input type="text" id="contact" name="roll" placeholder="" required></td>
                 </tr>
-
 
               
                 <tr>
@@ -68,7 +68,7 @@
              
                 <tr>
                     <td><label id="hack">Hackerearth Id</label></td>
-                    <td><i class="fas fa-city"></i><input type="text" name="hackid" id="city" placeholder="City" required></td>
+                    <td><input type="text" name="hackid" id="city" placeholder="Hackerearth id" required></td>
                 </tr>
 
                    <td><label id="instituteid">Proof of Identity(Id Card/Admission letter)</label></td>
