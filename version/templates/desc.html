@@ -3,8 +3,7 @@
 <title>Scrim 1</title>
 <!-- <title>{{event['name']}}</title> -->
 
-{% endblock %} {% block content %}
-{% include 'message.html' %}
+{% endblock %} {% block content %} {% include 'message.html' %}
 <div class="main2">
     <!-- <div class="prev">
         {% if id == 1 %}
@@ -64,19 +63,18 @@
                 </div>
 
                 <div id="Rules" class="tabcontent" style="text-align: left;">
-                    <!-- <p>{{event['rules']}}</p> -->
-                    <ul>
-                        <li>It is an individual event.</li>
-                        <li>Doubts regarding anything should be asked directly to the contacts provided by Team Version. Posting it in public forums will not be entertained.</li>
-                        <li>Unfair means to guarantee advantage will lead to disqualification.</li>
-                        <li>Plagiarism will lead to disqualification.</li>
-                        <li>The solutions should not be made public or open-sourced during the contest.</li>
-                        <li>The decision of the organizers will be final and binding in any case of disputes.</li>
-                    </ul>
-                    <p>Judging Criteria: At the end of the contest, the participants having highest score on the leaderboard win.</p>
-
-
-
+                    <div class="rules">
+                        <!-- <p>{{event['rules']}}</p> -->
+                        <ul>
+                            <li>It is an individual event.</li>
+                            <li>Doubts regarding anything should be asked directly to the contacts provided by Team Version. Posting it in public forums will not be entertained.</li>
+                            <li>Unfair means to guarantee advantage will lead to disqualification.</li>
+                            <li>Plagiarism will lead to disqualification.</li>
+                            <li>The solutions should not be made public or open-sourced during the contest.</li>
+                            <li>The decision of the organizers will be final and binding in any case of disputes.</li>
+                        </ul>
+                        <p>Judging Criteria: At the end of the contest, the participants having highest score on the leaderboard win.</p>
+                    </div>
                 </div>
                 <div id="Register" class="tabcontent">
                     <a href="{{ url_for('register', id = id) }}">Scrim 1 Registrations</a>

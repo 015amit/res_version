@@ -243,11 +243,15 @@ body {
         margin: auto;
     }
     .tabcontent {
-        margin: 10px;
+        overflow: scroll;
+        margin: 5px 20px;
+    }
+    .rules {
+        margin-top: 60px;
     }
     .tabcontent p,
     .tabcontent li {
-        font-size: 13px;
+        font-size: 11px;
     }
     .tabcontent a {
         font-size: 13px;
