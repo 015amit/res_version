@@ -222,7 +222,7 @@ a {
 
 @media screen and (max-width: 768px) {
     .mycard {
-        height: 255px;
+        height: 350px;
         margin: 3rem 0.5rem;
     }
     h1 {
