@@ -1,10 +1,11 @@
 
-from flask import render_template,session,jsonify,request,redirect,flash,url_for
+from flask import render_template,session,jsonify,request,redirect,flash,url_for,send_file
 from flask.helpers import make_response
 from werkzeug.utils import redirect
 from version import app,db
 from version.models import User
 import json
+from io import BytesIO
 
 from .teams import data, senior, junior_head
 from .events import allevents
@@ -45,6 +46,8 @@ def register(id):
         city=request.form.get('city')
         state=name=request.form.get('state')
         pin=name=request.form.get('pin')
+        img = request.files['Image']
+
         email1 = User.query.filter_by(email=email).first()
         contact1 = User.query.filter_by(contact=contact).first()
         if email1:
@@ -55,7 +58,7 @@ def register(id):
             return redirect(url_for('register',id=id))
         entry = User(name=name,email=email, gender=gender, contact=contact, roll=roll,
                 year=year, hackid=hackid, iname=iname,address=address, city=city,
-                state=state, pin=pin)
+                state=state, pin=pin, pic_name=contact, pic_data=img.read())
         db.session.add(entry)
         db.session.commit()
         flash("You are registered successfully ")
@@ -74,3 +77,10 @@ def teams(name):
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html', title="Page Not Found"), 404
+
+
+@app.route('/show/<int:id>')
+def getimg(id):
+    img = User.query.filter_by(contact=id).first()
+    get = send_file(BytesIO(img.pic_data), attachment_filename='flask.pdf')
+    return get
