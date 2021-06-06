@@ -247,7 +247,14 @@ body {
         margin: 5px 20px;
     }
     .rules {
-        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 160px;
+    }
+    .desc,
+    .format {
+        margin-top: 80px;
     }
     .tabcontent p,
     .tabcontent li {
