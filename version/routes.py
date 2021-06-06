@@ -1,7 +1,9 @@
 
-from flask import render_template,session,jsonify,request
+from flask import render_template,session,jsonify,request,redirect,flash,url_for
 from flask.helpers import make_response
-from version import app
+from werkzeug.utils import redirect
+from version import app,db
+from version.models import User
 import json
 
 from .teams import data, senior, junior_head
@@ -43,8 +45,13 @@ def register(id):
         city=request.form.get('city')
         state=name=request.form.get('state')
         pin=name=request.form.get('pin')
-        pass
-    
+        entry = User(name=name,email=email, gender=gender, contact=contact, roll=roll,
+                year=year, hackid=hackid, iname=iname,address=address, city=city,
+                state=state, pin=pin)
+        db.session.add(entry)
+        db.session.commit()
+        flash("You are registered successfully ")
+        return redirect(url_for('desc',id=id))
     return render_template('register.html', title="Registration", id=id )
 
 @app.route('/teams/<string:name>')
