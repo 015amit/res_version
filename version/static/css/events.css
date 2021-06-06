@@ -109,6 +109,7 @@ h1 {
 }
 
 .container1 {
+    min-height: 80%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -178,6 +179,7 @@ h1 {
     width: 90%;
     height: 100%;
     object-fit: contain;
+    transition: 2s ease-out;
 }
 
 .details {
@@ -200,6 +202,9 @@ h2 {
 
 .mycard:hover h2 {
     transform: scale(1.1);
+}
+.mycard:hover .imgbox {
+    transform: scale(1.2);
 }
 
 a {
