@@ -45,6 +45,14 @@ def register(id):
         city=request.form.get('city')
         state=name=request.form.get('state')
         pin=name=request.form.get('pin')
+        email1 = User.query.filter_by(email=email).first()
+        contact1 = User.query.filter_by(contact=contact).first()
+        if email1:
+            flash('This email has already been taken !')
+            return redirect(url_for('register',id=id))
+        if  contact1:
+            flash('This Mobile Number has already been taken !')
+            return redirect(url_for('register',id=id))
         entry = User(name=name,email=email, gender=gender, contact=contact, roll=roll,
                 year=year, hackid=hackid, iname=iname,address=address, city=city,
                 state=state, pin=pin)
