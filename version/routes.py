@@ -80,6 +80,7 @@ def page_not_found(e):
 
 @app.route('/show/<int:id>')
 def getimg(id):
-    img = User.query.filter_by(contact=id).first()
-    get = send_file(BytesIO(img.pic_data), attachment_filename='flask.pdf')
+    img = User.query.filter_by(id=id).first()
+    get = send_file(BytesIO(img.pic_data), attachment_filename='flask.jpg')
     return get
+    
