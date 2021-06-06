@@ -15,10 +15,14 @@ body {
 
 .main {
     min-height: 100vh;
+    width: 100%;
+    height: 700px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    z-index: 0;
 }
 
 .card1 {
@@ -226,15 +230,7 @@ a {
     }
 }
 
-.main {
-    width: 100%;
-    height: 700px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .slide {
     width: 85%;
