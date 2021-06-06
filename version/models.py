@@ -15,6 +15,8 @@ class User(db.Model):
     city = db.Column(db.String(50), nullable = False)
     state = db.Column(db.String(50), nullable = False)
     pin = db.Column(db.String(20), nullable = False)
+    pic_name = db.Column(db.String(200))
+    pic_data = db.Column(db.LargeBinary)
 
 
     def __repr__(self):
