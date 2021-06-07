@@ -18,24 +18,6 @@ body {
 }
 
 
-/* body {
-    overflow: hidden;
-    min-height: 100vh;
-} */
-
-
-/* .main1 {
-    overflow: hidden;
-    position: absolute;
-    height: 60rem;
-    width: 100%;
-    background: url("../images/bg.svg") rgba(0, 0, 0, 0.971);
-    background-blend-mode: overlay;
-    background-position: center;
-    filter: grayscale(1);
-} */
-
-
 /* MENU BAR START */
 
 .links {
@@ -156,9 +138,11 @@ body {
     cursor: pointer;
     z-index: 9;
 }
-.all-link ul li a img:hover{
+
+.all-link ul li a img:hover {
     transform: scale(1.1);
 }
+
 .all-link ul li i:hover {
     transform: scale(1.1);
 }
@@ -234,6 +218,7 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+
 #soon #m1 {
     font-size: 28px;
     margin-top: -3rem;
@@ -241,29 +226,33 @@ body {
     font-weight: 500;
     margin-left: 2rem;
 }
-.mar1{
+
+.mar1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -5rem;
+    margin-top: -4rem;
     padding: 0 0.5rem;
 }
-.mar1 i{
+
+.mar1 i {
     color: white;
     cursor: pointer;
     transition: 0.5s ease-out;
 }
-.mar1 i:hover{
+
+.mar1 i:hover {
     color: #74a0ef;
     transform: scale(1.1);
 }
-#marq{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+#marq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#m2{
+#m2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -461,6 +450,9 @@ body {
     #theme {
         width: 525px;
     }
+    #m1 {
+        font-size: 20px;
+    }
     .nitt {
         width: 60%;
         margin: 0;
@@ -494,4 +486,3 @@ body {
         height: 100px;
     }
 }
-
