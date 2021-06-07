@@ -204,6 +204,9 @@ body {
         height: 45px;
         width: 45px;
     }
+    .link-item a{
+        font-size: 18px;
+    }
 }
 
 
@@ -213,6 +216,7 @@ body {
 }
 #click{
     /* margin-top: 5rem; */
+    margin: -2rem 0;
     z-index: 1;
     color: #fff;
 
@@ -229,8 +233,8 @@ body {
     animation: blink 2s linear infinite;
 
 }
-#events{
-    font-size: 25px;
+.events{
+    /* font-size: 25px; */
     margin-left: 1rem;
    
     color: #fff;
