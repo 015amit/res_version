@@ -217,7 +217,19 @@ body {
     color: #fff;
 
 }
+#reg{
+    font-size: 15px;
+
+}
 .link-item p{
+    font-size: 25px;
+    margin-left: 1rem;
+   
+    color: #fff;
+    animation: blink 2s linear infinite;
+
+}
+#events{
     font-size: 25px;
     margin-left: 1rem;
    
