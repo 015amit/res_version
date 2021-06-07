@@ -13,14 +13,46 @@ body {
     font-family: "Bellota", "Belgrano", serif;
 }
 
-.head h1 {
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
     color: #fff;
+    text-align: center;
+}
+
+.head h1 {
     font-weight: bolder;
     font-size: 50px;
-    margin: 4rem;
+    /* margin: 2rem; */
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
+}
+
+.slide .head h6 {
+    font-size: 16px;
+    margin: 1rem;
+    font-weight: 400;
+}
+
+.slide .head a {
+    text-decoration: none;
+    font-size: 26px;
+    margin: 10px;
+    color: #fff;
+}
+
+.slide .head i {
+    transition: .2s ease-in-out;
+}
+
+.slide .head i:hover {
+    color: #74a0ef;
+    transform: scale(1.2);
 }
 
 @keyframes glow {
@@ -72,15 +104,6 @@ body {
     margin-top: -10%;
     width: 85%;
     height: 80%;
-}
-
-.head {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-    justify-content: center;
 }
 
 .content {
@@ -266,6 +289,12 @@ body {
     }
     .head h1 {
         font-size: 35px;
+    }
+    .slide .head h6 {
+        font-size: 12px;
+    }
+    .slide .head a {
+        font-size: 20px;
     }
     .prev,
     .next {
