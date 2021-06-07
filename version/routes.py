@@ -48,7 +48,6 @@ def register(id):
         state=request.form.get('state')
         pin=request.form.get('pin')
         img = request.files['Image']
-
         email1 = User.query.filter_by(email=email).first()
         contact1 = User.query.filter_by(contact=contact).first()
         if email1:
