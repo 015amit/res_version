@@ -227,6 +227,14 @@ body {
     font-weight: 600;
     z-index: 9999;
     line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#soon marquee {
+    font-size: 30px;
+    margin-top: -5rem;
 }
 
 #offset {
