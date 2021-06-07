@@ -235,6 +235,8 @@ body {
 #soon marquee {
     font-size: 30px;
     margin-top: -5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
 }
 
 #offset {
@@ -383,6 +385,9 @@ body {
         top: 76%;
         height: 200px;
         width: 250px;
+    }
+    #soon marquee {
+        font-size: 20px;
     }
     .add {
         top: 76%;
