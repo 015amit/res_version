@@ -6,6 +6,7 @@ from version import app,db
 from version.models import User
 import json
 from io import BytesIO
+import codecs
 
 from .teams import data, senior, junior_head
 from .events import allevents
@@ -84,7 +85,20 @@ def internal_server_error(e):
 
 @app.route('/show/<int:id>')
 def getimg(id):
-    img = User.query.filter_by(id=id).first()
-    get = send_file(BytesIO(img.pic_data), attachment_filename='flask.jpg')
+    user = User.query.filter_by(id=id).first()
+    header_byte = codecs.encode(user.pic_data[0:3], "hex")
+    header_byte = str(header_byte).lower()
+    header_byte = header_byte[2:8]
+    # return header_byte
+    # header_byte = user.pic_data[0:3].encode("hex").lower()
+
+    if header_byte == '255044':
+        get = send_file(BytesIO(user.pic_data), attachment_filename='flask.pdf')
+    elif header_byte == '89504e':
+        get = send_file(BytesIO(user.pic_data), attachment_filename='flask.png')
+    elif header_byte == 'ffd8ff':
+        get = send_file(BytesIO(user.pic_data), attachment_filename='flask.jpg')
+    else:
+        return "binary file"
     return get
     
