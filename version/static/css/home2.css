@@ -236,7 +236,7 @@ body {
 }
 #soon #m1 {
     font-size: 28px;
-    margin-top: -3rem;
+    margin-top: 0.5rem;
     color: rgb(255, 255, 255);
     font-weight: 500;
     margin-left: 2rem;
@@ -264,11 +264,14 @@ body {
 }
 
 #m2{
+    font-size: 21px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: 400;
+    margin-left: 0.5rem;
+    /* margin: 1rem 0; */
 }
 
 #offset {
