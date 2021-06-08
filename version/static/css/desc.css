@@ -195,7 +195,7 @@ body {
     font-size: 18px;
 }
 
-.tabcontent a {
+.tabcontent .mail {
     text-decoration: none;
     color: #fff;
     font-weight: 700;
@@ -204,9 +204,21 @@ body {
     padding: 1rem;
 }
 
-.tabcontent a:hover {
+.tabcontent .discord {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.tabcontent .mail:hover {
     background: #09ccee;
     color: #000;
+    font-weight: 700;
+}
+
+.tabcontent .discord:hover {
+    color: #74a0ef;
     font-weight: 700;
 }
 

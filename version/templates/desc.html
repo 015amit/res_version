@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% block header %}
-<link rel="stylesheet" href="{{url_for('static', filename='css/desc.css')}}" />
+<link rel="stylesheet" href="../static/css/desc.css?v=1.0" />
 <title>Scrim 1</title>
 <!-- <title>{{event['name']}}</title> -->
 
@@ -87,8 +87,12 @@
                 </div>
 
                 <div id="Contact" class="tabcontent">
-                    <a href="mailto:contact@version21.in" style="font-weight: 800;">
+                    <a class="mail" href="mailto:contact@version21.in" style="font-weight: 800;">
                         <i class="fas fa-envelope"></i>&nbsp; contact@version21.in
+                    </a>
+                    <p style="padding: 1rem;">Or</p>
+                    <a class="discord" href="https://discord.gg/dcKbGm8m" target="_blank" style="font-weight: 800;">
+                        <i class="fab fa-discord"></i>
                     </a>
                 </div>
             </div>
