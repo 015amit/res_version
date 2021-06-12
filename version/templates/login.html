@@ -1,20 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <form action="{{ url_for('login') }}" method="POST">
-            <label for="">email-id</label>
-            <input type="email" required name="email">
-            <label for="">Password</label>
-            <input type="password" required name="password">
-            <input type="submit">
-        </form>
-    </div>
-</body>
-</html>
+{% extends "base.html" %} {% block header %}
+<link rel="stylesheet" href="static/css/login.css" />
+<title>{{title}}</title>
+{% endblock %} {% block content %}
+<h1 style="margin-bottom: 2rem; margin-top: 41px">Log In!</h1>
+<div class="mycard">
+  <div class="content">
+    <table cellpadding="0" cellspacing="0">
+      <tbody>
+        <!-- Your Email -->
+        <tr>
+          <td>
+            <i class="fas fa-envelope"></i
+            ><input type="email" id="name" placeholder=" Your Email" required />
+          </td>
+        </tr>
+
+        <!-- Password -->
+        <tr>
+          <td>
+            <i class="fas fa-key"></i
+            ><input
+              type="password"
+              id="name"
+              placeholder=" Your Password"
+              required
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Login Button -->
+    <input type="submit" id="login" value="Log In" href="#" />
+    <!-- Forgot Password Link -->
+
+    <!-- Link to Register -->
+    <input
+      type="submit"
+      id="register"
+      value="Create an Account? Register?"
+      href="/register"
+    />
+  </div>
+</div>
+{% include "footer.html" %} {% endblock %}
