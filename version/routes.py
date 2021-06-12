@@ -90,13 +90,16 @@ def login():
             em = str(em).lower()
             gen = str(gen).lower()
             cont = str(cont).lower()
-            header_byte = em[0:4]+cont[0:4]+gen[0:4]
-            login_user(user)
-            return redirect(url_for('home'))
+            check_pass = em[0:4]+cont[0:4]+gen[0:4]
+            if check_pass==password:
+                login_user(user)
+                return redirect(url_for('home'))
+            flash('Incorrect Password')
+            return redirect(url_for('login'))
 
         elif user is None:
             flash("you haven't registered in any event yet ")
-            return redirect(url_for('events'))
+            return redirect(url_for('login'))
               
         else:    
             flash("Incorrect email or password")
