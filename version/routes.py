@@ -3,7 +3,7 @@ from flask import render_template,session,jsonify,request,redirect,flash,url_for
 from flask.helpers import make_response
 from werkzeug.utils import redirect
 from version import app,db
-from version.models import Scrim1, User
+from version.models import Scrim1, Scrim2, User
 from flask_login import login_user, current_user,login_required, logout_user
 import json
 from io import BytesIO
@@ -32,6 +32,17 @@ def events():
 @app.route('/events/<int:id>')
 def desc(id):
     return render_template('desc.html', id=id, event=allevents['event'][id-1])
+
+@app.route('/events/<int:id>/registration', methods=['GET','POST'])
+def registration(id):
+    if request.method=='POST':
+        user_id = request.form.get('scrim1id')
+        if id == 1:
+            user = Scrim1(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Scrim 1')
+            return redirect(url_for('profile'))
 
 @app.route('/events/<int:id>/registration', methods=['GET','POST'])
 def register(id):
@@ -111,8 +122,8 @@ def login():
 @login_required
 def profile():
     user = User.query.filter_by(id=current_user.id).first()
-    scrim1 = User.query.filter_by(user_id=user.id).first()
-    scrim2 = User.query.filter_by(user_id=user.id).first()
+    scrim1 = Scrim1.query.filter_by(user_id=current_user.id).first()
+    scrim2 = Scrim2.query.filter_by(user_id=current_user.id).first()
     if request.method == 'POST':
         user.name=request.form.get('name')
         email=request.form.get('email')
