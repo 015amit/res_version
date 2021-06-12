@@ -7,8 +7,6 @@
 /* BODY STARTS */
 
 body {
-    
-
     justify-content: center;
     align-items: center;
     background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
@@ -17,14 +15,26 @@ body {
     background-position: center;
 }
 
-.mycard {
-    height: 97%;
+.main {
+    /* min-height: 74vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
 
+.content {
+    width: 60%;
+}
+
+.mycard {
+    /* height: 97%; */
     position: relative;
-    width: 800px;
+    width: 100%;
     color: #fff;
-    margin:auto;
-    padding: 80px 40px;
+    margin: auto;
+    padding: 80px;
     margin-top: 3%;
     display: flex;
     box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
@@ -34,6 +44,20 @@ body {
     text-align: center;
     justify-content: space-around;
     cursor: pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    /* border: 1px solid rgb(255, 255, 255); */
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    /* box-shadow: 0 0 0px 1000px #000 inset; */
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 h1 {
@@ -52,13 +76,17 @@ h1 {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
     }
     to {
-        text-shadow: 0 0 15px #fff, 0 0 25px #09ccee, 0 0 25px #09ccee, 0 0 45px #09ccee;
+        text-shadow: 0 0 12px #fff, 0 0 22px #09ccee, 0 0 22px #09ccee, 0 0 42px #09ccee;
     }
 }
 
 i {
     position: absolute;
     padding: 24px;
+}
+
+table {
+    margin: auto;
 }
 
 input {
@@ -103,7 +131,9 @@ input[type="submit"] {
     border: 0;
     background: none;
     display: block;
+    margin: 20px auto;
     text-align: center;
+    padding: 14px 40px;
     outline: none;
     color: white;
     font-weight: 800;
@@ -113,9 +143,9 @@ input[type="submit"] {
 }
 
 #login {
-    border: 2px solid #2ecc71;
-    margin: 20px auto;
-    padding: 14px 40px;
+    border: 2px solid #b3d4c1;
+    /* margin: 20px auto; */
+    /* padding: 14px 40px; */
 }
 
 #login:hover {
@@ -143,28 +173,15 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 1028px) {
+    .main {
+        min-height: 100vh;
+    }
     h1 {
         font-size: 45px;
     }
     .mycard {
-        width: auto;
-        margin: 10px;
-        padding: 2px;
-    }
-    .content {
-        flex-direction: column;
-        margin: 10px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    h1 {
-        font-size: 35px;
-    }
-    .mycard {
-        width: auto;
-        margin: 10px;
-        padding: 2px;
+        margin: 50px auto;
+        padding: 30px;
     }
     .content {
         flex-direction: column;
@@ -172,6 +189,63 @@ input[type="submit"] {
     }
     input[type="email"],
     input[type="password"] {
-        width: 250px;
+        width: 220px;
+        margin: 15px auto;
+    }
+    label {
+        width: 130px;
+    }
+    i {
+        padding: 30px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        min-height: 74vh;
+    }
+    h1 {
+        font-size: 33px;
+    }
+    .mycard {
+        padding: 2px;
+    }
+    .content {
+        flex-direction: column;
+        margin: 10px;
+        width: 90%;
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: 200px;
+        margin: 15px auto;
+    }
+    i {
+        padding: 25px 13px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main {
+        min-height: 74vh;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .mycard {
+        padding: 2px;
+    }
+    .content {
+        flex-direction: column;
+        margin: 10px;
+        width: 90%;
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: 220px;
+        margin: 15px auto;
+    }
+    i {
+        padding: 30px 15px;
     }
 }

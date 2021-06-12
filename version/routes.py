@@ -77,19 +77,29 @@ def teams(name):
 
 @app.route('/login', methods=['GET','POST'])
 def login():
-  
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
         user = User.query.filter_by(email=email).first()
-
+        
+         
         if user:
-            login_user(user)
-            return redirect(url_for('home'))
+            em = user.email
+            cont = user.contact
+            gen = user.gender
+            em = str(em).lower()
+            gen = str(gen).lower()
+            cont = str(cont).lower()
+            check_pass = em[0:4]+cont[0:4]+gen[0:4]
+            if check_pass==password:
+                login_user(user)
+                return redirect(url_for('home'))
+            flash('Incorrect Password')
+            return redirect(url_for('login'))
 
         elif user is None:
             flash("you haven't registered in any event yet ")
-            return redirect(url_for('events'))
+            return redirect(url_for('login'))
               
         else:    
             flash("Incorrect email or password")
@@ -97,7 +107,7 @@ def login():
 
     return render_template('login.html')
 
-@app.route('/profile')
+@app.route('/profile', methods=['GET','POST'])
 def profile():
     user = User.query.filter_by(id=11).first()
     if request.method == 'POST':
