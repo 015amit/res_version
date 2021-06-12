@@ -108,8 +108,9 @@ def login():
     return render_template('login.html')
 
 @app.route('/profile', methods=['GET','POST'])
+@login_required
 def profile():
-    user = User.query.filter_by(id=11).first()
+    user = User.query.filter_by(id=current_user.id).first()
     if request.method == 'POST':
         user.name=request.form.get('name')
         user.email=request.form.get('email')
@@ -124,11 +125,18 @@ def profile():
         user.state=request.form.get('state')
         user.pin=request.form.get('pin')
 
+        
+
         db.session.commit()
         flash('your profile is updated successfully')
         return redirect(url_for('profile'))
     return render_template('profile.html', user=user)
 
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -138,10 +146,6 @@ def page_not_found(e):
 def internal_server_error(e):
     return render_template('500.html', title="Internal Server Error"), 500
 
-
-@app.route('/account')
-def account():
-    return render_template('account.html', title="Account")
 
 
 @app.route('/show/<int:id>')
