@@ -15,6 +15,18 @@ body {
     background-position: center;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.other {
+    width: 70%;
+}
+
 .mycard {
     position: relative;
     width: 800px;
@@ -176,6 +188,9 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 1028px) {
+    .main {
+        min-height: 100vh;
+    }
     h1 {
         font-size: 45px;
     }
@@ -215,9 +230,60 @@ h2 {
     margin: 4rem 0;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
+    .main {
+        min-height: 74vh;
+    }
     h1 {
-        font-size: 35px;
+        font-size: 33px;
+    }
+    .mycard {
+        width: auto;
+        margin: 10px;
+        padding: 30px;
+    }
+    .content {
+        flex-direction: column;
+        margin: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="select"],
+    input[type="file"],
+    select,
+    textarea,
+    input[type="password"] {
+        width: 200px;
+        margin: 15px auto;
+        font-size: 12px;
+    }
+    label {
+        width: 110px;
+        font-size: 12px;
+    }
+    i {
+        padding: 30px 15px;
+    }
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: 4rem 0;
+}
+
+@media screen and (max-width: 450px) {
+    .main {
+        min-height: 74vh;
+    }
+    .other {
+        width: 90%;
+    }
+    h1 {
+        font-size: 33px;
     }
     .mycard {
         width: auto;
@@ -229,7 +295,7 @@ h2 {
         margin: 10px;
     }
     label {
-        font-size: 13px;
+        font-size: 11px;
     }
     input[type="text"],
     input[type="email"],
@@ -240,7 +306,7 @@ h2 {
     select,
     textarea,
     input[type="password"] {
-        width: 220px;
+        width: 180px;
         margin: 15px auto;
     }
     label {
@@ -248,5 +314,6 @@ h2 {
     }
     i {
         padding: 30px 15px;
+        font-size: 11px;
     }
 }
