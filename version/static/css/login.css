@@ -16,7 +16,6 @@ body {
 }
 
 .main {
-    /* min-height: 74vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -2,122 +2,104 @@
 <link rel="stylesheet" href="{{url_for('static',filename='css/register.css')}}" />
 <title>{{title}}</title>
 {% endblock %} {% block content %}
-<h1 style="margin-bottom: 2rem; margin-top: 41px">Register Now!</h1>
-{% include 'message.html' %}
-<h2>Personal Details: </h2>
+<div class="main">
+    <div class="other">
+        <h1 style="margin-bottom: 2rem; margin-top: 41px">Register Now!</h1>
+        {% include 'message.html' %}
+        <h2>Personal Details: </h2>
 
-<form action="" method="POST" enctype="multipart/form-data">
-    <div class="mycard">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="mycard">
 
-        <div class="content">
+                <div class="content">
 
-            <table cellpadding="0" cellspacing="0">
+                    <table cellpadding="0" cellspacing="0">
 
-                <tbody>
-                    <!-- Your Email -->
-                    <tr>
-                        <td><label id="email">Name</label></td>
-                        <td><i class="fas fa-user"></i><input type="text" id="name" placeholder="Name" name="name" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label id="email">Email</label></td>
-                        <td><i class="fas fa-envelope"></i><input type="email" id="name" placeholder="Email" name="email" required></td>
-                    </tr>
-
-
-
-                    <!-- Your Gender -->
-                    <tr>
-                        <td><label id="degree">Gender</label></td>
-
-                        <td><select id="male" placeholder="Year" name="gender" required>
+                        <tbody>
+                            <!-- Name -->
+                            <tr>
+                                <td><label id="email">Name</label></td>
+                                <td><i class="fas fa-user"></i><input type="text" id="name" placeholder="Name" name="name" required>
+                                </td>
+                            </tr>
+                            <!-- Email -->
+                            <tr>
+                                <td><label id="email">Email</label></td>
+                                <td><i class="fas fa-envelope"></i><input type="email" id="name" placeholder="Email" name="email" required></td>
+                            </tr>
+                            <!-- Your Gender -->
+                            <tr>
+                                <td><label id="degree">Gender</label></td>
+                                <td><select id="male" placeholder="Year" name="gender" required>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                                 <option value="Other">Other</option>
                             </select></td>
-                    </tr>
-                    <!-- Your Nationality -->
-
-
-
-
-                    <!-- Your Contact Number -->
-                    <tr>
-                        <td><label id="contact">Contact Number(WhatsApp)</label></td>
-                        <td><i class="fas fa-phone"></i><input type="tel" maxlength="10" minlength="10" id="contact" name="contact" placeholder="Your Contact Number" required></td>
-                    </tr>
-
-                    <tr>
-                        <td><label id="contact">Permanent Roll No/Registration No(College)</label></td>
-                        <td><i class="fas fa-number"></i><input type="text" id="contact" name="roll" placeholder="" required></td>
-                    </tr>
-
-
-                    <tr>
-                        <td><label id="year">Year of Study</label></td>
-                        <td><select id="year" placeholder="Year" name="year" required>
+                            </tr>
+                            <!-- Contact Number -->
+                            <tr>
+                                <td><label id="contact">Contact Number(WhatsApp)</label></td>
+                                <td><i class="fas fa-phone"></i><input type="tel" maxlength="10" minlength="10" id="contact" name="contact" placeholder="Whatsapp Number" required></td>
+                            </tr>
+                            <!-- Roll No -->
+                            <tr>
+                                <td><label id="contact">Permanent Roll No/Registration No(College)</label></td>
+                                <td><i class="fas fa-number"></i><input type="text" id="contact" name="roll" placeholder="" required></td>
+                            </tr>
+                            <!-- Year -->
+                            <tr>
+                                <td><label id="year">Year of Study</label></td>
+                                <td><select id="year" placeholder="Year" name="year" required>
                                 <option value="first">First</option>
                                 <option value="second">Second</option>
                                 <option value="third">Third</option>
                             </select></td>
-                    </tr>
+                            </tr>
+                            <!-- HackerEarthid -->
+                            <tr>
+                                <td><label id="hack">Hackerearth Id / Username</label></td>
+                                <td><input type="text" name="hackid" id="city" placeholder="Hackerearth id" required></td>
+                            </tr>
+                            <!-- Proof of Id -->
+                            <td><label id="instituteid">Proof of Identity(Id Card/Admission letter)</label>
+                                <p style="font-size: 13px;">*Upload any document that proves you are MCA student of your college
+                                </p>
+                            </td>
+                            <!-- Upload file -->
+                            <td>
+                                <input type="file" accept=".jpg,.png,.pdf" name="Image" id="instituteidfile" required>
+                                <p style="font-size: 13px;">[Only JPG, PNG, PDF file types accepted]</p>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-
-                    <tr>
-                        <td><label id="hack">Hackerearth Id / Username</label></td>
-                        <td><input type="text" name="hackid" id="city" placeholder="Hackerearth id" required></td>
-                    </tr>
-
-                    <td><label id="instituteid">Proof of Identity(Id Card/Admission letter)</label>
-                        <p style="font-size: 13px;">*Upload any document that proves you are MCA student of your college
-                        </p>
-                    </td>
-                    <td>
-                        <input type="file" accept=".jpg,.png,.pdf" name="Image" id="instituteidfile" required>
-                        <p style="font-size: 13px;">[Only JPG, PNG, PDF file types accepted]</p>
-                    </td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-        </div>
-
-
-    </div>
-
-
-    <h2>College Details:</h2>
-    <div class="mycard">
-
-        <div class="content">
-
-            <table cellpadding="0" cellspacing="0">
-
-                <tbody>
-                    <!-- Your Email -->
-
-
-
-                    <tr>
-                        <td><label id="institute">Institute you're representing[*Full Name] &nbsp; &nbsp; </label></td>
-                        <td><i class="fas fa-university"></i><input type="text" name="iname" id="institute" placeholder="Institute" required></td>
-                    </tr>
-                    <!-- Your Institute's Postal Address -->
-                    <tr>
-                        <td><label id="instituteaddress">Your Institute's Postal Address</label></td>
-                        <td><i class="fas fa-map-marked-alt"></i><textarea id="instituteaddress" name="address" rows="4" placeholder="Institute's Postal Address" required></textarea></td>
-                    </tr>
-                    <!-- City -->
-                    <tr>
-                        <td><label id="city">City</label></td>
-                        <td><i class="fas fa-city"></i><input type="text" id="city" name="city" placeholder="City" required></td>
-                    </tr>
-                    <!-- State -->
-                    <tr>
-                        <td><label id="state">State</label></td>
-                        <td><select id="state" placeholder="State" name="state" required>
+            <h2>College Details:</h2>
+            <div class="mycard">
+                <div class="content">
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <!-- Institute Name -->
+                            <tr>
+                                <td><label id="institute">Institute you're representing[*Full Name] &nbsp; &nbsp; </label></td>
+                                <td><i class="fas fa-university"></i><input type="text" name="iname" id="institute" placeholder="Institute" required></td>
+                            </tr>
+                            <!-- Institute's Postal Address -->
+                            <tr>
+                                <td><label id="instituteaddress">Institute's Postal Address</label></td>
+                                <td><i class="fas fa-map-marked-alt"></i><textarea id="instituteaddress" name="address" rows="4" placeholder="Institute's Postal Address" required></textarea></td>
+                            </tr>
+                            <!-- City -->
+                            <tr>
+                                <td><label id="city">City</label></td>
+                                <td><i class="fas fa-city"></i><input type="text" id="city" name="city" placeholder="City" required></td>
+                            </tr>
+                            <!-- State -->
+                            <tr>
+                                <td><label id="state">State</label></td>
+                                <td><select id="state" placeholder="State" name="state" required>
                                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -155,21 +137,24 @@
                                 <option value="Uttar Pradesh">Uttar Pradesh</option>
                                 <option value="West Bengal">West Bengal</option>
                             </select></td>
-                    </tr>
-                    <!-- Pincode -->
-                    <tr>
-                        <td><label id="pincode">Pincode</label></td>
-                        <td><i class="fas fa-map-pin"></i><input type="number" name="pin" id="pincode" placeholder="Pincode" max="999999" min="100000" required></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+                            </tr>
+                            <!-- Pincode -->
+                            <tr>
+                                <td><label id="pincode">Pincode</label></td>
+                                <td><i class="fas fa-map-pin"></i><input type="number" name="pin" id="pincode" placeholder="Pincode" max="999999" min="100000" required></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-    <div class="mycard">
-        <div class="content">
-            <input type="submit" id="register" value="Register" href="#">
-        </div>
+            <div class="mycard">
+                <div class="content">
+                    <input type="submit" id="register" value="Register" href="#">
+                </div>
+            </div>
+        </form>
     </div>
-</form>
-{% include "footer.html" %} {% endblock %}
+    {% include "footer.html" %}
+</div>
+{% endblock %}
