@@ -39,6 +39,10 @@
                         Register
                     </button>
 
+                    <button class="tablinks" onclick="openTab(event, 'Contest')">
+                        Contest
+                    </button>
+
                     <button class="tablinks" onclick="openTab(event, 'Contact')">
                         Contact
                     </button>
@@ -84,6 +88,10 @@
                 </div>
                 <div id="Register" class="tabcontent">
                     <a class="mail" href="{{ url_for('register', id = id) }}">Scrim 1 Registrations</a>
+                </div>
+
+                <div id="Contest" class="tabcontent">
+                    <a class="mail" href="https://p.hck.re/Wt3E" target="_blank">Contest Link</a>
                 </div>
 
                 <div id="Contact" class="tabcontent">
