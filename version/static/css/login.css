@@ -16,6 +16,7 @@ body {
 }
 
 .mycard {
+    /* height: 97%; */
     position: relative;
     width: 800px;
     color: #fff;
@@ -80,21 +81,7 @@ label {
     font-weight: 800;
 }
 
-option {
-    font-weight: 800;
-    background: transparent;
-    color: black;
-    padding: 10px 10px;
-}
-
-input[type="text"],
 input[type="email"],
-input[type="number"],
-input[type="tel"],
-input[type="select"],
-input[type="file"],
-select,
-textarea,
 input[type="password"] {
     border: 0;
     background: none;
@@ -109,20 +96,7 @@ input[type="password"] {
     color: white;
 }
 
-input[type="radio"] {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 80px;
-}
-
-input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="file"]:focus,
-select:focus,
-textarea:focus,
-input[type="radio"]:focus,
 input[type="password"]:focus {
     background: none;
     border-color: #2ecc71;
@@ -130,14 +104,7 @@ input[type="password"]:focus {
     color: white;
 }
 
-input[type="text"]:hover,
 input[type="email"]:hover,
-input[type="number"]:hover,
-input[type="tel"]:hover,
-input[type="file"]:hover,
-select:hover,
-textarea:hover,
-input[type="radio"]:hover,
 input[type="password"]:hover {
     border-color: #d304d3;
     transform: scale(1.1);
@@ -158,21 +125,34 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-#register {
-    border: 2px solid #b3d4c1;
-}
-
-#register:hover {
-    background: #2ecc71;
-}
-
 #login {
-    color: #d304d3;
+    border: 2px solid #b3d4c1;
+    /* margin: 20px auto; */
+    /* padding: 14px 40px; */
 }
 
 #login:hover {
+    background: #2ecc71;
+}
+
+#register {
+    color: #d304d3;
+}
+
+#register,
+#forgot {
+    margin: 5px auto;
+    padding: 8px 20px;
+}
+
+#register:hover {
     transform: scale(1.1);
     color: white;
+}
+
+#forgot:hover {
+    transform: scale(1.1);
+    color: red;
 }
 
 @media screen and (max-width: 1028px) {
@@ -188,14 +168,7 @@ input[type="submit"] {
         flex-direction: column;
         margin: 10px;
     }
-    input[type="text"],
     input[type="email"],
-    input[type="number"],
-    input[type="tel"],
-    input[type="select"],
-    input[type="file"],
-    select,
-    textarea,
     input[type="password"] {
         width: 220px;
         margin: 15px auto;
@@ -206,13 +179,6 @@ input[type="submit"] {
     i {
         padding: 30px 15px;
     }
-}
-
-h2 {
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    margin: 4rem 0;
 }
 
 @media screen and (max-width: 450px) {
@@ -228,23 +194,10 @@ h2 {
         flex-direction: column;
         margin: 10px;
     }
-    label {
-        font-size: 13px;
-    }
-    input[type="text"],
     input[type="email"],
-    input[type="number"],
-    input[type="tel"],
-    input[type="select"],
-    input[type="file"],
-    select,
-    textarea,
     input[type="password"] {
         width: 220px;
         margin: 15px auto;
-    }
-    label {
-        width: 130px;
     }
     i {
         padding: 30px 15px;

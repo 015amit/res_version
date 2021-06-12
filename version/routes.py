@@ -136,6 +136,11 @@ def internal_server_error(e):
     return render_template('500.html', title="Internal Server Error"), 500
 
 
+@app.route('/account')
+def account():
+    return render_template('account.html', title="Account")
+
+
 @app.route('/show/<int:id>')
 def getimg(id):
     user = User.query.filter_by(id=id).first()
