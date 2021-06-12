@@ -77,6 +77,7 @@ def teams(name):
 
 @app.route('/login', methods=['GET','POST'])
 def login():
+  
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
@@ -126,6 +127,16 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html', title="Internal Server Error"), 500
+
+
+@app.route('/account')
+def account():
+    return render_template('account.html', title="Account")
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 
 @app.route('/show/<int:id>')
