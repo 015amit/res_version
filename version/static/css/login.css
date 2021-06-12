@@ -15,10 +15,23 @@ body {
     background-position: center;
 }
 
+.main {
+    /* min-height: 74vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    width: 60%;
+}
+
 .mycard {
     /* height: 97%; */
     position: relative;
-    width: 800px;
+    width: 100%;
     color: #fff;
     margin: auto;
     padding: 80px;
@@ -70,6 +83,10 @@ h1 {
 i {
     position: absolute;
     padding: 24px;
+}
+
+table {
+    margin: auto;
 }
 
 input {
@@ -156,12 +173,14 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 1028px) {
+    .main {
+        min-height: 100vh;
+    }
     h1 {
         font-size: 45px;
     }
     .mycard {
-        width: auto;
-        margin: 10px;
+        margin: 50px auto;
         padding: 30px;
     }
     .content {
@@ -181,18 +200,45 @@ input[type="submit"] {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
+    .main {
+        min-height: 74vh;
+    }
     h1 {
-        font-size: 35px;
+        font-size: 33px;
     }
     .mycard {
-        width: auto;
-        margin: 10px;
         padding: 2px;
     }
     .content {
         flex-direction: column;
         margin: 10px;
+        width: 90%;
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: 200px;
+        margin: 15px auto;
+    }
+    i {
+        padding: 25px 13px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main {
+        min-height: 74vh;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .mycard {
+        padding: 2px;
+    }
+    .content {
+        flex-direction: column;
+        margin: 10px;
+        width: 90%;
     }
     input[type="email"],
     input[type="password"] {
