@@ -170,3 +170,8 @@ def getimg(id):
         return "binary file"
     return get
     
+
+
+@app.route('/feedback')
+def feedback():
+    return render_template('feedback.html')    

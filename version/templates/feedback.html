@@ -1,0 +1,87 @@
+{% extends "base.html" %} {% block header %}
+<link
+  rel="stylesheet"
+  href="{{url_for('static',filename='css/feedback.css')}}"
+/>
+<title>{{title}}</title>
+{% endblock %} {% block content %}
+<div class="main">
+  <div class="other">
+    <h1 style="margin-bottom: 2rem; margin-top: 41px">Feedback for Scrim 1</h1>
+    {% include 'message.html' %}
+
+    <form action="" method="POST" enctype="multipart/form-data">
+      <div class="mycard">
+        <div class="content">
+          <table cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td><label id="email">Overall Experience </label></td>
+                <td>
+                  <input type="range" class="form-range" id="customRange1" />
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact"> Difficulty Level</label></td>
+                <td></td>
+                <td>
+                  <input type="range" class="form-range" id="customRange1" />
+                </td>
+              </tr>
+              <!-- Roll No -->
+              <tr>
+                <td><label id="contact"> Difficulty Level</label></td>
+                <td>
+                  <input type="range" class="form-range" id="customRange1" />
+                </td>
+              </tr>
+
+              <!-- HackerEarthid -->
+              <tr>
+                <td>
+                  <label id="hack"
+                    >Accessibility of information regarding event</label
+                  >
+                </td>
+                <td>
+                  <input type="range" class="form-range" id="customRange1" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label id="hack"
+                    >Where did you come to know about this event?
+                  </label>
+                </td>
+                <td>
+                  <input type="text" id="city" name="city" placeholder="" />
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="hack">Overall Feedback</label></td>
+                <td>
+                  <textarea
+                    id="instituteaddress"
+                    name="address"
+                    rows="6"
+                    placeholder="Feedback"
+                  ></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mycard">
+        <div class="content">
+          <input type="submit" id="register" value="Submit" href="#" />
+        </div>
+      </div>
+    </form>
+  </div>
+  {% include "footer.html" %}
+</div>
+{% endblock %}
