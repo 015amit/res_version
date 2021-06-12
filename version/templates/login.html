@@ -5,7 +5,8 @@
 <div class="main">
     <div class="content">
         <h1 style="margin-bottom: 2rem; margin-top: 41px">Log In!</h1>
-        <form action="" method="POST" enctype="multipart/form-data">
+        {% include 'message.html' %}
+        <form action="{{url_for('login')}}" method="POST" enctype="multipart/form-data">
             <div class="mycard">
                 <div class="content">
                     <table cellpadding="0" cellspacing="0">
@@ -13,38 +14,27 @@
                             <!-- Your Email -->
                             <tr>
                                 <td>
-                                    <i class="fas fa-envelope"></i><input type="email" id="name" placeholder=" Your Email" required />
+                                    <i class="fas fa-envelope"></i><input type="email" name="email" id="name" placeholder=" Your Email" required />
                                 </td>
                             </tr>
 
-{% include 'message.html' %}
-<form action="{{url_for('login')}}" method="POST" enctype="multipart/form-data">
-    <div class="mycard">
-        <div class="content">
-            <table cellpadding="0" cellspacing="0">
-                <tbody>
-                    <!-- Your Email -->
-                    <tr>
-                        <td>
-                            <i class="fas fa-envelope"></i><input type="email" name="email" id="name" placeholder=" Your Email" required />
-                        </td>
-                    </tr>
+                            <!-- Password -->
+                            <tr>
+                                <td>
+                                    <i class="fas fa-key"></i><input type="password" name="password" id="name" placeholder=" Your Password" required />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Login Button -->
+                    <input type="submit" id="login" value="Log In" href="#" />
+                    <!-- Forgot Password Link -->
 
-                    <!-- Password -->
-                    <tr>
-                        <td>
-                            <i class="fas fa-key"></i><input type="password" name="password" id="name" placeholder=" Your Password" required />
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- Login Button -->
-            <input type="submit" id="login" value="Log In" href="#" />
-            <!-- Forgot Password Link -->
-
-            <!-- Link to Register -->
-            <input type="submit" id="register" value="Create an Account? Register?" href="/register" />
-        </div>
+                    <!-- Link to Register -->
+                    <input type="submit" id="register" value="Create an Account? Register?" href="/register" />
+                </div>
+            </div>
+        </form>
     </div>
     {% include "footer.html" %}
 </div>
