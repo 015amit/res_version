@@ -77,7 +77,7 @@ def teams(name):
 
 @app.route('/login', methods=['GET','POST'])
 def login():
-    return render_template('404.html', title="Page Not Found"), 404
+  
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
