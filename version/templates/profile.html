@@ -1,18 +1,19 @@
 {% extends "base.html" %} {% block header %}
 
-<link rel="stylesheet" href="static/css/account.css" />
+<link rel="stylesheet" href="static/css/profile.css" />
 
 <title>{{title}}</title>
 
 {% endblock %} {% block content %}
 
-<h1 style="margin-bottom: 2rem; margin-top: 42px">Profile</h1>
+<h1 style="margin-bottom: 2rem; margin-top: 42px">Dashboard</h1>
 <div class="container">
     <div class="left">
         <div class="card" style="width: 18rem">
             <div class="card-body">
-                <a href="#" class="btn btn-primary" id="one">Update details</a>
-                <a href="#" class="btn btn-primary" id="two">Registered events</a>
+                <a href="#" class="btn btn-primary" id="one">Update Profile</a>
+                <a href="#" class="btn btn-primary" id="two">Register for Events</a>
+                <a href="#" class="btn btn-primary" id="three">Feedback</a>
 
 
             </div>
@@ -22,31 +23,19 @@
         {% include 'message.html' %}
         <div class="card" id="onediv">
             <form action="{{url_for('profile')}}" method="POST" enctype="multipart/form-data">
-
-
                 <div class="mycard">
-
                     <div class="content">
-
                         <table cellpadding="0" cellspacing="0">
-
                             <tbody>
-                                <!-- Your Email -->
                                 <tr>
                                     <td><label id="email">Name</label></td>
-                                    <td><i class="fas fa-user"></i><input type="text" id="name" value="{{user.name}}"
-                                            name="name" required>
+                                    <td><i class="fas fa-user"></i><input type="text" id="name" value="{{user.name}}" name="name" required>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><label id="email">Email</label></td>
-                                    <td><i class="fas fa-envelope"></i><input type="email" id="name"
-                                            value="{{user.email}}" name="email" required></td>
+                                    <td><i class="fas fa-envelope"></i><input type="email" id="name" value="{{user.email}}" name="email" required></td>
                                 </tr>
-
-
-
-                                <!-- Your Gender -->
                                 <tr>
                                     <td><label id="degree">Gender</label></td>
 
@@ -57,25 +46,15 @@
                                             <option value="Other">Other</option>
                                         </select></td>
                                 </tr>
-                                <!-- Your Nationality -->
-
-
-
-
-                                <!-- Your Contact Number -->
                                 <tr>
                                     <td><label id="contact">Contact Number(WhatsApp)</label></td>
-                                    <td><i class="fas fa-phone"></i><input type="tel" maxlength="10" minlength="10"
-                                            id="contact" value="{{user.contact}}" name="contact" required></td>
+                                    <td><i class="fas fa-phone"></i><input type="tel" maxlength="10" minlength="10" id="contact" value="{{user.contact}}" name="contact" required></td>
                                 </tr>
 
                                 <tr>
                                     <td><label id="contact">Permanent Roll No/Registration No(College)</label></td>
-                                    <td><i class="fas fa-number"></i><input type="text" id="contact"
-                                            value="{{user.roll}}" name="roll" required></td>
+                                    <td><i class="fas fa-number"></i><input type="text" id="contact" value="{{user.roll}}" name="roll" required></td>
                                 </tr>
-
-
                                 <tr>
                                     <td><label id="year">Year of Study</label></td>
                                     <td><select id="year" value="{{user.year}}" name="year" required>
@@ -85,55 +64,33 @@
                                             <option value="third">Third</option>
                                         </select></td>
                                 </tr>
-
-
                                 <tr>
                                     <td><label id="hack">Hackerearth Id / Username</label></td>
                                     <td><input type="text" value="{{user.hackid}}" name="hackid" id="city" required>
                                     </td>
                                 </tr>
-
-                                
                             </tbody>
                         </table>
-
                     </div>
-
-
                 </div>
-
-
                 <h2>College Details:</h2>
                 <div class="mycard">
-
                     <div class="content">
-
                         <table cellpadding="0" cellspacing="0">
-
                             <tbody>
-                                <!-- Your Email -->
-
-
-
                                 <tr>
                                     <td><label id="institute">Institute you're representing[*Full Name] &nbsp; &nbsp;
                                         </label></td>
-                                    <td><i class="fas fa-university"></i><input type="text" value="{{user.iname}}"
-                                            name="iname" id="institute" required></td>
+                                    <td><i class="fas fa-university"></i><input type="text" value="{{user.iname}}" name="iname" id="institute" required></td>
                                 </tr>
-                                <!-- Your Institute's Postal Address -->
                                 <tr>
                                     <td><label id="instituteaddress">Your Institute's Postal Address</label></td>
-                                    <td><i class="fas fa-map-marked-alt"></i><textarea id="instituteaddress"
-                                            name="address" rows="4" required>{{user.address}}</textarea></td>
+                                    <td><i class="fas fa-map-marked-alt"></i><textarea id="instituteaddress" name="address" rows="4" required>{{user.address}}</textarea></td>
                                 </tr>
-                                <!-- City -->
                                 <tr>
                                     <td><label id="city">City</label></td>
-                                    <td><i class="fas fa-city"></i><input type="text" id="city" value="{{user.city}}"
-                                            name="city" required></td>
+                                    <td><i class="fas fa-city"></i><input type="text" id="city" value="{{user.city}}" name="city" required></td>
                                 </tr>
-                                <!-- State -->
                                 <tr>
                                     <td><label id="state">State</label></td>
                                     <td><select id="state" value="{{user.state}}" name="state" required>
@@ -177,81 +134,73 @@
                                             <option value="West Bengal">West Bengal</option>
                                         </select></td>
                                 </tr>
-                                <!-- Pincode -->
                                 <tr>
                                     <td><label id="pincode">Pincode</label></td>
-                                    <td><i class="fas fa-map-pin"></i><input type="number" value="{{user.pin}}"
-                                            name="pin" id="pincode" max="999999" min="100000" required></td>
+                                    <td><i class="fas fa-map-pin"></i><input type="number" value="{{user.pin}}" name="pin" id="pincode" max="999999" min="100000" required></td>
                                 </tr>
-                                <!-- Institute ID -->
-
                             </tbody>
                         </table>
-
                     </div>
-
-
                 </div>
-
-
                 <div class="mycard">
-
                     <div class="content">
-
-
-
                         <input type="submit" id="register" value="Update" href="#">
-
                     </div>
-
-
                 </div>
             </form>
         </div>
+
         <div class="card" id="twodiv">
-
             <div class="card-body">
-                <h3 class="card-title" style="text-align: center;">You have registered for these events of Version'21.
-                </h3>
                 <p class="card-text">
-                <ul class="list">
-                    <li><a class="btn  btn-dark">Scrim 1</a>
-                        <small>Feedback received</small>
-                    </li>
-
-                    <li><a class="btn  btn-dark">Scrim 2</a><small>Give feedback</small>
-                    </li>
-
-                    <li><a class="btn btn-dark">Scrim 3</a><small>Give feedback</small></li>
-                </ul>
+                    <ul class="list">
+                        <li><a class="btn  btn-dark">Scrim 1</a>
+                        </li>
+                        <li><a class="btn  btn-dark">Scrim 2</a>
+                        </li>
+                        <li><a class="btn btn-dark">Scrim 3</a></li>
+                    </ul>
                 </p>
-
             </div>
         </div>
-
+        <div class="card" id="threediv">
+            <div class="card-body">
+                <h3 class="card-title" style="text-align: center;">Feedback
+                </h3>
+                <p class="card-text">
+                    <a class="btn  btn-dark">Scrim 1</a>
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 <script>
     var one = document.getElementById("one");
-
     var two = document.getElementById("two");
+    var three = document.getElementById("three");
 
     var onediv = document.getElementById("onediv");
-
     var twodiv = document.getElementById("twodiv");
-
+    var threediv = document.getElementById("threediv");
 
     one.addEventListener("click", () => {
         onediv.style.display = "flex";
         twodiv.style.display = "none";
+        threediv.style.display = "none";
 
     });
     two.addEventListener("click", () => {
         onediv.style.display = "none";
         twodiv.style.display = "flex";
+        threediv.style.display = "none";
 
     });
+    three.addEventListener("click", () => {
+        onediv.style.display = "none";
+        twodiv.style.display = "none";
+        threediv.style.display = "flex";
 
+    });
 </script>
 
 {% include "footer.html" %} {% endblock %}
