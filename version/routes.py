@@ -134,11 +134,6 @@ def account():
     return render_template('account.html', title="Account")
 
 
-@app.route('/login')
-def login():
-    return render_template('login.html')
-
-
 @app.route('/show/<int:id>')
 def getimg(id):
     user = User.query.filter_by(id=id).first()
