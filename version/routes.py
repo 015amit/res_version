@@ -4,6 +4,7 @@ from flask.helpers import make_response
 from werkzeug.utils import redirect
 from version import app,db
 from version.models import User
+from flask_login import login_user, current_user,login_required, logout_user
 import json
 from io import BytesIO
 import codecs
@@ -72,6 +73,50 @@ def teams(name):
     elif senior[name]:
         return render_template('team.html', title="Teams",name=name, team=data[name], senior =senior[name])    
     return render_template('team.html', title="Teams",name=name, team=data[name])
+
+
+@app.route('/login', methods=['GET','POST'])
+def login():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+        user = User.query.filter_by(email=email).first()
+
+        if user:
+            login_user(user)
+            return redirect(url_for('home'))
+
+        elif user is None:
+            flash("you haven't registered in any event yet ")
+            return redirect(url_for('events'))
+              
+        else:    
+            flash("Incorrect email or password")
+            return redirect(url_for('login'))
+
+    return render_template('login.html')
+
+@app.route('/profile')
+def profile():
+    user = User.query.filter_by(id=11).first()
+    if request.method == 'POST':
+        user.name=request.form.get('name')
+        user.email=request.form.get('email')
+        user.gender=request.form.get('gender')
+        user.contact=request.form.get('contact')
+        user.roll=request.form.get('roll')
+        user.year=request.form.get('year')
+        user.hackid=request.form.get('hackid')
+        user.iname=request.form.get('iname')
+        user.address = request.form.get('address')
+        user.city=request.form.get('city')
+        user.state=request.form.get('state')
+        user.pin=request.form.get('pin')
+
+        db.session.commit()
+        flash('your profile is updated successfully')
+        return redirect(url_for('profile'))
+    return render_template('profile.html', user=user)
 
 
 @app.errorhandler(404)

@@ -22,4 +22,8 @@ class User(db.Model):
     def __repr__(self):
         return f"User('{self.name}','{self.contact}')"
 
+class Scrim2(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
 db.create_all()
