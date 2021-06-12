@@ -105,7 +105,7 @@ def login():
             flash("Incorrect email or password")
             return redirect(url_for('login'))
 
-    return render_template('login.html')
+    return render_template('login.html', title="Log In")
 
 @app.route('/profile', methods=['GET','POST'])
 @login_required

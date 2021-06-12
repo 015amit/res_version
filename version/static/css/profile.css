@@ -13,7 +13,6 @@ body {
     background-attachment: fixed;
     background-blend-mode: overlay;
     background-position: center;
-
 }
 
 .container {
@@ -23,27 +22,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    
 }
-.left{
+
+.left {
     margin-top: 1rem;
     width: 20%;
-   
 }
-.left a{
+
+.left a {
     margin: 1rem;
 }
-.mycard{
+
+.mycard {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.rightdiv{
+.rightdiv {
     width: 70%;
-  
 }
-#twodiv,#threediv{
+
+#twodiv,
+#threediv {
     display: none;
 }
 
@@ -91,12 +92,9 @@ body {
     position: relative;
     width: 100%;
     text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        
-
-
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 p {
@@ -121,7 +119,6 @@ h1 {
     0% {
         transform: scale(1);
     }
-
     100% {
         transform: scale(1.2);
     }
@@ -131,7 +128,6 @@ h1 {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
     }
-
     to {
         text-shadow: 0 0 12px #fff, 0 0 22px #09ccee, 0 0 22px #09ccee, 0 0 42px #09ccee;
     }
@@ -159,16 +155,13 @@ h2 {
     .menu-container {
         width: 100%;
     }
-
     .container .card .content {
         width: 80%;
     }
-
     h1 {
         font-size: 35px;
     }
 }
-
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -199,7 +192,6 @@ h1 {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
     }
-
     to {
         text-shadow: 0 0 12px #fff, 0 0 22px #09ccee, 0 0 22px #09ccee, 0 0 42px #09ccee;
     }
@@ -297,37 +289,24 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-/* #upload {
-    background: darkblue;
-    position: absolute;
-    margin: 27px 12px;
-    width: 100px;
-    padding: 3px;
-    border-radius: 6px;
-} */
-
-
-/* #instituteidfile {
-    background: chartreuse;
-} */
-.list{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-.list li{
-        display: flex;
-        flex-direction: column;
-        margin: 2rem 0;
+
+.list li {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
 }
-.list li a{
+
+.list li a {
     font-size: 30px;
 }
-small{
-    font-size: 12px;
-}
+
 #register {
     border: 2px solid #b3d4c1;
 }
@@ -352,18 +331,15 @@ small{
     .container {
         flex-direction: column;
     }
-
     .mycard {
         width: auto;
         margin: 10px;
         padding: 30px;
     }
-
     .content {
         flex-direction: column;
         margin: 10px;
     }
-
     input[type="text"],
     input[type="email"],
     input[type="number"],
@@ -376,11 +352,9 @@ small{
         width: 220px;
         margin: 15px auto;
     }
-
     label {
         width: 130px;
     }
-
     i {
         padding: 30px 15px;
     }
@@ -397,25 +371,21 @@ h2 {
     h1 {
         font-size: 35px;
     }
-    .container{
+    .container {
         flex-direction: column;
     }
-
     .mycard {
         width: auto;
         margin: 10px;
         padding: 2px;
     }
-
     .content {
         flex-direction: column;
         margin: 10px;
     }
-
     label {
         font-size: 13px;
     }
-
     input[type="text"],
     input[type="email"],
     input[type="number"],
@@ -428,11 +398,9 @@ h2 {
         width: 220px;
         margin: 15px auto;
     }
-
     label {
         width: 130px;
     }
-
     i {
         padding: 30px 15px;
     }
