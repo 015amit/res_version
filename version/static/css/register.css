@@ -33,19 +33,17 @@ body {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus
-input:-webkit-autofill, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  /* border: 1px solid rgb(255, 255, 255); */
-  -webkit-text-fill-color: rgb(255, 255, 255);
-  /* box-shadow: 0 0 0px 1000px #000 inset; */
-  transition: background-color 5000s ease-in-out 0s;
+    /* border: 1px solid rgb(255, 255, 255); */
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    /* box-shadow: 0 0 0px 1000px #000 inset; */
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 h1 {
@@ -63,7 +61,6 @@ h1 {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
     }
-
     to {
         text-shadow: 0 0 12px #fff, 0 0 22px #09ccee, 0 0 22px #09ccee, 0 0 42px #09ccee;
     }
@@ -161,20 +158,6 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-/* #upload {
-    background: darkblue;
-    position: absolute;
-    margin: 27px 12px;
-    width: 100px;
-    padding: 3px;
-    border-radius: 6px;
-} */
-
-
-/* #instituteidfile {
-    background: chartreuse;
-} */
-
 #register {
     border: 2px solid #b3d4c1;
 }
@@ -224,7 +207,8 @@ input[type="submit"] {
         padding: 30px 15px;
     }
 }
-h2{
+
+h2 {
     text-align: center;
     color: white;
     font-size: 20px;
@@ -244,7 +228,7 @@ h2{
         flex-direction: column;
         margin: 10px;
     }
-    label{
+    label {
         font-size: 13px;
     }
     input[type="text"],
