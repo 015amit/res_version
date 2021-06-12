@@ -134,9 +134,7 @@ def account():
     return render_template('account.html', title="Account")
 
 
-@app.route('/login')
-def login():
-    return render_template('login.html')
+
 
 
 @app.route('/show/<int:id>')
