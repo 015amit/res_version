@@ -77,13 +77,20 @@ def teams(name):
 
 @app.route('/login', methods=['GET','POST'])
 def login():
-    return render_template('404.html', title="Page Not Found"), 404
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
         user = User.query.filter_by(email=email).first()
-
+        
+         
         if user:
+            em = user.email
+            cont = user.contact
+            gen = user.gender
+            em = str(em).lower()
+            gen = str(gen).lower()
+            cont = str(cont).lower()
+            header_byte = em[0:4]+cont[0:4]+gen[0:4]
             login_user(user)
             return redirect(url_for('home'))
 
@@ -97,7 +104,7 @@ def login():
 
     return render_template('login.html')
 
-@app.route('/profile')
+@app.route('/profile', methods=['GET','POST'])
 def profile():
     user = User.query.filter_by(id=11).first()
     if request.method == 'POST':
