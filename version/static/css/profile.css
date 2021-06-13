@@ -28,6 +28,7 @@ body {
     position: relative;
     margin-top: 3%;
     display: flex;
+    
     justify-content: space-around;
     align-items: flex-start;
 }
