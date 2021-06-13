@@ -28,6 +28,12 @@ body {
     align-items: center;
     height: 100vh;
 }
+.note{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .content {
     width: 60%;
