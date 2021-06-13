@@ -3,11 +3,14 @@
   rel="stylesheet"
   href="{{url_for('static',filename='css/feedback.css')}}"
 />
+
 <title>{{title}}</title>
 {% endblock %} {% block content %}
 <div class="main">
   <div class="other">
-    <h1 style="margin-bottom: 2rem; margin-top: 41px">Feedback for {{event.name}}</h1>
+    <h1 style="margin-bottom: 2rem; margin-top: 41px">
+      Feedback for {{event.name}}
+    </h1>
     {% include 'message.html' %}
 
     <form action="" method="POST" enctype="multipart/form-data">
@@ -19,12 +22,13 @@
                 <td><label id="email">Overall Experience </label></td>
                 <td>
                   <input
-                    type="range"
-                    min="1"
-                    max="10"
-                    value="1"
-                    class="form-range"
-                    id="customRange1"
+                    id="ex1"
+                    data-slider-id="ex1Slider"
+                    type="text"
+                    data-slider-min="1"
+                    data-slider-max="10"
+                    data-slider-step="1"
+                    data-slider-value="1"
                     name="first"
                   />
                 </td>
@@ -32,15 +36,16 @@
 
               <tr>
                 <td><label id="contact"> Difficulty Level</label></td>
-                <td></td>
+
                 <td>
                   <input
-                    type="range"
-                    min="1"
-                    max="10"
-                    value="1"
-                    class="form-range"
-                    id="customRange1"
+                    id="ex2"
+                    data-slider-id="ex1Slider"
+                    type="text"
+                    data-slider-min="1"
+                    data-slider-max="10"
+                    data-slider-step="1"
+                    data-slider-value="1"
                     name="second"
                   />
                 </td>
@@ -50,12 +55,13 @@
                 <td><label id="contact"> Clarity of Questions</label></td>
                 <td>
                   <input
-                    type="range"
-                    min="1"
-                    max="10"
-                    value="1"
-                    class="form-range"
-                    id="customRange1"
+                    id="ex3"
+                    data-slider-id="ex1Slider"
+                    type="text"
+                    data-slider-min="1"
+                    data-slider-max="10"
+                    data-slider-step="1"
+                    data-slider-value="1"
                     name="third"
                   />
                 </td>
@@ -70,12 +76,13 @@
                 </td>
                 <td>
                   <input
-                    type="range"
-                    min="1"
-                    max="10"
-                    value="1"
-                    class="form-range"
-                    id="customRange1"
+                    id="ex4"
+                    data-slider-id="ex1Slider"
+                    type="text"
+                    data-slider-min="1"
+                    data-slider-max="10"
+                    data-slider-step="1"
+                    data-slider-value="1"
                     name="fourth"
                   />
                 </td>
@@ -87,7 +94,13 @@
                   </label>
                 </td>
                 <td>
-                  <input type="text" required id="city" placeholder="" name="fifth" />
+                  <input
+                    type="text"
+                    required
+                    id="city"
+                    placeholder="Your answer"
+                    name="fifth"
+                  />
                 </td>
               </tr>
 
@@ -116,4 +129,11 @@
   </div>
   {% include "footer.html" %}
 </div>
+<script>
+  var slider = new Slider("#ex1", { tooltip: "always" });
+  var slider1 = new Slider("#ex2", { tooltip: "always" });
+
+  var slider2 = new Slider("#ex3", { tooltip: "always" });
+  var slider3 = new Slider("#ex4", { tooltip: "always" });
+</script>
 {% endblock %}
