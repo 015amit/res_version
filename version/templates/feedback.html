@@ -1,8 +1,5 @@
 {% extends "base.html" %} {% block header %}
-<link
-  rel="stylesheet"
-  href="{{url_for('static',filename='css/feedback.css')}}"
-/>
+<link rel="stylesheet" href="{{url_for('static',filename='css/feedback.css')}}" />
 
 <title>{{title}}</title>
 {% endblock %} {% block content %}
@@ -21,16 +18,8 @@
               <tr>
                 <td><label id="email">Overall Experience </label></td>
                 <td>
-                  <input
-                    id="ex1"
-                    data-slider-id="ex1Slider"
-                    type="text"
-                    data-slider-min="1"
-                    data-slider-max="10"
-                    data-slider-step="1"
-                    data-slider-value="1"
-                    name="first"
-                  />
+                  <input type="range" name="first" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
                 </td>
               </tr>
 
@@ -38,81 +27,43 @@
                 <td><label id="contact"> Difficulty Level</label></td>
 
                 <td>
-                  <input
-                    id="ex2"
-                    data-slider-id="ex1Slider"
-                    type="text"
-                    data-slider-min="1"
-                    data-slider-max="10"
-                    data-slider-step="1"
-                    data-slider-value="1"
-                    name="second"
-                  />
+                  <input type="range" name="second" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
                 </td>
               </tr>
               <!-- Roll No -->
               <tr>
                 <td><label id="contact"> Clarity of Questions</label></td>
                 <td>
-                  <input
-                    id="ex3"
-                    data-slider-id="ex1Slider"
-                    type="text"
-                    data-slider-min="1"
-                    data-slider-max="10"
-                    data-slider-step="1"
-                    data-slider-value="1"
-                    name="third"
-                  />
+                  <input type="range" name="third" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
                 </td>
               </tr>
 
               <!-- HackerEarthid -->
               <tr>
                 <td>
-                  <label id="hack"
-                    >Accessibility of information regarding event</label
-                  >
+                  <label id="hack">Accessibility of information regarding event</label>
                 </td>
                 <td>
-                  <input
-                    id="ex4"
-                    data-slider-id="ex1Slider"
-                    type="text"
-                    data-slider-min="1"
-                    data-slider-max="10"
-                    data-slider-step="1"
-                    data-slider-value="1"
-                    name="fourth"
-                  />
+                  <input type="range" name="fourth" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <label id="hack"
-                    >Where did you come to know about this event?
+                  <label id="hack">Where did you come to know about this event?
                   </label>
                 </td>
                 <td>
-                  <input
-                    type="text"
-                    required
-                    id="city"
-                    placeholder="Your answer"
-                    name="fifth"
-                  />
+                  <input type="text" required id="city" placeholder="Your answer" name="fifth" />
                 </td>
               </tr>
 
               <tr>
                 <td><label id="hack">Overall Feedback</label></td>
                 <td>
-                  <textarea
-                    id="instituteaddress"
-                    name="sixth"
-                    rows="6"
-                    placeholder="Feedback"
-                  ></textarea>
+                  <textarea id="instituteaddress" name="sixth" rows="6" placeholder="Feedback"></textarea>
                 </td>
               </tr>
             </tbody>
@@ -129,11 +80,5 @@
   </div>
   {% include "footer.html" %}
 </div>
-<script>
-  var slider = new Slider("#ex1", { tooltip: "always" });
-  var slider1 = new Slider("#ex2", { tooltip: "always" });
 
-  var slider2 = new Slider("#ex3", { tooltip: "always" });
-  var slider3 = new Slider("#ex4", { tooltip: "always" });
-</script>
 {% endblock %}

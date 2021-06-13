@@ -91,11 +91,20 @@ i {
 }
 td{
     display: flex;
-    flex-direction: column;
+    margin: 0.8rem 0;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    /* flex-direction: column; */
 }
 
 input {
     outline: none;
+}
+output{
+    margin-left: 2rem;
+    color: #fff;
+    padding-top: 0;
 }
 
 label {
@@ -243,9 +252,6 @@ h2 {
     color: white;
     font-size: 20px;
     margin: 4rem 0;
-}
-td{
-    margin: 0.8rem 0;
 }
 
 @media screen and (max-width: 768px) {
