@@ -41,7 +41,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    cursor: pointer;
+   
 }
 
 input:-webkit-autofill,
