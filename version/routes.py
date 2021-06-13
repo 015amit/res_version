@@ -3,7 +3,7 @@ from flask import render_template,session,jsonify,request,redirect,flash,url_for
 from flask.helpers import make_response
 from werkzeug.utils import redirect
 from version import app,db
-from version.models import Scrim1, Scrim2, User
+from version.models import Event, Scrim1, Scrim2, User, Feedback
 from flask_login import login_user, current_user,login_required, logout_user
 import json
 from io import BytesIO
@@ -118,7 +118,7 @@ def login():
 
     return render_template('login.html', title="Log In")
 
-@app.route('/profile', methods=['GET','POST'])
+@app.route('/dashboard', methods=['GET','POST'])
 @login_required
 def profile():
     user = User.query.filter_by(id=current_user.id).first()
@@ -151,7 +151,7 @@ def profile():
         db.session.commit()
         flash('your profile is updated successfully')
         return redirect(url_for('profile'))
-    return render_template('profile.html', user=user, scrim1=scrim1, scrim2=scrim2)
+    return render_template('profile.html', user=user, scrim1=scrim1, scrim2=scrim2, title="Dashboard")
 
 
 @app.route('/logout')
@@ -166,6 +166,9 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html', title="Internal Server Error"), 500
+
+
+
 
 
 
@@ -188,3 +191,26 @@ def getimg(id):
         return "binary file"
     return get
     
+
+
+@app.route('/event/<int:id>/feedback', methods=['GET','POST'])
+@login_required
+def feedback(id):
+    if request.method=='POST':
+        first = request.form.get('first')
+        second = request.form.get('second')
+        third = request.form.get('third')
+        fourth = request.form.get('fourth')
+        fifth = request.form.get('fifth')
+        sixth = request.form.get('sixth')
+
+        name = Event.query.filter_by(id=id).first()
+        feedback = Feedback(event_id=id, user_id=current_user.id, overall=first, level=second, clarity=third, access=fourth, source=fifth, feed=sixth)
+        db.session.add(feedback)
+        db.session.commit()
+        flash(f'Thank you for your Feedback for {name.name}')
+        return redirect(url_for('profile'))
+
+    return render_template('feedback.html', title="Feedback")    
+
+
