@@ -44,6 +44,7 @@
               </tr>
             </tbody>
           </table>
+
           <!-- Login Button -->
           <input type="submit" id="login" value="Log In" href="#" />
 
@@ -51,7 +52,22 @@
         </div>
       </div>
     </form>
+    <div class="note">
+      <small
+        style="
+          font-size: 14px;
+          color: white;
+          text-align: center;
+          margin: 0.5rem;
+        "
+        >*The password will be your first four letters of email, phone and
+        gender.
+        <h6>eg: email: demo@demo.com; mobile: 9876543210; gender:female;</h6>
+        <h5>Password will be: &nbsp; demo9876fema</h5>
+      </small>
+    </div>
   </div>
+
   {% include "footer.html" %}
 </div>
 {% endblock %}
