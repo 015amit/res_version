@@ -193,6 +193,21 @@ def getimg(id):
     
 
 
-@app.route('/feedback')
+@app.route('/feedback', methods=['GET','POST'])
 def feedback():
+    if request.method=='POST':
+        first = request.form.get('first')
+        second = request.form.get('second')
+        third = request.form.get('third')
+        fourth = request.form.get('fourth')
+        fifth = request.form.get('fifth')
+        sixth = request.form.get('sixth')
+        l=[]
+        l.append(first)
+        l.append(second)
+        return jsonify(l)
+        
+
     return render_template('feedback.html')    
+
+
