@@ -1,12 +1,13 @@
 {% extends "base.html" %} {% block header %}
 
 <title>{{title}}</title>
-<link rel="stylesheet" href="static/css/home2.css?v1.0" /> {% endblock %} {% block content %}
+<link rel="stylesheet" href="static/css/home2.css?v1.0" /> {% endblock %} {%
+block content %}
 
 <div class="main">
-    <div class="hero">
-        <h1>
-            <span class="V" style="font-size: 40px; text-align: center">
+  <div class="hero">
+    <h1>
+      <span class="V" style="font-size: 40px; text-align: center">
         <img
           id="ver"
           src="static/images/logos/v4.png"
@@ -14,30 +15,46 @@
           width="350px"
         />
       </span>
-        </h1>
-        <p class="tagline" style="text-align: center">presents</p>
-        <img id="theme" src="../static/images/logos/theme1.png" alt="" />
-    </div>
+    </h1>
+    <p class="tagline" style="text-align: center">presents</p>
+    <img id="theme" src="../static/images/logos/theme1.png" alt="" />
+  </div>
 
-    <div id="text">
-        <h1 id="soon">
-            <div id="marq">
-                <div class="mar1">
-                    <a href="https://discord.gg/dcKbGm8m" target="_blank">
-                        <i class="fab fa-discord"></i>
-                    </a>
+  <div id="text">
+    <h1 id="soon">
+      <div id="marq">
+        <div class="mar1">
+          <a href="https://discord.gg/dcKbGm8m" target="_blank">
+            <i class="fab fa-discord"></i>
+          </a>
 
-                    <marquee id="m2" width="98%" direction="left" height="100px" scrollamount="15">
-                        The Version'21 Community Server has been launched over at Discord. Please join for updates on the latest happenings.
-                    </marquee>
-                </div>
+          <marquee
+            id="m2"
+            width="98%"
+            direction="left"
+            height="100px"
+            scrollamount="15"
+          >
+            The Version'21 Community Server has been launched over at Discord.
+            Please join for updates on the latest happenings.
+          </marquee>
+        </div>
 
-                <marquee width="93%" direction="left" height="100px" id="m1" style="color: rgb(255, 102, 0);">
-                  Thank you for your participation in Scrim 1. Editorials and results will be updated soon.
-                </marquee>
-            </div>
-            <div>
-                <span id="offset">C</span>OM<span id="offset">ING</span> S<span id="offset">OON !</span
+        <marquee
+          width="93%"
+          direction="left"
+          height="100px"
+          id="m1"
+          style="color: rgb(255, 102, 0)"
+        >
+          Thank you for your participation in Scrim 1. Editorials and results
+          will be updated soon.
+        </marquee>
+      </div>
+      <div>
+        <span id="offset">C</span>OM<span id="offset">ING</span> S<span
+          id="offset"
+          >OON !</span
         >
       </div>
     </h1>
