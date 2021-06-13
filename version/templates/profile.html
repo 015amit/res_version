@@ -364,12 +364,13 @@
       </div>
 
       <div class="threediv" id="threediv">
-        {% for event, feed in events1 %}
+        {% for event in pop %}
         <div class="formcard">
           <div class="content1">
             <h2>Feedback</h2>
+
             <div class="links">
-              {% if feed %}
+              {% if event in pop1 %}
               <a class="button1 bg-secondary">{{event.name}}</a>
               <p>Your Feedback is submitted.</p>
               {% else %}
