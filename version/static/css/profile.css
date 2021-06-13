@@ -15,93 +15,117 @@ body {
     background-position: center;
 }
 
-.container {
-    position: relative;
-    width: 100%;
-    margin-top: 5%;
+.main {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.mycontainer {
+    width: 90%;
+    position: relative;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
     align-items: flex-start;
 }
 
-.left {
-    margin-top: 1rem;
+.leftdiv {
     width: 20%;
-}
-
-.left a {
-    margin: 1rem;
-}
-
-.mycard {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .rightdiv {
     width: 70%;
+    flex-direction: column;
+    /* height: 100vh; */
+    /* overflow-y: scroll; */
+    /* align-items: center; */
+}
+
+.leftdiv a {
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    padding: 2.5rem;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.mycard {
+    padding: 10px;
+    flex-direction: column;
+}
+
+.formcard {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 80px;
+}
+
+.mycard,
+.formcard {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: 0.5s;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px;
 }
 
 #twodiv,
 #threediv {
     display: none;
+    flex-direction: column;
 }
 
-.container .card {
-    position: relative;
+.content1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    /* background: rgba(255, 255, 255, 0.2); */
-    background-color: rgba(7, 6, 6, 0.123);
+}
+
+.content1 .links {
+    width: 20%;
+    padding: 10px;
+}
+
+.content1 .links .button1 {
+    margin: 10px;
+    width: 100%;
     color: #fff;
-    margin-top: 3%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-    /* box-shadow: 0 5px 20px rgba(255, 255, 255, 0.363); */
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0rem;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: .5rem;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.imgBx1,
-.imgBx2,
-.imgBx3 {
-    position: relative;
-    margin-top: 10%;
+.content1 .links .button1:hover {
+    background: #09ccee;
+    color: #000;
 }
 
-.imgBx1 img,
-.imgBx2 img,
-.imgBx3 img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 4rem;
-    transition: transform 0.5s;
+.content1 .links .button1:focus {
+    background: green;
+    color: #000;
 }
 
-.imgBx1 img:hover,
-.imgBx2 img:hover,
-.imgBx3 img:hover {
-    transform: scale(1.1);
-}
-
-.container .card .content {
-    margin-top: 2%;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-p {
-    line-height: 1;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: justify;
+.content1 .links a {
+    text-decoration: none;
+    color: #09ccee;
 }
 
 h1 {
@@ -113,15 +137,6 @@ h1 {
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
-}
-
-@keyframes mover {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.2);
-    }
 }
 
 @keyframes glow {
@@ -134,33 +149,10 @@ h1 {
 }
 
 h2 {
-    -webkit-animation: mover 1s infinite alternate;
-    animation: mover 2s infinite alternate;
-}
-
-.imgBx1 img {
-    object-fit: contain;
-}
-
-
-/* MENU BAR STARTS */
-
-@media screen and (max-width: 1080px) {
-    .container {
-        padding: 8rem 1rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .menu-container {
-        width: 100%;
-    }
-    .container .card .content {
-        width: 80%;
-    }
-    h1 {
-        font-size: 35px;
-    }
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: 4rem 0;
 }
 
 input:-webkit-autofill,
@@ -171,30 +163,8 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    /* border: 1px solid rgb(255, 255, 255); */
     -webkit-text-fill-color: rgb(255, 255, 255);
-    /* box-shadow: 0 0 0px 1000px #000 inset; */
     transition: background-color 5000s ease-in-out 0s;
-}
-
-h1 {
-    margin-top: 5%;
-    font-size: 50px;
-    text-align: center;
-    color: #fff;
-    font-weight: bolder;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
-    }
-    to {
-        text-shadow: 0 0 12px #fff, 0 0 22px #09ccee, 0 0 22px #09ccee, 0 0 42px #09ccee;
-    }
 }
 
 i {
@@ -297,82 +267,42 @@ input[type="submit"] {
     flex-wrap: wrap;
 }
 
-.list li {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 0;
-}
-
-.list li a {
-    font-size: 30px;
-}
-
-#register {
+#update {
     border: 2px solid #b3d4c1;
 }
 
-#register:hover {
+#update:hover {
     background: #2ecc71;
-}
-
-#login {
-    color: #d304d3;
-}
-
-#login:hover {
-    transform: scale(1.1);
-    color: white;
 }
 
 @media screen and (max-width: 1028px) {
     h1 {
         font-size: 45px;
     }
-    .container {
-        flex-direction: column;
-    }
-    .mycard {
-        width: auto;
-        margin: 10px;
-        padding: 30px;
-    }
-    .content {
-        flex-direction: column;
-        margin: 10px;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    input[type="tel"],
-    input[type="select"],
-    input[type="file"],
-    select,
-    textarea,
-    input[type="password"] {
-        width: 220px;
-        margin: 15px auto;
-    }
-    label {
-        width: 130px;
-    }
-    i {
-        padding: 30px 15px;
-    }
 }
 
-h2 {
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    margin: 4rem 0;
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 35px;
+    }
+    .mycontainer {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .leftdiv {
+        flex-direction: row;
+        width: auto;
+        margin: auto;
+    }
+    .mycontainer {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 450px) {
     h1 {
         font-size: 35px;
-    }
-    .container {
-        flex-direction: column;
     }
     .mycard {
         width: auto;
