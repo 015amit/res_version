@@ -3,7 +3,7 @@ from flask import render_template,session,jsonify,request,redirect,flash,url_for
 from flask.helpers import make_response
 from werkzeug.utils import redirect
 from version import app,db
-from version.models import User
+from version.models import Scrim1, Scrim2, User
 from flask_login import login_user, current_user,login_required, logout_user
 import json
 from io import BytesIO
@@ -32,6 +32,17 @@ def events():
 @app.route('/events/<int:id>')
 def desc(id):
     return render_template('desc.html', id=id, event=allevents['event'][id-1])
+
+@app.route('/events/<int:id>/registration', methods=['GET','POST'])
+def registration(id):
+    if request.method=='POST':
+        user_id = request.form.get('scrim1id')
+        if id == 1:
+            user = Scrim1(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Scrim 1')
+            return redirect(url_for('profile'))
 
 @app.route('/events/<int:id>/registration', methods=['GET','POST'])
 def register(id):
@@ -93,7 +104,7 @@ def login():
             check_pass = em[0:4]+cont[0:4]+gen[0:4]
             if check_pass==password:
                 login_user(user)
-                return redirect(url_for('home'))
+                return redirect(url_for('profile'))
             flash('Incorrect Password')
             return redirect(url_for('login'))
 
@@ -111,11 +122,13 @@ def login():
 @login_required
 def profile():
     user = User.query.filter_by(id=current_user.id).first()
+    scrim1 = Scrim1.query.filter_by(user_id=current_user.id).first()
+    scrim2 = Scrim2.query.filter_by(user_id=current_user.id).first()
     if request.method == 'POST':
         user.name=request.form.get('name')
-        user.email=request.form.get('email')
+        email=request.form.get('email')
         user.gender=request.form.get('gender')
-        user.contact=request.form.get('contact')
+        contact=request.form.get('contact')
         user.roll=request.form.get('roll')
         user.year=request.form.get('year')
         user.hackid=request.form.get('hackid')
@@ -124,13 +137,21 @@ def profile():
         user.city=request.form.get('city')
         user.state=request.form.get('state')
         user.pin=request.form.get('pin')
+ 
+        if email != user.email or contact != user.contact:
+            email1 = User.query.filter_by(email=email).first()
+            cont1 = User.query.filter_by(contact=contact).first()
+            if email1 or cont1:
+                flash('This email-id or contact is already taken!')
+                return redirect(url_for('profile')) 
 
-        
+        user.email=email
+        user.contact=contact
 
         db.session.commit()
         flash('your profile is updated successfully')
         return redirect(url_for('profile'))
-    return render_template('profile.html', user=user, title="Dashboard")
+    return render_template('profile.html', user=user, scrim1=scrim1, scrim2=scrim2)
 
 
 @app.route('/logout')
