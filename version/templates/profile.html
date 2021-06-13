@@ -9,7 +9,7 @@
     <h1 style="margin-bottom: 2rem; margin-top: 42px">Dashboard</h1>
     <div class="mycontainer">
         <div class="leftdiv">
-            <div class="mycard" style="padding: 40px 0px;">
+            <div class="mycard">
                 <!-- <div class="leftcontent"> -->
                 <a href="#" id="one">Update Profile</a>
                 <a href="#" id="two">Register for Events</a>
@@ -148,26 +148,44 @@
                     </div>
                 </form>
             </div>
-
+            
             <div class="twodiv" id="twodiv">
+                {% for event,reg in events %}
                 <div class="formcard">
                     <div class="content1">
-                        <h2>Scrim 1</h2>
+                        <h2>{{event.name}}</h2>
                         <div class="links">
-                            <a href="#" class="button1">Register</a>
-                            <p><a href="#">Know more</a> about the Event</p>
+                            {% if reg %}
+                            <a class="button1 bg-secondary">Registered</a>
+                            {% else %}
+                            <a data-bs-toggle="modal" data-bs-target="#event-{{event.id}}" class="button1">Register</a>
+                            {% endif %}
+                            <p><a href="{{ url_for('desc', id=event.id) }}">Know more</a> about the Event</p>
                         </div>
                     </div>
                 </div>
-                <div class="formcard">
-                    <div class="content1">
-                        <h2>Scrim 2</h2>
-                        <div class="links">
-                            <a href="#" class="button1">Register</a>
-                            <p><a href="#">Know more</a> about the Event</p>
+                <div class="modal fade" id="event-{{event.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{event.name}} Registration</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p style="color: #000;">Are you sure want to register for {{event.name}} ?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <form action="{{url_for('registration', id =event.id)}}" method="POST">
+                                    <input type="number" name="scrim1id" value="{{user.id}}" hidden>
+                                    
+                                    <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Not now</button>
+                                    <button type="submit" class="btn btn-sm btn-success">Register</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
             </form>
         </div>
 
@@ -214,16 +232,27 @@
                         
                     </ul>
                 </p>
+=======
+                {% endfor %}
+>>>>>>> version/main
             </div>
+
             <div class="threediv" id="threediv">
+                {% for event, feed in events1 %}
                 <div class="formcard">
                     <div class="content1">
                         <h2>Feedback</h2>
                         <div class="links">
-                            <a href="#" class="button1">Scrim 1</a>
+                            {% if feed %}
+                            <a class="button1 bg-secondary">{{event.name}}</a>
+                            <p>Your Feedback is submitted.</p>
+                            {% else %}
+                            <a href="{{url_for('feedback', id=event.id)}}" class="button1">{{event.name}}</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -266,6 +295,12 @@
         });
     </script> -->
 
+<<<<<<< HEAD
 </div>
     {% include "footer.html" %}
  {% endblock %}
+=======
+
+    {% include "footer.html" %}
+</div> {% endblock %}
+>>>>>>> version/main
