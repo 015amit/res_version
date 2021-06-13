@@ -169,6 +169,9 @@ def internal_server_error(e):
 
 
 
+
+
+
 @app.route('/show/<int:id>')
 def getimg(id):
     user = User.query.filter_by(id=id).first()
@@ -188,3 +191,23 @@ def getimg(id):
         return "binary file"
     return get
     
+
+
+@app.route('/feedback', methods=['GET','POST'])
+def feedback():
+    if request.method=='POST':
+        first = request.form.get('first')
+        second = request.form.get('second')
+        third = request.form.get('third')
+        fourth = request.form.get('fourth')
+        fifth = request.form.get('fifth')
+        sixth = request.form.get('sixth')
+        l=[]
+        l.append(first)
+        l.append(second)
+        return jsonify(l)
+        
+
+    return render_template('feedback.html')    
+
+
