@@ -44,8 +44,8 @@ def registration(id):
             flash('you have registered for Scrim 1')
             return redirect(url_for('profile'))
 
-@app.route('/events/<int:id>/registration', methods=['GET','POST'])
-def register(id):
+@app.route('/registration', methods=['GET','POST'])
+def register():
     if request.method=='POST':
         name=request.form.get('name')
         email=request.form.get('email')
@@ -64,18 +64,18 @@ def register(id):
         contact1 = User.query.filter_by(contact=contact).first()
         if email1:
             flash('This email has already been taken !')
-            return redirect(url_for('register',id=id))
+            return redirect(url_for('register'))
         if  contact1:
             flash('This Mobile Number has already been taken !')
-            return redirect(url_for('register',id=id))
+            return redirect(url_for('register'))
         entry = User(name=name,email=email, gender=gender, contact=contact, roll=roll,
                 year=year, hackid=hackid, iname=iname,address=address, city=city,
                 state=state, pin=pin, pic_name=contact, pic_data=img.read())
         db.session.add(entry)
         db.session.commit()
         flash("You are registered successfully ")
-        return redirect(url_for('desc',id=id))
-    return render_template('register.html', title="Registration", id=id )
+        return redirect(url_for('login'))
+    return render_template('register.html', title="Registration")
 
 @app.route('/teams/<string:name>')
 def teams(name):
