@@ -1,12 +1,13 @@
 {% extends "base.html" %} {% block header %}
 
 <title>{{title}}</title>
-<link rel="stylesheet" href="static/css/home2.css?v1.0" /> {% endblock %} {% block content %}
+<link rel="stylesheet" href="static/css/home2.css?v1.0" /> {% endblock %} {%
+block content %}
 
 <div class="main">
-    <div class="hero">
-        <h1>
-            <span class="V" style="font-size: 40px; text-align: center">
+  <div class="hero">
+    <h1>
+      <span class="V" style="font-size: 40px; text-align: center">
         <img
           id="ver"
           src="static/images/logos/v4.png"
@@ -14,40 +15,62 @@
           width="350px"
         />
       </span>
-        </h1>
-        <p class="tagline" style="text-align: center">presents</p>
-        <img id="theme" src="../static/images/logos/theme1.png" alt="" />
-    </div>
+    </h1>
+    <p class="tagline" style="text-align: center">presents</p>
+    <img id="theme" src="../static/images/logos/theme1.png" alt="" />
+  </div>
 
-    <div id="text">
-        <h1 id="soon">
-            <div id="marq">
-                <div class="mar1">
-                    <a href="https://discord.gg/dcKbGm8m" target="_blank">
-                        <i class="fab fa-discord"></i>
-                    </a>
+  <div id="text">
+    <h1 id="soon">
+      <div id="marq">
+        <div class="mar1">
+          <a href="https://discord.gg/dcKbGm8m" target="_blank">
+            <i class="fab fa-discord"></i>
+          </a>
 
-                    <marquee id="m2" width="98%" direction="left" height="100px" scrollamount="15">
-                        The Version'21 Community Server has been launched over at Discord. Please join for updates on the latest happenings.
-                    </marquee>
-                </div>
-                <div class="mar1 mar2">
-                  <a href="https://blog.version21.in/" target="_blank"><img id="blog" src="{{url_for('static', filename='images/decentralized.svg')}}" alt=""></a>
+          <marquee
+            id="m2"
+            width="98%"
+            direction="left"
+            height="100px"
+            scrollamount="15"
+          >
+            The Version'21 Community Server has been launched over at Discord.
+            Please join for updates on the latest happenings.
+          </marquee>
+        </div>
+        <div class="mar1 mar2">
+          <a href="https://blog.version21.in/" target="_blank"
+            ><img
+              id="blog"
+              src="{{url_for('static', filename='images/decentralized.svg')}}"
+              alt=""
+          /></a>
 
-                    <marquee id="m2" width="98%" direction="left" height="100px" scrollamount="11" style="color: rgb(255, 102, 0); font-size:30px;">
-                      The editorials have been uploaded on the official blog of Version'21.
-                    </marquee>
-                </div>
+          <marquee
+            id="m2"
+            width="98%"
+            direction="left"
+            height="100px"
+            scrollamount="11"
+            style="color: rgb(255, 102, 0); font-size: 30px"
+          >
+            The editorials have been uploaded on the official blog of
+            Version'21.
+          </marquee>
+        </div>
 
-                <!-- <div class="marq1" style="display: flex; width:92%;">
+        <!-- <div class="marq1" style="display: flex; width:92%;">
                   <a href="https://blog.version21.in/" target="_blank"><img id="blog" src="{{url_for('static', filename='images/decentralized.svg')}}" alt=""></a>
                 <marquee width="93%" direction="left" height="100px" id="m1" style="color: rgb(255, 102, 0);">
                   The editorials have been uploaded on the official blog of Version'21.
                 </marquee>
                 </div> -->
-            </div>
-            <div>
-                <span id="offset">C</span>OM<span id="offset">ING</span> S<span id="offset">OON !</span
+      </div>
+      <div>
+        <span id="offset">C</span>OM<span id="offset">ING</span> S<span
+          id="offset"
+          >OON !</span
         >
       </div>
     </h1>

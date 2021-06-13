@@ -130,9 +130,10 @@ def profile():
     scrim2 = Scrim2.query.filter_by(user_id=current_user.id).first()
     registeredevent.append(scrim2)
     feeds = Feedback.query.filter_by(user_id=current_user.id).all()
-    for feed in feeds:
-        event3 = Feedback.query.filter_by(id=feed.id).first()
-        feedbackevent.append(event3)
+    if feeds:
+        for feed in feeds:
+            event3 = Event.query.filter_by(id=feed.event_id).first()
+            feedbackevent.append(event3)
     if request.method == 'POST':
         user.name=request.form.get('name')
         email=request.form.get('email')
@@ -160,7 +161,7 @@ def profile():
         db.session.commit()
         flash('your profile is updated successfully')
         return redirect(url_for('profile'))
-    return render_template('profile.html', user=user,events=zip(events,registeredevent),events1=zip(events,feedbackevent), title="Dashboard")
+    return render_template('profile.html', user=user,events=zip(events,registeredevent),events1=zip(events,feedbackevent), title="Dashboard", pop=events, pop1=feedbackevent)
 
 
 @app.route('/logout')
