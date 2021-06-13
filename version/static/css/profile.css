@@ -132,10 +132,6 @@
         color: #000;
     }
     
-    .content1 .links .button1:focus {
-        background: green;
-        color: #000;
-    }
     
     .content1 .links a {
         text-decoration: none;

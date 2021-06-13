@@ -27,7 +27,7 @@ body {
 
 .hero {
     position: absolute;
-    top: 15%;
+    top: 8%;
     left: 35%;
     width: 30%;
     display: flex;
@@ -55,7 +55,7 @@ body {
 #theme {
     position: absolute;
     width: 965px;
-    top: 9rem;
+    top: 15rem;
 }
 
 .tagline {
@@ -209,6 +209,7 @@ body {
 
 #soon {
     color: #0addaf;
+    margin-top: 10rem;
     font-size: 55px;
     font-weight: 600;
     z-index: 9999;
