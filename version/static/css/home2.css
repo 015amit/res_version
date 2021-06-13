@@ -221,10 +221,22 @@ body {
 
 #soon #m1 {
     font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 0.5rem;
     color: rgb(255, 255, 255);
     font-weight: 500;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
+}
+#blog{
+    width: 46px;
+    height: 46px;
+    /* margin-left: -40px; */
+    transition: 0.5s ease-out;
+}
+#blog:hover{
+    transform: scale(1.2);
 }
 
 .mar1 {
@@ -232,7 +244,12 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: -4rem;
+    width: 90%;
     padding: 0 0.5rem;
+}
+.mar2{
+    width: 90%;
+    margin-top: 0;
 }
 
 .mar1 i {
@@ -412,6 +429,10 @@ body {
     }
     #soon marquee {
         font-size: 20px;
+    }
+    #blog{
+        height: 32px;
+        width: 32px;
     }
     .add {
         top: 76%;
