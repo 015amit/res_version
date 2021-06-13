@@ -10,18 +10,15 @@
     <div class="mycontainer">
         <div class="leftdiv">
             <div class="mycard">
-                <!-- <div class="leftcontent"> -->
-                <a href="#" id="one">Update Profile</a>
-                <a href="#" id="two">Register for Events</a>
-                <a href="#" id="three">Feedback</a>
-                <!-- </div> -->
+                <a class="tablinks active" onclick="openTab(event, 'Update')" href="#" id="one">Update Profile</a>
+                <a class="tablinks" onclick="openTab(event, 'Register')" href="#" id="two">Register for Events</a>
+                <a class="tablinks" onclick="openTab(event, 'Feedback')" href="#" id="three">Feedback</a>
             </div>
         </div>
         <div class="rightdiv">
             {% include 'message.html' %}
-            <div id="onediv">
+            <div id="Update" class="tabcontent active" style="display: flex; ">
                 <form action="{{url_for('profile')}}" method="POST" enctype="multipart/form-data">
-                    <!-- <h2>Personal Details:</h2> -->
                     <div class="formcard" style="padding: 80px;">
                         <div class="content">
                             <table cellpadding="0" cellspacing="0">
@@ -72,7 +69,6 @@
                             </table>
                         </div>
                     </div>
-                    <!-- <h2>College Details:</h2> -->
                     <div class="formcard">
                         <div class="content">
                             <table cellpadding="0" cellspacing="0">
@@ -148,18 +144,16 @@
                     </div>
                 </form>
             </div>
-            
-            <div class="twodiv" id="twodiv">
+
+            <div class="twodiv tabcontent" id="Register">
                 {% for event,reg in events %}
                 <div class="formcard">
                     <div class="content1">
                         <h2>{{event.name}}</h2>
                         <div class="links">
                             {% if reg %}
-                            <a class="button1 bg-secondary">Registered</a>
-                            {% else %}
-                            <a data-bs-toggle="modal" data-bs-target="#event-{{event.id}}" class="button1">Register</a>
-                            {% endif %}
+                            <a class="button1 bg-secondary">Registered</a> {% else %}
+                            <a data-bs-toggle="modal" data-bs-target="#event-{{event.id}}" class="button1">Register</a> {% endif %}
                             <p><a href="{{ url_for('desc', id=event.id) }}">Know more</a> about the Event</p>
                         </div>
                     </div>
@@ -177,7 +171,7 @@
                             <div class="modal-footer">
                                 <form action="{{url_for('registration', id =event.id)}}" method="POST">
                                     <input type="number" name="scrim1id" value="{{user.id}}" hidden>
-                                    
+
                                     <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Not now</button>
                                     <button type="submit" class="btn btn-sm btn-success">Register</button>
                                 </form>
@@ -188,7 +182,7 @@
                 {% endfor %}
             </div>
 
-            <div class="threediv" id="threediv">
+            <div class="threediv tabcontent" id="Feedback">
                 {% for event, feed in events1 %}
                 <div class="formcard">
                     <div class="content1">
@@ -198,8 +192,7 @@
                             <a class="button1 bg-secondary">{{event.name}}</a>
                             <p>Your Feedback is submitted.</p>
                             {% else %}
-                            <a href="{{url_for('feedback', id=event.id)}}" class="button1">{{event.name}}</a>
-                            {% endif %}
+                            <a href="{{url_for('feedback', id=event.id)}}" class="button1">{{event.name}}</a> {% endif %}
                         </div>
                     </div>
                 </div>
@@ -207,44 +200,23 @@
             </div>
         </div>
     </div>
+
+
     <script>
-        var one = document.getElementById("one");
-        var two = document.getElementById("two");
-        var three = document.getElementById("three");
-
-        var onediv = document.getElementById("onediv");
-        var twodiv = document.getElementById("twodiv");
-        var threediv = document.getElementById("threediv");
-
-        one.addEventListener("click", () => {
-            onediv.style.display = "initial";
-            one.style.backgroundColor = "red";
-            twodiv.style.display = "none";
-            two.style.backgroundColor = "none";
-            threediv.style.display = "none";
-
-        });
-        two.addEventListener("click", () => {
-            onediv.style.display = "none";
-            one.style.backgroundColor = "none";
-            twodiv.style.display = "flex";
-            two.style.backgroundColor = "red";
-            threediv.style.display = "none";
-            three.style.backgroundColor = "none";
-
-
-        });
-        three.addEventListener("click", () => {
-            onediv.style.display = "none";
-            one.style.backgroundColor = "none";
-            twodiv.style.display = "none";
-            two.style.backgroundColor = "none";
-            threediv.style.display = "flex";
-            three.style.backgroundColor = "red";
-
-        });
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "flex";
+            evt.currentTarget.className += " active";
+        }
     </script>
-
 
     {% include "footer.html" %}
 </div> {% endblock %}
