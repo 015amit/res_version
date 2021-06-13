@@ -419,7 +419,7 @@ body {
 @media screen and (max-width: 768px) {
     #theme {
         width: 707px;
-        top: 10rem;
+        top: 17rem;
     }
     .svg-right {
         transform: scale(0.6) rotate(90deg);
@@ -448,10 +448,14 @@ body {
         margin-top: 20rem;
     }
     #soon {
+        margin-top: 6rem;
         font-size: 32px;
     }
     .link-icon {
         margin-bottom: 3rem;
+    }
+    .mar2{
+        margin-top: -5rem;
     }
     .hero {
         top: 5%;
