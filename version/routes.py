@@ -55,6 +55,7 @@ def registration(id):
             db.session.commit()
             flash('you have registered for Scrim 3')
             return redirect(url_for('profile'))
+    return render_template('404.html')
 
 @app.route('/registration', methods=['GET','POST'])
 def register():
@@ -220,22 +221,24 @@ def getimg(id):
 @app.route('/event/<int:id>/feedback', methods=['GET','POST'])
 @login_required
 def feedback(id):
-    events = Event.query.filter_by(id=id).first()
-    if request.method=='POST':
-        first = request.form.get('first')
-        second = request.form.get('second')
-        third = request.form.get('third')
-        fourth = request.form.get('fourth')
-        fifth = request.form.get('fifth')
-        sixth = request.form.get('sixth')
+    events = Event.query.filter_by(id=id).first_or_404()
+    if events:
+        if request.method=='POST':
+            first = request.form.get('first')
+            second = request.form.get('second')
+            third = request.form.get('third')
+            fourth = request.form.get('fourth')
+            fifth = request.form.get('fifth')
+            sixth = request.form.get('sixth')
 
-        name = Event.query.filter_by(id=id).first()
-        feedback = Feedback(event_id=id, user_id=current_user.id, overall=first, level=second, clarity=third, access=fourth, source=fifth, feed=sixth)
-        db.session.add(feedback)
-        db.session.commit()
-        flash(f'Thank you for your Feedback for {name.name}')
-        return redirect(url_for('profile'))
+            name = Event.query.filter_by(id=id).first()
+            feedback = Feedback(event_id=id, user_id=current_user.id, overall=first, level=second, clarity=third, access=fourth, source=fifth, feed=sixth)
+            db.session.add(feedback)
+            db.session.commit()
+            flash(f'Thank you for your Feedback for {name.name}')
+            return redirect(url_for('profile'))
 
-    return render_template('feedback.html',event=events, title="Feedback")    
+        return render_template('feedback.html',event=events, title="Feedback")  
+      
 
 
