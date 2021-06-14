@@ -55,7 +55,7 @@ body {
 #theme {
     position: absolute;
     width: 965px;
-    top: 15rem;
+    top: 9rem;
 }
 
 .tagline {
@@ -154,7 +154,8 @@ body {
     position: absolute;
     right: 0%;
     opacity: 0.5;
-    bottom: 0;
+    top: 30rem;
+    /* bottom: 0; */
     stroke-dasharray: 90%;
     animation: svg-stroke 3s linear infinite alternate-reverse;
 }
@@ -209,7 +210,7 @@ body {
 
 #soon {
     color: #0addaf;
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     font-size: 55px;
     font-weight: 600;
     z-index: 9999;
@@ -244,13 +245,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -4rem;
+    margin-top: -9rem;
     width: 90%;
     padding: 0 0.5rem;
 }
 .mar2{
     width: 90%;
-    margin-top: 0;
+    margin-top: -1rem;
 }
 
 .mar1 i {
@@ -332,9 +333,9 @@ body {
         height: 50rem;
     } */
     .svg-right {
-        transform: scale(0.8) rotate(90deg);
-        left: -14%;
-        top: 72%;
+        transform: scale(0.8);
+        left: 62%;
+        top: 62%;
         height: 350px;
         width: 500px;
     }
@@ -342,7 +343,7 @@ body {
         display: none;
     }
     #theme {
-        top: 15rem;
+        /* top: 15rem; */
         width: 800px;
     }
     .add {
@@ -359,9 +360,9 @@ body {
     .all-link ul li {
         font-size: 45px;
     }
-    #text {
+    /* #text {
         margin-top: 40rem;
-    }
+    } */
     .icon {
         width: 24px;
         height: 24px;
@@ -377,9 +378,10 @@ body {
         min-height: 100vh;
     }
     .svg-right {
-        transform: scale(0.8) rotate(90deg);
-        left: -14%;
-        top: 78%;
+        transform: scale(0.8);
+        /* left: -14%; */
+        top: 137%;
+        /* bottom: -38rem; */
         height: 300px;
         width: 450px;
     }
@@ -419,10 +421,10 @@ body {
 @media screen and (max-width: 768px) {
     #theme {
         width: 707px;
-        top: 17rem;
+        top: 12rem;
     }
     .svg-right {
-        transform: scale(0.6) rotate(90deg);
+        transform: scale(0.6);
         left: -8%;
         top: 76%;
         height: 200px;
@@ -478,6 +480,9 @@ body {
 @media screen and (max-width: 450px) {
     #theme {
         width: 525px;
+    }
+    .coming{
+        margin-top: -3rem;
     }
     #m1 {
         font-size: 20px;
