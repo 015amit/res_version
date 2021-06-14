@@ -127,21 +127,6 @@ input[type="radio"] {
     width: 80px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="file"]:focus,
-select:focus,
-textarea:focus,
-input[type="radio"]:focus,
-input[type="password"]:focus {
-    background: none;
-    border-color: #2ecc71;
-    transform: scale(1.1);
-    color: white;
-}
-
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="number"]:hover,
@@ -175,7 +160,7 @@ input[type="submit"] {
 }
 
 #register:hover {
-    background: #2ecc71;
+    background: #09ccee;
 }
 
 #login {

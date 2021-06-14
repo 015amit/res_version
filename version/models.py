@@ -25,6 +25,7 @@ class User(db.Model, UserMixin):
     pic_data = db.Column(db.LargeBinary)
     scrim1 = db.relationship('Scrim1', backref ='event1')
     scrim2 = db.relationship('Scrim2', backref ='event2')
+    scrim3 = db.relationship('Scrim3', backref ='event3')
     feedback = db.relationship('Feedback', backref ='feedback2')
 
 
@@ -39,9 +40,14 @@ class Scrim2(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
+class Scrim3(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
 class Event(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String, unique=True, nullable=False)
+    status = db.Column(db.String, unique=False, default="open")
     feedback = db.relationship('Feedback', backref ='feedback1',cascade="all,delete")
 
 class Feedback(db.Model):

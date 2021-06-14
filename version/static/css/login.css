@@ -124,13 +124,6 @@ input[type="password"] {
     color: white;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
-    background: none;
-    border-color: #2ecc71;
-    transform: scale(1.1);
-    color: white;
-}
 
 input[type="email"]:hover,
 input[type="password"]:hover {
@@ -160,7 +153,7 @@ input[type="submit"] {
 }
 
 #login:hover {
-    background: #2ecc71;
+    background: #09ccee;
 }
 
 #register {

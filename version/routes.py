@@ -3,7 +3,7 @@ from flask import render_template,session,jsonify,request,redirect,flash,url_for
 from flask.helpers import make_response
 from werkzeug.utils import redirect
 from version import app,db
-from version.models import Event, Scrim1, Scrim2, User, Feedback
+from version.models import Event, Scrim1, Scrim2, User, Feedback, Scrim3
 from flask_login import login_user, current_user,login_required, logout_user
 import json
 from io import BytesIO
@@ -42,6 +42,18 @@ def registration(id):
             db.session.add(user)
             db.session.commit()
             flash('you have registered for Scrim 1')
+            return redirect(url_for('profile'))
+        if id == 2:
+            user = Scrim2(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Scrim 2')
+            return redirect(url_for('profile'))
+        if id == 3:
+            user = Scrim3(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Scrim 3')
             return redirect(url_for('profile'))
 
 @app.route('/registration', methods=['GET','POST'])
@@ -124,11 +136,13 @@ def profile():
     registeredevent = []
     feedbackevent = []
     user = User.query.filter_by(id=current_user.id).first()
-    events = Event.query.all()
+    events = Event.query.order_by(Event.id).all()
     scrim1 = Scrim1.query.filter_by(user_id=current_user.id).first()
     registeredevent.append(scrim1)
     scrim2 = Scrim2.query.filter_by(user_id=current_user.id).first()
     registeredevent.append(scrim2)
+    scrim3 = Scrim3.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(scrim3)
     feeds = Feedback.query.filter_by(user_id=current_user.id).all()
     if feeds:
         for feed in feeds:
@@ -161,7 +175,7 @@ def profile():
         db.session.commit()
         flash('your profile is updated successfully')
         return redirect(url_for('profile'))
-    return render_template('profile.html', user=user,events=zip(events,registeredevent),events1=zip(events,feedbackevent), title="Dashboard", pop=events, pop1=feedbackevent)
+    return render_template('profile.html', user=user,events=zip(events,registeredevent),events1=zip(events,registeredevent), title="Dashboard", pop=events, pop1=feedbackevent, pop2=registeredevent)
 
 
 @app.route('/logout')
