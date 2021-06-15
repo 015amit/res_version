@@ -99,10 +99,11 @@ td{
 }
 
 input {
+    width: 90%;
     outline: none;
 }
 output{
-    margin-left: 2rem;
+    margin-left: 1rem;
     color: #fff;
     padding-top: 0;
 }
@@ -110,6 +111,9 @@ output{
 label {
     color: white;
     
+}
+.modal{
+    opacity: 1;
 }
 
 option {
@@ -128,13 +132,14 @@ input[type="file"],
 select,
 textarea,
 input[type="password"] {
+    width: 100%;
     border: 0;
     background: none;
     margin: 10px auto;
     text-align: center;
     border: 2px solid #3498db;
     padding: 10px 10px;
-    width: 300px;
+    /* width: 300px; */
     outline: none;
     font-weight: 800;
     border-radius: 24px;
