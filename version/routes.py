@@ -31,7 +31,10 @@ def events():
 
 @app.route('/events/<int:id>')
 def desc(id):
-    return render_template('desc.html', id=id, event=allevents['event'][id-1])
+    if id == 1 or id == 2:
+        return render_template('desc.html', id=id, event=allevents['event'][id-1])
+    else:
+        return page_not_found(404)
 
 @app.route('/events/<int:id>/registration', methods=['GET','POST'])
 def registration(id):

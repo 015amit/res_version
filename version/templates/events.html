@@ -8,19 +8,41 @@
     <div class="container1">
         {% for event in events %}
 
-        <a href="/events/{{event['id']}}">
+
         <!-- <a href="#"> -->
-            <div class="mycard">
+        {% if event['id'] == 1 %}
+        <a href="/events/{{event['id']}}">
+            <div class="mycard mycard1">
                 <div class="img-container">
-                    <img class="imgbx" src="static/images/events/scrim1.jpeg" alt="pic" />
+                    <img class="imgbx"
+                        src="{{url_for('static', filename='images/events/scrim' + event['id']|string + '.jpeg')}}"
+                        alt="pic" />
+                </div>
+                <div class="details">
+                    <h2>{{event['name']}}</h2>
+                    <h2 style="font-size:18px; color: red;">(Closed)</h2>
+                </div>
+            </div>
+        </a>
+        {% else %}
+        <a href="/events/{{event['id']}}">
+            <div class="mycard mycard1">
+                <div class="img-container">
+                    <img class="imgbx"
+                        src="{{url_for('static', filename='images/events/scrim' + event['id']|string + '.jpeg')}}"
+                        alt="pic" />
                 </div>
                 <div class="details">
                     <h2>{{event['name']}}</h2>
                 </div>
             </div>
         </a>
+        {% endif %}
+
         {% endfor %}
     </div>
-    
+
+
+
 </div>
 {% include "footer.html" %} {% endblock %}
