@@ -103,8 +103,7 @@
             </div>
         </div>
     </div>
-    {% endif %}
-    {% if id == 2 %}
+    {% endif %} {% if id == 2 %}
     <div class="slide" id="slide1">
         <div class="head">
 
@@ -132,7 +131,7 @@
 
 
                     <button class="tablinks" onclick="openTab(event, 'Contest')">
-                        Contest
+                        Register
                     </button>
 
                     <button class="tablinks" onclick="openTab(event, 'Contact')">
@@ -145,21 +144,22 @@
                         <!-- <p>{{event['desc']}}</p> -->
 
                         <p>The Scrims are being conducted by Team Version.</p>
-                        <p>This year we bring the very first edition of the Scrims Initiative- Scrim 1.</p>
-                        <p>This contest will check your problem-solving skills.</p>
-                        <p>Participate and outsmart other participants to reach at the peak of the Leaderboard.</p>
-                        <p>May the best coder win!</p>
-                        <p>Starts at 08:00 PM, 12 June 2021</p>
+                        <p>Now,we bring the second edition of the Scrims Initiative- Scrim 2.</p>
+                        <p>This contest will check your technical as well as analytical skills.</p>
+                        <p>Participate to reach at the peak of the Leaderboard.</p>
+                        <p>All the best!</p>
+                        <p>Starts at 08:00 PM, 3 July 2021</p>
                     </div>
                 </div>
 
                 <div id="Format" class="tabcontent">
                     <div class="format">
                         <ul>
-                            <li>This is an open coding contest, hosted on hackerearth.</li>
-                            <li>There will be 8 problems and you will get 2 hours and 30 minutes to solve them.</li>
-                            <li>Points are distributed according to problem levels.</li>
-                            <li>The Contest is open i.e. it will not be proctored. </li>
+                            <li>This is a quiz event, hosted on hackerearth.</li>
+                            <li>There will be 60 multiple choice questions and you will get 45 minutes to solve them.</li>
+                            <li>50 questions will be technical each of 2 marks and 10 questions will be riddle each of 5 marks.</li>
+                            <li>For every wrong answer there will be negative marking of 1 for technical and 2 marks for riddle.</li>
+                            <li>The Contest is open i.e. it will not be proctored.</li>
                             <li>At the end of the Contest, participants having maximum scores will win.</li>
                         </ul>
                     </div>
@@ -171,7 +171,7 @@
                             <li>It is an individual event.</li>
                             <li>Doubts regarding anything should be asked directly to the contacts provided by Team Version. Posting it in public forums will not be entertained.</li>
                             <li>Unfair means to guarantee advantage will lead to disqualification.</li>
-                            <li>Plagiarism will lead to disqualification.</li>
+                            <li>Changing tabs will kick out the participant.</li>
                             <li>The solutions should not be made public or open-sourced during the contest.</li>
                             <li>The decision of the organizers will be final and binding in any case of disputes.</li>
                         </ul>
@@ -181,8 +181,8 @@
 
 
                 <div id="Contest" class="tabcontent">
-                    <p>This Event is over now!</p>
-                    <a class="mail" href="https://p.hck.re/Wt3E" target="_blank">Contest Link</a>
+                    <!-- <p>This Event is over now!</p> -->
+                    <a class="mail" href="{{url_for('profile')}}">Register Here</a>
                 </div>
 
                 <div id="Contact" class="tabcontent">
