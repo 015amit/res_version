@@ -8,7 +8,7 @@ import re
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL','postgres://qnqfgovaplwtuj:133018b4322b974d88cded3ac737f24afeb6ff8b1405469fdf296f07c15409de@ec2-3-214-136-47.compute-1.amazonaws.com:5432/dbabnsoq30me3f')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL','postgres://fcguqmbuyopajs:199158f7cc8b81dd5d952785ff66060083879815d02225687d305fd5b34bfa82@ec2-3-218-71-191.compute-1.amazonaws.com:5432/d2nh3e5t7mnpde')
 if app.config['SQLALCHEMY_DATABASE_URI'].startswith("postgres://"):
     app.config['SQLALCHEMY_DATABASE_URI'] = app.config['SQLALCHEMY_DATABASE_URI'].replace("postgres://", "postgresql://", 1)
 
