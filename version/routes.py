@@ -47,6 +47,10 @@ def registration(id):
             flash('you have registered for Scrim 1')
             return redirect(url_for('profile'))
         if id == 2:
+            u1 = Scrim2.query.filter_by(user_id = user_id).first()
+            if u1:
+                flash('you have registered already for Scrim 2')
+                return redirect(url_for('profile'))
             user = Scrim2(user_id=user_id)
             db.session.add(user)
             db.session.commit()
@@ -235,6 +239,10 @@ def feedback(id):
             sixth = request.form.get('sixth')
 
             name = Event.query.filter_by(id=id).first()
+            u1 = Feedback.query.filter_by(user_id=current_user.id, event_id=id).first()
+            if u1:
+                flash(f'your Feedback for {name.name} is already submitted.')
+                return redirect(url_for('profile'))
             feedback = Feedback(event_id=id, user_id=current_user.id, overall=first, level=second, clarity=third, access=fourth, source=fifth, feed=sixth)
             db.session.add(feedback)
             db.session.commit()
