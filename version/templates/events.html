@@ -10,7 +10,7 @@
 
 
         <!-- <a href="#"> -->
-        {% if event['id'] == 1 or  event['id'] == 2 %}
+        {% if event['id'] == 1 or  event['id'] == 2 or event['id'] == 3 %}
         <a href="/events/{{event['id']}}">
             <div class="mycard mycard1">
                 <div class="img-container">
@@ -29,7 +29,7 @@
             <div class="mycard mycard1">
                 <div class="img-container">
                     <img class="imgbx"
-                        src="{{url_for('static', filename='images/events/worksh.jpeg')}}"
+                        src="{{url_for('static', filename='images/events/event1.jpeg')}}"
                         alt="pic" />
                 </div>
                 <div class="details">
