@@ -110,7 +110,7 @@ body {
 
 .mailbutton:hover {
     transform: scale(1.1);
-    color: #09ccee;
+    color: white;
     border-bottom: 2px solid #fff;
 }
 
@@ -146,12 +146,21 @@ h1 {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
     }
     to {
-        text-shadow: 0 0 12px #fff, 0 0 22px #09ccee, 0 0 22px #09ccee, 0 0 42px #09ccee;
+        text-shadow: 0 0 15px #fff, 0 0 25px #09ccee, 0 0 25px #09ccee, 0 0 45px #09ccee;
     }
 }
 
 .heading h2 {
     font-weight: bolder;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 .content h4 {
