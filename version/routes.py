@@ -16,6 +16,10 @@ def home():
 def about():
     return render_template('about.html', title="About Us")
 
+@app.route('/magazine')
+def magazine():
+    return render_template('magazine.html', title="Magazine")
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html', title="Contact Us")
