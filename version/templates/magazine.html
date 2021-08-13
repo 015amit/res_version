@@ -1,0 +1,96 @@
+{% extends "base.html" %} {% block header %}
+
+<link rel="stylesheet" href="static/css/about.css" />
+<title>{{title}}</title>
+
+<style>
+    .containerc {
+        padding: 2rem 1rem;
+        margin: auto;
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+    }
+    
+    .imgbox {
+        width: 90%;
+    }
+    
+    .imgbox img {
+        /* width: 400px;*/
+        width: 100%;
+    }
+    
+    .cardc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cardc .mail {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        border: 1px solid #09ccee;
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 30px 0;
+    }
+    
+    .cardc .mail:hover {
+        background: #09ccee;
+        color: #000;
+        font-weight: 700;
+    }
+    
+    @media screen and (max-width: 1080px) {
+        .containerc {
+            padding: 11rem 1rem;
+            height: fit-content;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .containerc {
+            flex-direction: column;
+            width: 80%;
+            padding: 1rem;
+        }
+        .cardc {
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        h1 {
+            font-size: 35px;
+        }
+        .cardc .mail {
+            font-weight: 600;
+            font-size: 11px;
+            padding: .8rem;
+            margin: 10px 0;
+            width: 90%;
+        }
+    }
+</style>
+
+{% endblock %} {% block content %}
+
+<h1 style="margin-bottom: 2rem; margin-top: 42px">Magazines</h1>
+
+<div class="containerc">
+    <div class="cardc">
+        <div class="imgbox">
+            <img src="../static/magazine/june_page-0001.jpg" alt="Versionize-June-2021">
+        </div>
+
+        <a class="mail" href="../static/magazine/Versionize-June-2021.pdf" download="Versionize-June-2021">Download</a>
+    </div>
+    <div class="cardc">
+        <div class="imgbox">
+            <img src="../static/magazine/august_page-0001.jpg" alt="Versionize-August-2021">
+        </div>
+        <a class="mail" href="../static/magazine/Versionize-August 2021-edition.pdf" download="Versionize-August-2021">Download</a>
+    </div>
+</div>
+{% include "footer.html" %} {% endblock %}
