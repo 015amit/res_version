@@ -12,7 +12,7 @@ animation
     {
       marginBottom: "-1px",
       ease: "Power2.inOut",
-      duration: 0.1,
+      duration: 0.2,
     },
     "-=0.7"
   )
@@ -21,25 +21,25 @@ animation
     {
       marginTop: "-1px",
       ease: "Power2.inOut",
-      duration: 0.1,
+      duration: 0.2,
     },
     "-=0.7"
   )
   .to(".line2", {
     rotation: 90,
     ease: "Power2.Out",
-    duration: 0.2,
+    duration: 0.3,
   })
   .to(".humberger", {
     rotation: 45,
     ease: "Power2.Out",
-    duration: 0.2,
+    duration: 0.3,
   })
   .to(
     ".link-item",
     {
       opacity: 1,
-      duration: 0.3,
+      duration: 0.5,
       ease: "Power2.inOut",
       stagger: 0.15,
     },

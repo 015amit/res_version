@@ -1,373 +1,107 @@
 {% extends "base.html" %} {% block header %}
-<link rel="stylesheet" href="../static/css/desc.css?v=1.0" />
+<link rel="stylesheet" href="{{url_for('static', filename='css/desc.css')}}" />
 <title>{{event['name']}}</title>
-<!-- <title>{{event['name']}}</title> -->
 
-{% endblock %} {% block content %} {% include 'message.html' %}
+{% endblock %} {% block content %}
 <div class="main2">
-    <!-- <div class="prev">
-        {% if id == 1 %}
-        <a href="{{url_for('desc', id = 4)}}"><i class="fas fa-chevron-left"></i></a> {% else %}
-        <a href="{{url_for('desc', id = id-1)}}"><i class="fas fa-chevron-left"></i></a> {% endif %}
-    </div> -->
+  <div class="prev">
     {% if id == 1 %}
-    <div class="slide" id="slide1">
-        <div class="head">
-
-            <!-- <h1>{{event['name']}}</h1> -->
-            <h1>Scrim 1</h1>
-            <h6>All the queries regarding the event will be addressed at our Version'21 Community Server
-                <a href="https://discord.gg/AETDZXtkwz" target="_blank"><i class="fab fa-discord"></i>.</a>
-            </h6>
-        </div>
-        <div class="content">
-
-            <div class="card ">
-                <div class="tab text-center">
-                    <button class="tablinks active" onclick="openTab(event, 'Description')">
-                        Description
-                    </button>
-
-                    <button class="tablinks" onclick="openTab(event, 'Format')">
-                        Format
-                    </button>
-
-                    <button class="tablinks" onclick="openTab(event, 'Rules')">
-                        Rules
-                    </button>
-
-
-                    <button class="tablinks" onclick="openTab(event, 'Contest')">
-                        Contest
-                    </button>
-
-                    <button class="tablinks" onclick="openTab(event, 'Contact')">
-                        Contact
-                    </button>
-                </div>
-
-                <div id="Description" class="tabcontent active" style="display: flex; text-align: left;">
-                    <div class="desc">
-                        <!-- <p>{{event['desc']}}</p> -->
-
-                        <p>The Scrims are being conducted by Team Version.</p>
-                        <p>This year we bring the very first edition of the Scrims Initiative- Scrim 1.</p>
-                        <p>This contest will check your problem-solving skills.</p>
-                        <p>Participate and outsmart other participants to reach at the peak of the Leaderboard.</p>
-                        <p>May the best coder win!</p>
-                        <p>Starts at 08:00 PM, 12 June 2021</p>
-                    </div>
-                </div>
-
-                <div id="Format" class="tabcontent">
-                    <div class="format">
-                        <ul>
-                            <li>This is an open coding contest, hosted on hackerearth.</li>
-                            <li>There will be 8 problems and you will get 2 hours and 30 minutes to solve them.</li>
-                            <li>Points are distributed according to problem levels.</li>
-                            <li>The Contest is open i.e. it will not be proctored. </li>
-                            <li>At the end of the Contest, participants having maximum scores will win.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="Rules" class="tabcontent" style="text-align: left;">
-                    <div class="rules">
-                        <!-- <p>{{event['rules']}}</p> -->
-                        <ul>
-                            <li>It is an individual event.</li>
-                            <li>Doubts regarding anything should be asked directly to the contacts provided by Team Version. Posting it in public forums will not be entertained.</li>
-                            <li>Unfair means to guarantee advantage will lead to disqualification.</li>
-                            <li>Plagiarism will lead to disqualification.</li>
-                            <li>The solutions should not be made public or open-sourced during the contest.</li>
-                            <li>The decision of the organizers will be final and binding in any case of disputes.</li>
-                        </ul>
-                        <p>Judging Criteria: At the end of the contest, the participants having highest score on the leaderboard win.</p>
-                    </div>
-                </div>
-
-
-                <div id="Contest" class="tabcontent">
-                    <p>This Event is over now!</p>
-                    <a class="mail" href="https://p.hck.re/Wt3E" target="_blank">Contest Link</a>
-                </div>
-
-                <div id="Contact" class="tabcontent">
-                    <a class="mail" href="mailto:contact@version21.in" style="font-weight: 800;">
-                        <i class="fas fa-envelope"></i>&nbsp; contact@version21.in
-                    </a>
-                    <p style="padding: 1rem;">Or</p>
-                    <a class="discord" href="https://discord.gg/AETDZXtkwz" target="_blank" style="font-weight: 800;">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endif %} {% if id == 2 %}
-    <div class="slide" id="slide1">
-        <div class="head">
-
-            <!-- <h1>{{event['name']}}</h1> -->
-            <h1>Scrim 2</h1>
-            <h6>All the queries regarding the event will be addressed at our Version'21 Community Server
-                <a href="https://discord.gg/AETDZXtkwz" target="_blank"><i class="fab fa-discord"></i>.</a>
-            </h6>
-        </div>
-        <div class="content">
-
-            <div class="card ">
-                <div class="tab text-center">
-                    <button class="tablinks active" onclick="openTab(event, 'Description')">
-                        Description
-                    </button>
-
-                    <button class="tablinks" onclick="openTab(event, 'Format')">
-                        Format
-                    </button>
-
-                    <button class="tablinks" onclick="openTab(event, 'Rules')">
-                        Rules
-                    </button>
-                    <!-- 
-                    <button class="tablinks" onclick="openTab(event, 'Register')">
-                        Register
-                    </button> -->
-
-                    <button class="tablinks" onclick="openTab(event, 'Contest')">
-                        Contest
-                    </button>
-
-                    <button class="tablinks" onclick="openTab(event, 'Contact')">
-                        Contact
-                    </button>
-                </div>
-
-                <div id="Description" class="tabcontent active" style="display: flex; text-align: left;">
-                    <div class="desc">
-                        <!-- <p>{{event['desc']}}</p> -->
-
-                        <p>The Scrims are being conducted by Team Version.</p>
-                        <p>Now,we bring the second edition of the Scrims Initiative- Scrim 2.</p>
-                        <p>This contest will check your technical as well as analytical skills.</p>
-                        <p>Participate to reach at the peak of the Leaderboard.</p>
-                        <p>All the best!</p>
-                        <p>Starts at 08:00 PM, 3 July 2021</p>
-                    </div>
-                </div>
-
-                <div id="Format" class="tabcontent">
-                    <div class="format">
-                        <ul>
-                            <li>This is a quiz event, hosted on hackerearth.</li>
-                            <li>There will be 60 multiple choice questions and you will get 45 minutes to solve them.</li>
-                            <li>50 questions will be technical each of 2 marks and 10 questions will be riddle each of 5 marks.</li>
-                            <li>For every wrong answer there will be negative marking of 1 for technical and 2 marks for riddle.</li>
-                            <li>At the end of the Contest, participants having maximum scores will win.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="Rules" class="tabcontent" style="text-align: left;">
-                    <div class="rules">
-                        <!-- <p>{{event['rules']}}</p> -->
-                        <ul>
-                            <li>It is an individual event.</li>
-                            <li>Doubts regarding anything should be asked directly to the contacts provided by Team Version. Posting it in public forums will not be entertained.</li>
-                            <li>Unfair means to guarantee advantage will lead to disqualification.</li>
-                            <li>Changing tabs will kick out the participant.</li>
-                            <li>The solutions should not be made public or open-sourced during the contest.</li>
-                            <li>The decision of the organizers will be final and binding in any case of disputes.</li>
-                        </ul>
-                        <p>Judging Criteria: At the end of the contest, the participants having highest score on the leaderboard win.</p>
-                    </div>
-                </div>
-                <!-- 
-                <div id="Register" class="tabcontent">
-                    <p>The Registrations will close today at 8 pm!</p>
-                    <a class="mail" href="/dashboard">Register</a>
-                </div> -->
-
-                <div id="Contest" class="tabcontent">
-                    <p>This Event is over now!</p>
-                    <a class="mail" href="https://p.hck.re/Znez" target="_blank">Contest Link</a>
-                </div>
-
-                <div id="Contact" class="tabcontent">
-                    <a class="mail" href="mailto:contact@version21.in" style="font-weight: 800;">
-                        <i class="fas fa-envelope"></i>&nbsp; contact@version21.in
-                    </a>
-                    <p style="padding: 1rem;">Or</p>
-                    <a class="discord" href="https://discord.gg/AETDZXtkwz" target="_blank" style="font-weight: 800;">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endif %} {% if id == 4 %}
-    <div class="slide" id="slide1">
-        <div class="head">
-
-            <!-- <h1>{{event['name']}}</h1> -->
-            <h1>Dappnovation </h1>
-            <h6>All the queries regarding the event will be addressed at our Version'21 Community Server
-                <a href="https://discord.gg/AETDZXtkwz" target="_blank"><i class="fab fa-discord"></i>.</a>
-            </h6>
-        </div>
-        <div class="content">
-
-            <div class="card ">
-                <div class="tab text-center">
-                    <button class="tablinks active" onclick="openTab(event, 'Description')">
-                        Description
-                    </button>
-
-                    <button class="tablinks" onclick="openTab(event, 'Format')">
-                        Format
-                    </button>
-
-                    <button class="tablinks" onclick="openTab(event, 'Rules')">
-                        Rules
-                    </button>
-                    <!-- 
-                    <button class="tablinks" onclick="openTab(event, 'Register')">
-                        Register
-                    </button> -->
-
-                    <button class="tablinks" onclick="openTab(event, 'Contest')">
-                        Contest
-                    </button>
-
-                    <button class="tablinks" onclick="openTab(event, 'Contact')">
-                        Contact
-                    </button>
-                </div>
-
-                <div id="Description" class="tabcontent active" style="display: flex; text-align: left;">
-                    <div style="overflow: auto;" class="desc">
-                        <!-- <p>{{event['desc']}}</p> -->
-
-                        <p>Dappnovation is a DApps based hackathon.</p>
-                        <p>It is a team event where we expect you to come up with creative and innovative solutions to everyday problems in the form of a decentralized application. </p>
-                        <p>There are couple of examples you can choose from – Online Voting System, Healthcare System, Social Media.</p>
-                        <p>You are not limited to these domains only. You can pick up any domain of your choice given that the final product is in the form of a decentralized application.</p>
-
-                    </div>
-                </div>
-
-                <div id="Format" class="tabcontent">
-                    <div style="overflow: auto;" class="format">
-                        <p>The Dappnovation will be in three phases:</p>
-                        <ol>
-                            <li>Abstract Submission along with the registration which start tomorrow and the last date for the same is 15th August.</li>
-                            <li>In the 2nd phase, there will be two review rounds in a space of 7-10 days.
-                                <ul>
-                                    <li> In both the review rounds, the teams must present their projects in front of a panel of judges. They will also be questioned about their projects and the technologies used. The top teams will then advance to the next phase. </li> 
-                            <li>The 1st review round will be on 29th August, and we expect the teams must have completed at least 60% of their project. </li> 
-                            <li>By the 2nd review round, your projects must be close to completion. The exact date for the 2nd review round hasn’t been finalized yet. But rest assured there will at least be a gap of 1 week between both the rounds. The teams will be updated as soon as the dates are finalized, and you can also check our website for regular updates.</li>
-                                </ul>
-                            </li>
-                            <li>The 3rd phase is the final round where the winners of Dappnovation will be declared.</li>
-                        </ol>
-                    </div>
-                </div>
-                <div id="Rules" class="tabcontent" style="text-align: left;">
-                    <div class="rules">
-                        <!-- <p>{{event['rules']}}</p> -->
-                        <ul>
-                            <li>Your project must be a decentralized application. You can select any domain of your choice.</li>
-                            <li>The teams can be of 3-5 members. The students can be studying in different years of MCA; however, they must be from the same college. A thorough verification will be done of every team before the distribution of prizes.</li>
-                            <li>Any form of unfair practice will lead to immediate disqualification.</li>
-                            
-                        </ul>
-                        
-                    </div>
-                </div>
-                <!-- 
-                <div id="Register" class="tabcontent">
-                    <p>The Registrations will close today at 8 pm!</p>
-                    <a class="mail" href="/dashboard">Register</a>
-                </div> -->
-
-                <div id="Contest" class="tabcontent">
-                    <!-- <p>This Event is over now!</p> -->
-                    <a class="mail" href="https://dappnovation.version21.in/" target="_blank">Contest Link</a>
-                </div>
-
-                <div id="Contact" class="tabcontent">
-                    <a class="mail" href="mailto:contact@version21.in" style="font-weight: 800;">
-                        <i class="fas fa-envelope"></i>&nbsp; contact@version21.in
-                    </a>
-                    <p style="padding: 1rem;">Or</p>
-                    <a class="discord" href="https://discord.gg/AETDZXtkwz" target="_blank" style="font-weight: 800;">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endif %} {% if id == 3 %}
-    <div class="slide" id="slide1">
-        <div class="head">
-            <br><br>
-            <!-- <h1>{{event['name']}}</h1> -->
-            <h1 id="workhead">Workshop on Decentralised Applications</h1>
-            <h6>All the queries regarding the Workshop will be addressed at our Version'21 Community Server
-                <a href="https://discord.gg/AETDZXtkwz" target="_blank"><i class="fab fa-discord"></i>.</a>
-            </h6>
-        </div>
-        <div class="content">
-
-            <div class="card head">
-                <!-- <h1 style="font-size: 30px;">Workshop on Decentralised Applications</h1> -->
-                <div id="Description" class="tabcontent active" style="display: flex; text-align: left;">
-                    <div style="overflow: auto;" class="desc">
-                        <!-- <p>{{event['desc']}}</p> -->
-
-                        <p>Get the insight on Decentralised Applications from Industry Experts at Samsung.</p>
-                        <p>Headstart on the main event of VERSION(Hackathon) based on Decentralised Applications.</p>
-                        <p>Workshop link will be sent to the registered mail IDs.</p>
-                        <p>Participation details of DAPPNOVATION and guidelines will be shared.</p>
-                        <p>All doubts related to the event will be directly answered by the event organizers in the workshop.</p>
-                        <p>Tips will be shared with all the attendees to increase their chances of winning.</p>
-                        <p>Participation certificate will be provided to all the attendees.</p>
-                        <p>Free of cost</p>
-                        <p style="color: aqua;">Time: 02:00 PM, Date: 08 August 2021</p>
-                        
-                    </div><br>
-                    <a class="mail" href="/dashboard">Register</a>
-                </div>
-
-                </div>
-            </div>
-    </div>
-    </div>
+    <a href="{{url_for('desc', id = 4)}}"
+      ><i class="fas fa-chevron-left"></i
+    ></a>
+    {% else %}
+    <a href="{{url_for('desc', id = id-1)}}"
+      ><i class="fas fa-chevron-left"></i
+    ></a>
     {% endif %}
+  </div>
+  <div class="slide" id="slide1">
+    <div class="head">
+      
+      <h1>{{event['name']}}</h1>
+    </div>
+    <div class="content">
+      
+          <div class="card text-center">
+            <div class="tab">
+              <button
+                class="tablinks active"
+                onclick="openTab(event, 'Description')"
+              >
+                Description
+              </button>
+              <button class="tablinks" onclick="openTab(event, 'Rules')">
+                Rules
+              </button>
+              <button class="tablinks" onclick="openTab(event, 'Format')">
+                Format
+              </button>
+              <button class="tablinks" onclick="openTab(event, 'Register')">
+                Contest
+              </button>
+              <button class="tablinks" onclick="openTab(event, 'Contact')">
+                Contact
+              </button>
+            </div>
 
-    <!-- <div class="next">
+            <div
+              id="Description"
+              class="tabcontent active"
+              style="display: flex"
+            >
+              <p>{{event['desc']}}</p>
+            </div>
+
+            <div id="Rules" class="tabcontent">
+              <p>{{event['rules']}}</p>
+            </div>
+
+            <div id="Format" class="tabcontent">
+              <h3>Format</h3>
+              <p>Format is the capital of Japan.</p>
+            </div>
+
+            <div id="Register" class="tabcontent">
+              <h3>Register</h3>
+              <p>Register is the capital of Japan.</p>
+            </div>
+
+            <div id="Contact" class="tabcontent">
+              <h3>Contact</h3>
+              <p>Contact is the capital of Japan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="next">
         {% if id==4 %}
-        <a href="{{url_for('desc', id = 1)}}"><i class="fas fa-chevron-right" id="next"></i></a> {% else %}
-                    <a href="{{url_for('desc', id = id+1)}}"><i class="fas fa-chevron-right" id="next"></i></a> {% endif %}
-                </div> -->
-</div>
-<!-- <div class="note">
-    <p>Note- Registrations are compulsory for prizes</p>
-</div> -->
-
-<script>
-    function openTab(evt, tabName) {
+        <a href="{{url_for('desc', id = 1)}}"
+          ><i class="fas fa-chevron-right" id="next"></i
+        ></a>
+        {% else %}
+        <a href="{{url_for('desc', id = id+1)}}"
+          ><i class="fas fa-chevron-right" id="next"></i
+        ></a>
+        {% endif %}
+      </div>
+    </div>
+    <script>
+      function openTab(evt, tabName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
+          tabcontent[i].style.display = "none";
         }
         tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
         document.getElementById(tabName).style.display = "flex";
         evt.currentTarget.className += " active";
-    }
-</script>
+      }
+    </script>
 
-{% include "footer.html" %} {% endblock %}
+    {% include "footer.html" %} {% endblock %}
+  </div>
 </div>
