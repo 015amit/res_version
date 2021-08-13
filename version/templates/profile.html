@@ -11,7 +11,7 @@
     <div class="leftdiv">
       <div class="mycard">
         <a class="tablinks active" onclick="openTab(event, 'Update')" href="#" id="one">Update Profile</a>
-        <a class="tablinks" onclick="openTab(event, 'Register')" href="#" id="two">Register for Events</a>
+        <a class="tablinks" onclick="openTab(event, 'Register')" href="#" id="two">Register for Workshop</a>
         <a class="tablinks" onclick="openTab(event, 'Feedback')" href="#" id="three">Feedback</a>
       </div>
     </div>
@@ -113,7 +113,8 @@
                       <label id="instituteaddress">Your Institute's Postal Address</label>
                     </td>
                     <td>
-                      <i class="fas fa-map-marked-alt"></i><textarea id="instituteaddress" name="address" rows="4"
+                      <!-- <i class="fas fa-map-marked-alt"></i> -->
+                      <textarea id="instituteaddress" name="address" rows="4"
                         required>
 {{user.address}}</textarea>
                     </td>

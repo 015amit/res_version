@@ -190,6 +190,10 @@ body {
     border-top: none;
 }
 
+#workhead{
+    font-size: 35px;
+}
+
 .tabcontent p,
 .tabcontent li {
     font-size: 18px;
@@ -281,15 +285,18 @@ body {
         overflow: scroll;
         margin: 5px 20px;
     }
+    #workhead{
+        font-size: 25px;
+    }
     .rules {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        margin-top: 160px;
+        /* margin-top: 160px; */
     }
     .desc,
     .format {
-        margin-top: 80px;
+        margin-top: 50px;
     }
     .tabcontent p,
     .tabcontent li {

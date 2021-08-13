@@ -31,7 +31,7 @@ def events():
 
 @app.route('/events/<int:id>')
 def desc(id):
-    if id == 1 or id == 2:
+    if id == 1 or id == 2 or id == 3 or id == 4:
         return render_template('desc.html', id=id, event=allevents['event'][id-1])
     else:
         return page_not_found(404)
@@ -60,7 +60,7 @@ def registration(id):
             user = Scrim3(user_id=user_id)
             db.session.add(user)
             db.session.commit()
-            flash('you have registered for Scrim 3')
+            flash('you have registered for Workshop')
             return redirect(url_for('profile'))
     return render_template('404.html')
 
