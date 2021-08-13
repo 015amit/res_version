@@ -1,3 +1,7 @@
+* {
+    font-family: "Bellota", "Belgrano", serif;
+}
+
 body {
     font-family: "Bellota", "Belgrano", serif;
 }
@@ -101,7 +105,11 @@ body {
     color: white;
     transition: all 0.2s ease-in-out;
     background: #161616;
-    z-index: 99;
+    z-index: 1081;
+}
+#cover{
+    width: 90%;
+    height: 90%;
 }
 
 .link-item a::before {
@@ -195,5 +203,48 @@ body {
     .humberger {
         height: 45px;
         width: 45px;
+    }
+    .link-item a{
+        font-size: 18px;
+    }
+}
+
+
+.modal{
+    z-index: 9999;
+    opacity: 2;
+}
+#click{
+    /* margin-top: 5rem; */
+    margin: -2rem 0;
+    z-index: 1;
+    color: #fff;
+
+}
+#reg{
+    font-size: 15px;
+
+}
+.link-item p{
+    font-size: 25px;
+    margin-left: 1rem;
+   
+    color: #fff;
+    animation: blink 2s linear infinite;
+
+}
+.events{
+    /* font-size: 25px; */
+    margin-left: 1rem;
+   
+    color: #fff;
+    animation: blink 2s linear infinite;
+
+}
+@keyframes blink{
+    
+    50%{
+opacity: 0;
+
     }
 }

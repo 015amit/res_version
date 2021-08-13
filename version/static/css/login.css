@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* BODY STARTS */
+
+body {
+    justify-content: center;
+    align-items: center;
+    background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-position: center;
+}
+
+#regi{
+    
+    color: #09ccee;
+    
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.note{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 60%;
+}
+
+.mycard {
+    /* height: 97%; */
+    position: relative;
+    width: 100%;
+    color: #fff;
+    margin: auto;
+    padding: 80px;
+    margin-top: 3%;
+    display: flex;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: 0.5s;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    /* border: 1px solid rgb(255, 255, 255); */
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    /* box-shadow: 0 0 0px 1000px #000 inset; */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+h1 {
+    margin-top: 5%;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
+    }
+    to {
+        text-shadow: 0 0 12px #fff, 0 0 22px #09ccee, 0 0 22px #09ccee, 0 0 42px #09ccee;
+    }
+}
+
+i {
+    position: absolute;
+    padding: 24px;
+}
+
+table {
+    margin: auto;
+}
+
+input {
+    outline: none;
+}
+
+label {
+    color: white;
+    font-weight: 800;
+}
+
+input[type="email"],
+input[type="password"] {
+    border: 0;
+    background: none;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    width: 300px;
+    outline: none;
+    font-weight: 800;
+    border-radius: 24px;
+    color: white;
+}
+
+
+
+input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    font-weight: 800;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#login {
+    border: 2px solid #b3d4c1;
+    /* margin: 20px auto; */
+    /* padding: 14px 40px; */
+}
+
+#login:hover {
+    background: #09ccee;
+}
+
+#register {
+    color: #d304d3;
+}
+
+#register,
+#forgot {
+    margin: 5px auto;
+    padding: 8px 20px;
+}
+
+#register:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+#forgot:hover {
+    transform: scale(1.1);
+    color: red;
+}
+
+@media screen and (max-width: 1028px) {
+    .main {
+        min-height: 100vh;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    .mycard {
+        margin: 50px auto;
+        padding: 30px;
+    }
+    .content {
+        flex-direction: column;
+        margin: 10px;
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: 220px;
+        margin: 15px auto;
+    }
+    label {
+        width: 130px;
+    }
+    i {
+        padding: 30px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        min-height: 74vh;
+    }
+    h1 {
+        font-size: 33px;
+    }
+    .mycard {
+        padding: 2px;
+    }
+    .content {
+        flex-direction: column;
+        margin: 10px;
+        width: 90%;
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: 200px;
+        margin: 15px auto;
+    }
+    i {
+        padding: 25px 13px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main {
+        min-height: 74vh;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .mycard {
+        padding: 2px;
+    }
+    .content {
+        flex-direction: column;
+        margin: 10px;
+        width: 90%;
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: 220px;
+        margin: 15px auto;
+    }
+    i {
+        padding: 30px 15px;
+    }
+}

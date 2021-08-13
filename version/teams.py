@@ -265,7 +265,7 @@ data = {
             "linkedin": "https://www.linkedin.com/in/shanoorahmed/",
         },
         {
-            "name": "Shobit Samaria",
+            "name": "Shobhit Samaria",
             "roll": "099",
             "github": "https://github.com/shobhit099",
             "linkedin": "https://www.linkedin.com/mwlite/in/shobhit-samaria-1a484a202",
@@ -572,6 +572,12 @@ data = {
             "linkedin": "https://www.linkedin.com/in/74prashant",
         },
         {
+            "name": "Priya Chowdhury",
+            "roll": "077",
+            "github": "https://github.com/priya077 ",
+            "linkedin": "",
+        },
+        {
             "name": "Puneet Kumar",
             "roll": "078",
             "github": "https://github.com/78puneet",
@@ -686,12 +692,6 @@ data = {
             "roll": "067",
             "github": "https://github.com/prajapatinitin98",
             "linkedin": "https://www.linkedin.com/in/prajapatinitin98",
-        },
-        {
-            "name": "Priya Choudhary",
-            "roll": "077",
-            "github": "https://github.com/priya077 ",
-            "linkedin": "",
         },
         {
             "name": "Rahul Dhadkar",
