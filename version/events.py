@@ -6,8 +6,6 @@ allevents = {
         "rules": "Copying is not allowed here"},
         {"id": 3,"name": "Workshop on D-Apps","desc": "You got a chance to show your css skills",
         "rules": "Copying is not allowed here"},
-        {"id": 4,"name": "Dappnovation ","desc": "You got a chance to show your css skills",
-        "rules": "Copying is not allowed here"},
         # {"id": 3,"name": "Cicada","desc": "Solve basic questions but in less time"},
         # {"id": 4,"name": "Mothra","desc": "Guess the logic and apply to get the answers"}
     ]
