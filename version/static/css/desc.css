@@ -1,69 +1,70 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    /* position: relative; */
-    background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
-    background-blend-mode: overlay;
-    background-size: contain;
-    font-family: "Bellota", "Belgrano", serif;
+  width: 100%;
+  /* position: relative; */
+  background: url(../images/bg.svg) center fixed rgba(0, 0, 0, 0.961);
+  background-blend-mode: overlay;
+  background-size: contain;
+  font-family: "Bellota", "Belgrano", serif;
 }
 
 .head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
 }
 
 .head h1 {
-    font-weight: bolder;
-    font-size: 50px;
-    /* margin: 2rem; */
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+  font-weight: bolder;
+  font-size: 50px;
+  /* margin: 2rem; */
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
 .slide .head h6 {
-    font-size: 16px;
-    margin: 1rem;
-    font-weight: 400;
+  font-size: 16px;
+  margin: 1rem;
+  font-weight: 400;
 }
 
 .slide .head a {
-    text-decoration: none;
-    font-size: 26px;
-    margin: 10px;
-    color: #fff;
+  text-decoration: none;
+  font-size: 26px;
+  margin: 10px;
+  color: #fff;
 }
 
 .slide .head i {
-    transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .slide .head i:hover {
-    color: #74a0ef;
-    transform: scale(1.2);
+  color: #74a0ef;
+  transform: scale(1.2);
 }
 
 @keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee, 0 0 40px #09ccee;
-    }
-    to {
-        text-shadow: 0 0 12px #fff, 0 0 22px #09ccee, 0 0 22px #09ccee, 0 0 42px #09ccee;
-    }
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09ccee,
+      0 0 40px #09ccee;
+  }
+  to {
+    text-shadow: 0 0 12px #fff, 0 0 22px #09ccee, 0 0 22px #09ccee,
+      0 0 42px #09ccee;
+  }
 }
-
 
 /* 
 .main {
@@ -78,180 +79,184 @@ body {
 } */
 
 .main2 {
-    width: 100%;
-    height: 600px;
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .note {
-    width: 100%;
-    margin-top: -8%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
+  width: 100%;
+  margin-top: -8%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .slide {
-    margin-top: -10%;
-    width: 85%;
-    height: 80%;
+  margin-top: -10%;
+  width: 85%;
+  height: 80%;
 }
 
 .content {
-    display: flex;
-    width: 100%;
-    height: 80%;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .imgbox {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: white;
-    margin-right: 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card {
-    height: 100%;
-    width: 85%;
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-    border-radius: 0px 50px;
+  height: 100%;
+  width: 85%;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+  border-radius: 0px 50px;
 }
 
 .prev,
 .next {
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .tabcontent {
-    height: 90%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 17px;
-    letter-spacing: 0.7px;
+  height: 90%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: auto; */
+  align-items: center;
+  font-size: 17px;
+  letter-spacing: 0.7px;
 }
-
+#Contest,#Contact{
+    /* display: flex; */
+    justify-content: center;
+}
 .tab {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
 .tab button {
-    width: 80%;
-    display: flex;
-    border: none;
-    outline: none;
-    background: none;
-    color: #fff;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0.5rem;
-    cursor: pointer;
-    font-weight: 600;
-    border-radius: 2px;
-    transition: 0.3s;
+  width: 80%;
+  display: flex;
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: 0.3s;
 }
 
 .tab button.active {
-    color: black;
-    background: #fff;
+  color: black;
+  background: #fff;
 }
 
 .tab button:hover {
-    color: black;
-    background-color: white;
+  color: black;
+  background-color: white;
 }
 
 .tabcontent {
-    display: none;
-    margin: auto 40px;
-    padding: 6px 12px;
-    border-top: none;
+  display: none;
+  margin: auto 40px;
+  padding: 6px 12px;
+  border-top: none;
 }
 
-#workhead{
-    font-size: 35px;
+#workhead {
+  font-size: 35px;
 }
 
 .tabcontent p,
 .tabcontent li {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .tabcontent .mail {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-    border: 1px solid #09ccee;
-    border-radius: 6px;
-    padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid #09ccee;
+  border-radius: 6px;
+  padding: 1rem;
 }
 
 .tabcontent .discord {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-    font-size: 40px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
 }
 
 .tabcontent .mail:hover {
-    background: #09ccee;
-    color: #000;
-    font-weight: 700;
+  background: #09ccee;
+  color: #000;
+  font-weight: 700;
 }
 
 .tabcontent .discord:hover {
-    color: #74a0ef;
-    font-weight: 700;
+  color: #74a0ef;
+  font-weight: 700;
 }
 
 .active {
-    color: #fff;
+  color: #fff;
 }
 
 @media screen and (max-width: 1080px) {
-    .tabcontent a {
-        font-size: 16px;
-        padding: 0.8rem;
-    }
-    .head h1 {
-        font-size: 39px;
-    }
-    .prev,
-    .next {
-        font-size: 22px;
-    }
-    .card-header ul li {
-        font-size: 14px;
-    }
-    .card-text {
-        font-size: 22px;
-    }
+  .tabcontent a {
+    font-size: 16px;
+    padding: 0.8rem;
+  }
+  .head h1 {
+    font-size: 39px;
+  }
+  .prev,
+  .next {
+    font-size: 22px;
+  }
+  .card-header ul li {
+    font-size: 14px;
+  }
+  .card-text {
+    font-size: 22px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    /* 
+  /* 
     .slide {
         margin-top: 5%;
     }
@@ -267,67 +272,69 @@ body {
     .head {
         margin-top: -50px;
     } */
-    .slide {
-        margin-top: -40%;
-    }
-    .tab {
-        flex-direction: column;
-        box-shadow: 2px 1px 2px grey;
-        border-radius: 0px 50px;
-    }
-    .tab button {
-        font-size: 14px;
-        padding: 0.2rem;
-        width: 50%;
-        margin: auto;
-    }
-    .tabcontent {
-        overflow: scroll;
-        margin: 5px 20px;
-    }
-    #workhead{
-        font-size: 25px;
-    }
-    .rules {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        /* margin-top: 160px; */
-    }
-    .desc,
-    .format {
-        margin-top: 50px;
-    }
-    .tabcontent p,
-    .tabcontent li {
-        font-size: 11px;
-    }
-    .tabcontent a {
-        font-size: 13px;
-        padding: 0.5rem;
-    }
-    .head h1 {
-        font-size: 35px;
-    }
-    .slide .head h6 {
-        font-size: 12px;
-    }
-    .slide .head a {
-        font-size: 20px;
-    }
-    .prev,
-    .next {
-        font-size: 18px;
-    }
-    .card-header ul li {
-        font-size: 10px;
-    }
-    .card-text {
-        font-size: 18px;
-    }
-    .note {
-        margin-top: -20%;
-        font-size: 16px;
-        font-weight: 600;
-    }
+  .slide {
+    margin-top: -40%;
+  }
+  .tab {
+    flex-direction: column;
+    box-shadow: 2px 1px 2px grey;
+    border-radius: 0px 50px;
+  }
+  .tab button {
+    font-size: 14px;
+    padding: 0.2rem;
+    width: 50%;
+    margin: auto;
+  }
+  .tabcontent {
+    overflow: scroll;
+    /* justify-content: unset; */
+    margin: 5px 20px;
+  }
+  #workhead {
+    font-size: 25px;
+  }
+  .rules {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    /* margin-top: 160px; */
+  }
+  .desc,
+  .format,
+  .rules {
+    margin-top: 20px;
+  }
+  .tabcontent p,
+  .tabcontent li {
+    font-size: 11px;
+  }
+  .tabcontent a {
+    font-size: 13px;
+    padding: 0.5rem;
+  }
+  .head h1 {
+    font-size: 35px;
+  }
+  .slide .head h6 {
+    font-size: 12px;
+  }
+  .slide .head a {
+    font-size: 20px;
+  }
+  .prev,
+  .next {
+    font-size: 18px;
+  }
+  .card-header ul li {
+    font-size: 10px;
+  }
+  .card-text {
+    font-size: 18px;
+  }
+  .note {
+    margin-top: -20%;
+    font-size: 16px;
+    font-weight: 600;
+  }
 }

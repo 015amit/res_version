@@ -36,7 +36,7 @@ def events():
 
 @app.route('/events/<int:id>')
 def desc(id):
-    if id == 1 or id == 2 or id == 3:
+    if id in range(1,14):
         return render_template('desc.html', id=id, event=allevents['event'][id-1])
     else:
         return page_not_found(404)
