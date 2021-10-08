@@ -6,7 +6,7 @@ allevents = {
         "rules": "Copying is not allowed here"},
         {"id": 6,"name": "Conundrum","desc": "You got a chance to show your css skills",
         "rules": "Copying is not allowed here"},
-        {"id": 7,"name": "Math Pirate","desc": "You got a chance to show your css skills",
+        {"id": 7,"name": "Math 𝜋rate","desc": "You got a chance to show your css skills",
         "rules": "Copying is not allowed here"},
         {"id": 8,"name": "Apprentissage","desc": "You got a chance to show your css skills",
         "rules": "Copying is not allowed here"},
