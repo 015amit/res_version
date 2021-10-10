@@ -73,55 +73,55 @@ def registration(id):
             db.session.commit()
             flash('you have registered for Mothra')
             return redirect(url_for('profile'))
-        if id == 5:
+        if id == 6:
             user = Codathon(user_id=user_id)
             db.session.add(user)
             db.session.commit()
             flash('you have registered for Codathon')
             return redirect(url_for('profile'))
-        if id == 6:
+        if id == 7:
             user = Conundrum(user_id=user_id)
             db.session.add(user)
             db.session.commit()
             flash('you have registered for Conundrum')
             return redirect(url_for('profile'))
-        if id == 7:
+        if id == 8:
             user = Math_Pirate(user_id=user_id)
             db.session.add(user)
             db.session.commit()
             flash('you have registered for Math 𝜋rate')
             return redirect(url_for('profile'))
-        if id == 8:
+        if id == 9:
             user = Apprentissage(user_id=user_id)
             db.session.add(user)
             db.session.commit()
             flash('you have registered for Apprentissage')
             return redirect(url_for('profile'))
-        if id == 9:
+        if id == 10:
             user = App_Replica(user_id=user_id)
             db.session.add(user)
             db.session.commit()
             flash('you have registered for App Replica')
             return redirect(url_for('profile'))
-        if id == 10:
+        if id == 11:
             user = Maze_Runner(user_id=user_id)
             db.session.add(user)
             db.session.commit()
             flash('you have registered for Maze Runner')
             return redirect(url_for('profile'))
-        if id == 11:
+        if id == 12:
             user = Genius(user_id=user_id)
             db.session.add(user)
             db.session.commit()
             flash('you have registered for Genius')
             return redirect(url_for('profile'))
-        if id == 12:
+        if id == 13:
             user = CTB(user_id=user_id)
             db.session.add(user)
             db.session.commit()
             flash('you have registered for CTB')
             return redirect(url_for('profile'))
-        if id == 13:
+        if id == 14:
             user = Code_Pazuru(user_id=user_id)
             db.session.add(user)
             db.session.commit()
