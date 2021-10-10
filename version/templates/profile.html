@@ -216,10 +216,17 @@
               <a class="button1 bg-danger">Registration closed</a>
               {% endif %}
               {% endif %}
+              {% if event.id == 4 %}
               <p>
                 <a href="{{ url_for('desc', id=event.id) }}">Know more</a> about
                 the Event
               </p>
+              {% else %}
+              <p>
+                <a href="{{ url_for('desc', id=event.id-1) }}">Know more</a> about
+                the Event
+              </p>
+              {% endif %}
             </div>
           </div>
         </div>
