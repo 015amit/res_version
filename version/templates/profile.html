@@ -11,7 +11,7 @@
     <div class="leftdiv">
       <div class="mycard">
         <a class="tablinks active" onclick="openTab(event, 'Update')" href="#" id="one">Update Profile</a>
-        <a class="tablinks" onclick="openTab(event, 'Register')" href="#" id="two">Register for Workshop</a>
+        <a class="tablinks" onclick="openTab(event, 'Register')" href="#" id="two">Register for Events</a>
         <a class="tablinks" onclick="openTab(event, 'Feedback')" href="#" id="three">Feedback</a>
       </div>
     </div>
@@ -210,7 +210,7 @@
             <div class="links">
               {% if reg %} 
               <a class="button1 bg-secondary">Registered</a> {% else %}
-              {% if event.status == "open" %}
+              {% if event.status == "Open" %}
               <a data-bs-toggle="modal" data-bs-target="#event-{{event.id}}" class="button1">Register</a>
               {% else %}
               <a class="button1 bg-danger">Registration closed</a>
