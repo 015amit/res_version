@@ -210,6 +210,7 @@ def profile():
     feedbackevent = []
     user = User.query.filter_by(id=current_user.id).first()
     events = Event.query.order_by(Event.id).all()
+    closed_event = Event.query.filter_by(status = "closed").all()
     scrim1 = Scrim1.query.filter_by(user_id=current_user.id).first()
     registeredevent.append(scrim1)
     scrim2 = Scrim2.query.filter_by(user_id=current_user.id).first()
@@ -268,7 +269,7 @@ def profile():
         db.session.commit()
         flash('your profile is updated successfully')
         return redirect(url_for('profile'))
-    return render_template('profile.html', user=user,events=zip(events,registeredevent),events1=zip(events,registeredevent), title="Dashboard", pop=events, pop1=feedbackevent, pop2=registeredevent)
+    return render_template('profile.html', user=user,events=zip(events,registeredevent),events1=zip(events,registeredevent), title="Dashboard", pop=events, pop1=feedbackevent, pop2=registeredevent, closed_event = zip(closed_event, registeredevent))
 
 
 @app.route('/logout')

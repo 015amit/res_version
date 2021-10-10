@@ -202,7 +202,9 @@
       </div>
 
       <div class="twodiv tabcontent" id="Register">
+        <h4 style="text-align: center; color:#fff;">You can register until the event starts</h4>
         {% for event,reg in events %}
+        {% if event.status == "Open" %}
         <div class="formcard">
           
           <div class="content1">
@@ -230,6 +232,7 @@
             </div>
           </div>
         </div>
+        {% endif %}
         <div class="modal fade" id="event-{{event.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
           aria-hidden="true">
           <div class="modal-dialog">
@@ -262,6 +265,35 @@
         </div>
         {% endfor %}
         
+        {% for event,reg in closed_event %}
+        <div class="formcard">
+          
+          <div class="content1">
+            <h2>{{event.name}}</h2>
+            <div class="links">
+              {% if reg %} 
+              <a class="button1 bg-secondary">Registered</a> {% else %}
+              {% if event.status == "Open" %}
+              <a class="button1">Register</a>
+              {% else %}
+              <a class="button1 bg-danger">Registration closed</a>
+              {% endif %}
+              {% endif %}
+              {% if event.id == 4 %}
+              <p>
+                <a href="{{ url_for('desc', id=event.id) }}">Know more</a> about
+                the Event
+              </p>
+              {% else %}
+              <p>
+                <a href="{{ url_for('desc', id=event.id-1) }}">Know more</a> about
+                the Event
+              </p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
 
       <div class="threediv tabcontent" id="Feedback">
