@@ -3,7 +3,7 @@ from flask import render_template,session,jsonify,request,redirect,flash,url_for
 from flask.helpers import make_response
 from werkzeug.utils import redirect
 from version import app,db
-from version.models import Event, Scrim1, Scrim2, User, Feedback, Scrim3
+from version.models import Codathon, Event, Scrim1, Scrim2, User, Feedback, Scrim3, Mothra, Conundrum, Math_Pirate, Apprentissage, App_Replica, Maze_Runner, Genius, CTB, Code_Pazuru
 from flask_login import login_user, current_user,login_required, logout_user
 import json
 from io import BytesIO
@@ -66,6 +66,66 @@ def registration(id):
             db.session.add(user)
             db.session.commit()
             flash('you have registered for Workshop')
+            return redirect(url_for('profile'))
+        if id == 4:
+            user = Mothra(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Mothra')
+            return redirect(url_for('profile'))
+        if id == 5:
+            user = Codathon(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Codathon')
+            return redirect(url_for('profile'))
+        if id == 6:
+            user = Conundrum(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Conundrum')
+            return redirect(url_for('profile'))
+        if id == 7:
+            user = Math_Pirate(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Math 𝜋rate')
+            return redirect(url_for('profile'))
+        if id == 8:
+            user = Apprentissage(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Apprentissage')
+            return redirect(url_for('profile'))
+        if id == 9:
+            user = App_Replica(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for App Replica')
+            return redirect(url_for('profile'))
+        if id == 10:
+            user = Maze_Runner(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Maze Runner')
+            return redirect(url_for('profile'))
+        if id == 11:
+            user = Genius(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Genius')
+            return redirect(url_for('profile'))
+        if id == 12:
+            user = CTB(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for CTB')
+            return redirect(url_for('profile'))
+        if id == 13:
+            user = Code_Pazuru(user_id=user_id)
+            db.session.add(user)
+            db.session.commit()
+            flash('you have registered for Code Pazuru')
             return redirect(url_for('profile'))
     return render_template('404.html')
 
@@ -156,6 +216,26 @@ def profile():
     registeredevent.append(scrim2)
     scrim3 = Scrim3.query.filter_by(user_id=current_user.id).first()
     registeredevent.append(scrim3)
+    mothra = Mothra.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(mothra)
+    codathon = Codathon.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(codathon)
+    conundrum = Conundrum.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(conundrum)
+    math_Pirate = Math_Pirate.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(math_Pirate)
+    apprentissage = Apprentissage.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(apprentissage)
+    app_Replica = App_Replica.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(app_Replica)
+    maze_Runner = Maze_Runner.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(maze_Runner)
+    genius = Genius.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(genius)
+    ctb = CTB.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(ctb)
+    code_Pazuru = Code_Pazuru.query.filter_by(user_id=current_user.id).first()
+    registeredevent.append(code_Pazuru)
     feeds = Feedback.query.filter_by(user_id=current_user.id).all()
     if feeds:
         for feed in feeds:
@@ -256,5 +336,21 @@ def feedback(id):
 
         return render_template('feedback.html',event=events, title="Feedback")  
       
+
+
+@app.route('/amit_nikki_anshu', methods=['GET','POST'])
+def adddata():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        status = request.form.get('status')
+
+        data = Event(name = name, status = status)
+        db.session.add(data)
+        db.session.commit()
+        return redirect(url_for('adddata'))
+    return render_template('addevent.html')
+
+
+
 
 
