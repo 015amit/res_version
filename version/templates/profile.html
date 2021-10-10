@@ -212,8 +212,8 @@
               <a class="button1 bg-secondary">Registered</a> {% else %}
               {% if event.status == "Open" %}
               <a data-bs-toggle="modal" data-bs-target="#event-{{event.id}}" class="button1">Register</a>
-              {% else %}
-              <a class="button1 bg-danger">Registration closed</a>
+              <!-- {% else %}
+              <a class="button1 bg-danger">Registration closed</a> -->
               {% endif %}
               {% endif %}
               <p>
@@ -250,6 +250,23 @@
                   </button>
                 </form>
               </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% for event,reg in events %}
+        <div class="formcard">
+          
+          <div class="content1">
+            <h2>{{event.name}}</h2>
+            <div class="links">
+              {% if not reg and event.status == "closed" %} 
+              <a class="button1 bg-danger">Registration closed</a>
+              {% endif %}
+              <p>
+                <a href="{{ url_for('desc', id=event.id) }}">Know more</a> about
+                the Event
+              </p>
             </div>
           </div>
         </div>
