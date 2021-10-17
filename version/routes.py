@@ -345,8 +345,12 @@ def adddata():
         name = request.form.get('name')
         status = request.form.get('status')
 
-        data = Event(name = name, status = status)
-        db.session.add(data)
+        ev = Event.query.filter_by(name = name).first()
+        if ev:
+            ev.status = status
+        else:
+            data = Event(name = name, status = status)
+            db.session.add(data)
         db.session.commit()
         return redirect(url_for('adddata'))
     return render_template('addevent.html')
