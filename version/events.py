@@ -1,12 +1,7 @@
 allevents = {
     "event": [
+                
         
-        {"id": 5,"name": "Codathon","desc": "You got a chance to show your css skills",
-        "rules": "Copying is not allowed here"},
-        
-        
-        {"id": 9,"name": "App Replica","desc": "You got a chance to show your css skills",
-        "rules": "Copying is not allowed here"},
         {"id": 11,"name": "Genius","desc": "You got a chance to show your css skills",
         "rules": "Copying is not allowed here"},
         {"id": 12,"name": "CTB","desc": "You got a chance to show your css skills",
@@ -24,6 +19,10 @@ allevents = {
         {"id": 8,"name": "Apprentissage","desc": "You got a chance to show your css skills",
         "rules": "Copying is not allowed here"},
         {"id": 10,"name": "Maze Runner","desc": "You got a chance to show your css skills",
+        "rules": "Copying is not allowed here"},
+        {"id": 5,"name": "Codathon","desc": "You got a chance to show your css skills",
+        "rules": "Copying is not allowed here"},
+        {"id": 9,"name": "App Replica","desc": "You got a chance to show your css skills",
         "rules": "Copying is not allowed here"},
         {"id": 1 ,"name": "Scrim 1","desc": "This is a coding based event",
          "rules": "Solution should not be made public during the events"},
