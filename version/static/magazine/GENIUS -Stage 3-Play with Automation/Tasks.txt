@@ -1,0 +1,21 @@
+Welcome to GENIUS Stage 3 - PLAY WITH AUTOMATION
+
+A Chatbot is provided to you made using python.
+Basic things that it does are taking commands for opening apps,opening websites,etc.
+
+But it can be made to do more things via automation
+If you are not much familier with it, don't worry it just needs some research, just spend few minutes on the web and then you will find that the tasks are easy.
+
+So we have three tasks in this event that you have to do via chatbot means you have to give command to the bot for it to perform the task:
+
+1) Login into any website (Google autofill must not be used to fill credentials)
+2) Open and search any shopping website and add an item to the cart.
+3) Perform file searching (In a folder with multiple files, give command to the bot with a name of a file to run). Ex: Playing a particular movie from a folder with a list of movies.
+
+We have used selenium for automation here, you are free to use some other python tool for it and make required changes to the bot.
+
+Even if you are not much familier with python, you can do the tasks, the 2 hours time is enough for research, learn and complete task.
+
+Submission format : Make a video of the bot taking commands and executing the tasks and upload the drive link of the folder and submission video to the form available on the website.
+
+If you're not familiar with python, you can choose any language.
