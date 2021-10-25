@@ -104,4 +104,23 @@ class Feedback(db.Model):
     feed = db.Column(db.String, nullable=True)
 
 
+class Feed1(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    user_id = db.Column(db.Integer)
+    mothra = db.Column(db.Integer)
+    codathon = db.Column(db.Integer)
+    math_pirate = db.Column(db.Integer)
+    app_replica = db.Column(db.Integer)
+    apprentissage = db.Column(db.Integer)
+    conundrum = db.Column(db.Integer)
+    maze_runner = db.Column(db.Integer)
+    ctb = db.Column(db.Integer)
+    genius = db.Column(db.Integer)
+    code_pazuru = db.Column(db.Integer)
+    scrim1 = db.Column(db.Integer)
+    scrim2 = db.Column(db.Integer)
+    experience = db.Column(db.String, nullable=True)
+    suggestion = db.Column(db.String, nullable=True)
+    overall = db.Column(db.String, nullable=True)
+
 db.create_all()

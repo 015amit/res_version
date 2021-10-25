@@ -12,7 +12,7 @@
       <div class="mycard">
         <a class="tablinks active" onclick="openTab(event, 'Update')" href="#" id="one">Update Profile</a>
         <a class="tablinks" onclick="openTab(event, 'Register')" href="#" id="two">Register for Events</a>
-        <a class="tablinks" onclick="openTab(event, 'Feedback')" href="#" id="three">Feedback</a>
+        <a class="tablinks"  href="{{url_for('feed')}}" id="three">Feedback</a>
       </div>
     </div>
     <div class="rightdiv">
@@ -297,7 +297,7 @@
       </div>
 
       <div class="threediv tabcontent" id="Feedback">
-        {% for event,reg in events1 %}
+        <!-- {% for event,reg in events1 %}
         {% if reg %}
         {% if event.status == "closed" %}
         <div class="formcard">
@@ -316,7 +316,17 @@
         </div>
         {% endif %}
         {% endif %}
-        {% endfor %}
+        {% endfor %} -->
+        <div class="formcard">
+          <div class="content1">
+            <h2>Feedback</h2>
+
+            <div class="links">
+              
+              <a href="{{url_for('feed')}}" class="button1">Feedback for Version'21</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@ from flask import render_template,session,jsonify,request,redirect,flash,url_for
 from flask.helpers import make_response
 from werkzeug.utils import redirect
 from version import app,db
-from version.models import Codathon, Event, Scrim1, Scrim2, User, Feedback, Scrim3, Mothra, Conundrum, Math_Pirate, Apprentissage, App_Replica, Maze_Runner, Genius, CTB, Code_Pazuru
+from version.models import Codathon, Event, Scrim1, Scrim2, User, Feedback, Scrim3, Mothra, Conundrum, Math_Pirate, Apprentissage, App_Replica, Maze_Runner, Genius, CTB, Code_Pazuru, Feed1
 from flask_login import login_user, current_user,login_required, logout_user
 import json
 from io import BytesIO
@@ -238,6 +238,7 @@ def profile():
     code_Pazuru = Code_Pazuru.query.filter_by(user_id=current_user.id).first()
     registeredevent.append(code_Pazuru)
     feeds = Feedback.query.filter_by(user_id=current_user.id).all()
+    feed = Feed1.query.filter_by(user_id=current_user.id).first()
     if feeds:
         for feed in feeds:
             event3 = Event.query.filter_by(id=feed.event_id).first()
@@ -269,7 +270,7 @@ def profile():
         db.session.commit()
         flash('your profile is updated successfully')
         return redirect(url_for('profile'))
-    return render_template('profile.html', user=user,events=zip(events,registeredevent),events1=zip(events,registeredevent), title="Dashboard", pop=events, pop1=feedbackevent, pop2=registeredevent, closed_event = zip(closed_event, registeredevent))
+    return render_template('profile.html', user=user,events=zip(events,registeredevent),events1=zip(events,registeredevent), title="Dashboard", pop=events, pop1=feedbackevent, pop2=registeredevent, closed_event = zip(closed_event, registeredevent), feed=feed)
 
 
 @app.route('/logout')
@@ -337,6 +338,52 @@ def feedback(id):
 
         return render_template('feedback.html',event=events, title="Feedback")  
       
+
+
+
+
+@app.route('/version/feedback', methods=['GET','POST'])
+@login_required
+def feed():
+    # events = Event.query.filter_by(id=id).first_or_404()
+    # if events:
+    u1 = Feed1.query.filter_by(user_id=current_user.id).first()
+    if u1:
+        flash(f'Your Feedback is already submitted.')
+        return redirect(url_for('profile'))
+    if request.method=='POST':
+        first = request.form.get('first')
+        second = request.form.get('second')
+        third = request.form.get('third')
+        fourth = request.form.get('fourth')
+        fifth = request.form.get('fifth')
+        sixth = request.form.get('sixth')
+        seventh = request.form.get('seventh')
+        eighth = request.form.get('eighth')
+        ninth = request.form.get('ninth')
+        tenth = request.form.get('tenth')
+        eleventh = request.form.get('eleventh')
+        twelfth = request.form.get('twelfth')
+        # thirteenth = request.form.get('thirteenth')
+        fourteenth = request.form.get('fourteenth')
+        fifteenth = request.form.get('fifteenth')
+        sixteenth = request.form.get('sixteenth')
+
+        # name = Event.query.filter_by(id=id).first()
+        u1 = Feed1.query.filter_by(user_id=current_user.id).first()
+        if u1:
+            flash(f'your Feedback for is already submitted.')
+            return redirect(url_for('profile'))
+        feedback = Feed1(user_id=current_user.id, mothra=first, codathon=second, math_pirate=third, conundrum=fourth, app_replica=fifth, apprentissage=sixth, maze_runner=seventh, ctb=eighth, genius=ninth, code_pazuru=tenth, scrim1=eleventh, scrim2=twelfth, experience=fourteenth, suggestion=fifteenth, overall=sixteenth)
+        db.session.add(feedback)
+        db.session.commit()
+        flash(f'Thank you for your Feedback.')
+        return redirect(url_for('profile'))
+
+    return render_template('feed.html', title="Feedback")  
+
+
+
 
 
 @app.route('/amit_nikki_anshu', methods=['GET','POST'])

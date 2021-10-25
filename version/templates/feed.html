@@ -1,0 +1,169 @@
+{% extends "base.html" %} {% block header %}
+
+<!-- <link
+rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+/> -->
+<link rel="stylesheet" href="{{url_for('static',filename='css/feedback.css')}}" />
+
+<title>{{title}}</title>
+{% endblock %} {% block content %}
+<div class="main">
+  <div class="other">
+    <h1 style="margin-bottom: 2rem; margin-top: 41px">
+      Feedback
+    </h1>
+    {% include 'message.html' %}
+
+    <form action="" method="POST" enctype="multipart/form-data">
+      <div class="mycard">
+        <div class="content">
+          <table cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td><label id="email">Mothra</label></td>
+                <td>
+                  <input type="range" name="first" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">Codathon</label></td>
+
+                <td>
+                  <input type="range" name="second" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+              <!-- Roll No -->
+              <tr>
+                <td><label id="contact">Math 𝜋rate</label></td>
+                <td>
+                  <input type="range" name="third" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">Conundrum</label></td>
+                <td>
+                  <input type="range" name="fourth" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">App Replica</label></td>
+                <td>
+                  <input type="range" name="fifth" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">Apprentissage</label></td>
+                <td>
+                  <input type="range" name="sixth" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">Maze Runner</label></td>
+                <td>
+                  <input type="range" name="seventh" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">Capture The Blog</label></td>
+                <td>
+                  <input type="range" name="eighth" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">Genius</label></td>
+                <td>
+                  <input type="range" name="ninth" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">Code Pazuru</label></td>
+                <td>
+                  <input type="range" name="tenth" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">Scrim 1</label></td>
+                <td>
+                  <input type="range" name="eleventh" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="contact">Scrim 2</label></td>
+                <td>
+                  <input type="range" name="twelfth" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr>
+
+              <!-- HackerEarthid -->
+              <!-- <tr>
+                <td>
+                  <label id="hack">Accessibility of information regarding event</label>
+                </td>
+                <td>
+                  <input type="range" name="thirteenth" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+                  <output>1</output>
+                </td>
+              </tr> -->
+              <tr>
+                <td>
+                  <label id="hack">Tell us your experience 
+                  </label>
+                </td>
+                <td>
+                    <textarea id="instituteaddress" name="fourteenth" rows="6" placeholder="Feedback"></textarea>                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label id="hack">Things that could have been better 
+                  </label>
+                </td>
+                <td>
+                    <textarea id="instituteaddress" name="fifteenth" rows="6" placeholder="Feedback"></textarea>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label id="hack">Overall Feedback</label></td>
+                <td>
+                  <textarea id="instituteaddress" name="sixteenth" rows="6" placeholder="Feedback"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mycard">
+        <div class="content">
+          <input type="submit" id="register" value="Submit" href="#" />
+        </div>
+      </div>
+    </form>
+  </div>
+  {% include "footer.html" %}
+</div>
+
+{% endblock %}
